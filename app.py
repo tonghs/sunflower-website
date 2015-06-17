@@ -5,21 +5,18 @@ import tornado
 import tornado.ioloop
 import tornado.web
 from tornado.options import define, options
-from view.root import index 
+from config import PORT, DEBUG
 
-define('port', default=8080, help='run on this port', type=int)
-define('debug', default=True, help='enable debug mode')
+from _route import route
 
 settings = dict(
-    debug=options.debug,
+    debug=DEBUG,
     template_path="html"
 )
 
-application = tornado.web.Application([
-    (r"/", index),
-], **settings)
+application = tornado.web.Application(route.url_list, **settings)
 
 if __name__ == "__main__":
     tornado.options.parse_command_line()
-    application.listen(options.port)
+    application.listen(PORT)
     tornado.ioloop.IOLoop.instance().start()
