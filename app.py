@@ -5,16 +5,18 @@ import tornado
 import tornado.ioloop
 import tornado.web
 from tornado.options import define, options
+from view.root import index 
 
-from url import MainHandler
-
-define('port', default=8888, help='run on this port', type=int)
+define('port', default=8080, help='run on this port', type=int)
 define('debug', default=True, help='enable debug mode')
 
-settings = dict(debug=options.debug)
+settings = dict(
+    debug=options.debug,
+    template_path="html"
+)
 
 application = tornado.web.Application([
-    (r"/([a-zA-Z0-9-_]*)", MainHandler),
+    (r"/", index),
 ], **settings)
 
 if __name__ == "__main__":
