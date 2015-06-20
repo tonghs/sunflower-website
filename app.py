@@ -6,6 +6,7 @@ import tornado.ioloop
 import tornado.web
 from tornado.options import define, options
 from config import PORT, DEBUG
+import _url
 
 from _route import route
 

@@ -3,7 +3,7 @@
 
 DEBUG = True
 
-PORT = 8080 
+PORT = 8080
 
 HOST = 'http://s.tonghs.me/'
 

@@ -7,6 +7,7 @@ class Route(object):
 
     def __call__(self, url):
         def _(cls):
+            print url, cls
             self.url_list.append((url, cls))
 
             return cls
