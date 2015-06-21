@@ -5,7 +5,10 @@ DEBUG = True
 
 PORT = 8080
 
-HOST = 'http://s.tonghs.me/'
+APP = '向日葵传媒'
+
+HOST = 'http://c.cc:8080'
+STATIC_HOST = 'http://static.c.cc:8080'
 
 DB = 'SUNFLOWER'
 

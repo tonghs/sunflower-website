@@ -1,12 +1,17 @@
 #!/usr/bin/env python
 #coding:utf-8
 
-
+import sys
 import tornado.web
 import mako.lookup
 import mako.template
 import json
 import logging
+
+from config import STATIC_HOST
+
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 # from model.user import User
 
@@ -20,6 +25,7 @@ class BaseHandler(tornado.web.RequestHandler):
 
     def render_string(self, filename, **kwargs):
         kwargs["current_user"] = self.current_user
+        kwargs["STATIC_HOST"] = str(STATIC_HOST)
         template = self.lookup.get_template(filename)
         namespace = self.get_template_namespace()
         namespace.update(kwargs)

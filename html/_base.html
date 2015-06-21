@@ -1,0 +1,24 @@
+<%!
+    from config import APP
+%>
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%block name="css">
+        <link href="${STATIC_HOST}/css/_lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link href="${STATIC_HOST}/css/base.css" rel="stylesheet">
+    </%block>
+    <title><%block name="title"></%block> | ${APP}</title>
+  </head>
+  <body>
+    ${next.body()}
+    <%block name="js">
+        <script src="${STATIC_HOST}/js/_lib/jquery/jquery-2.1.4.min.js"></script>
+        <script src="${STATIC_HOST}/js/_lib/bootstrap/bootstrap.min.js"></script>
+    </%block>
+  </body>
+</html>
+
