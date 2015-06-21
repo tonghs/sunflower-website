@@ -1,3 +1,22 @@
 body{
+    background-color: #000;
     font-size: 14px;
 }
+
+/***** 重新 bootstrap ******/
+
+.navbar{
+    border-radius: 0;
+    background-color: #fafafa;
+    margin-bottom: 0;
+}
+
+.container-fluid{
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+    min-height: 500px;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+/***** 重新 bootstrap end ******/
