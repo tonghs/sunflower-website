@@ -3,20 +3,30 @@ body{
     font-size: 14px;
 }
 
+
 /***** 重新 bootstrap ******/
 
-.navbar{
-    border-radius: 0;
+.navbar-default{
     background-color: #fafafa;
+/*    min-height: 80px; */
+}
+
+.navbar{
     margin-bottom: 0;
 }
 
-.container-fluid{
+/*
+.navbar-brand{
+    padding: 30px;
 }
 
-.container .jumbotron, .container-fluid .jumbotron {
+.navbar-nav>li>a{
+    line-height: 49px;
+}
+*/
+
+.jumbotron{
     min-height: 500px;
-    border-radius: 0;
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 /***** 重新 bootstrap end ******/
