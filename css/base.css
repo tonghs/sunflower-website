@@ -1,3 +1,9 @@
+@font-face { font-family:noto; src:url(http://tonghs-cdn-static.qiniudn.com/NotoSansHans-Light.otf);}
+
+*{
+    font-family: noto, Helvetica, 'Microsoft Yahei Light', Arial ;
+}
+
 body{
     font-size: 14px;
 }
@@ -11,31 +17,19 @@ body{
 }
 
 
-/***** 重新 bootstrap ******/
+/***** 重写 bootstrap ******/
 
 .navbar-default{
     background-color: #fafafa;
-/*    min-height: 80px; */
 }
-
 .navbar{
     margin-bottom: 0;
     position: fixed;
     width: 100%;
 }
-
-/*
-.navbar-brand{
-    padding: 30px;
-}
-
-.navbar-nav>li>a{
-    line-height: 49px;
-}
-*/
-
 .jumbotron{
     min-height: 500px;
     margin-bottom: 0px;
 }
-/***** 重新 bootstrap end ******/
+/*    min-height: 80px; */
+
