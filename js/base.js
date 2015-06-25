@@ -21,12 +21,17 @@
     var scroll_top;
     $('#home').parallax();
     scroll_top = $(window).scrollTop();
-    console.log(scroll_top);
     if (scroll_top > 0) {
-      return $('#to-top').css('opacity', 1);
+      $('#to-top').css('opacity', 1);
     } else {
-      return $('#to-top').css('opacity', '0');
+      $('#to-top').css('opacity', '0');
     }
+    return $("#footer-sns #weixin").poshytip({
+      className: 'tip-twitter',
+      showTimeout: 1,
+      alignTo: 'target',
+      alignX: 'center'
+    });
   });
 
 }).call(this);
