@@ -12,9 +12,15 @@ $('#to-top').click ->
 $(window).scroll ->
     $('#home').parallax()
     scroll_top = $(window).scrollTop()
-    console.log scroll_top
 
     if scroll_top > 0
         $('#to-top').css('opacity', 1)
     else
         $('#to-top').css('opacity', '0')
+
+    $("#footer-sns #weixin").poshytip({
+        className: 'tip-twitter',
+        showTimeout: 1,
+        alignTo: 'target',
+        alignX: 'center',
+    })

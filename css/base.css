@@ -24,7 +24,7 @@ body{
 /***** 重写 bootstrap ******/
 
 .navbar-default{
-    background-color: #fafafa;
+    background-color: #fff;
 }
 .navbar{
     margin-bottom: 0;
@@ -56,9 +56,6 @@ a:hover{
     padding: 15px 0 5px;
 }
 
-#footer .container{
-    width: 420px;
-}
 
 #footer .container div{
     float: left;
@@ -82,4 +79,39 @@ a:hover{
 #footer p{
     font-size: 13px;
     line-height: 13px;
+}
+
+#footer #footer-sns {
+    float: right;
+    margin-top: 10px;
+}
+
+#footer #footer-sns a{
+    display: block;
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    margin-left: 10px;
+}
+#footer #footer-sns a#weixin{
+    background-image: url(https://dn-sunflower-media.qbox.me/img/wechat_L@2x.png?imageMogr2/thumbnail/x80);
+}
+#footer #footer-sns a#weixin:hover{
+    background-image: url(https://dn-sunflower-media.qbox.me/img/wechat_F@2x.png?imageMogr2/thumbnail/x80);
+}
+
+#footer #footer-sns a#weibo{
+    background-image: url(https://dn-sunflower-media.qbox.me/img/sina_weibo_L@2x.png?imageMogr2/thumbnail/x80);
+}
+#footer #footer-sns a#weibo:hover{
+    background-image: url(https://dn-sunflower-media.qbox.me/img/sina_weibo_F@2x.png?imageMogr2/thumbnail/x80);
+}
+
+#footer #footer-sns a#renren{
+    background-image: url(https://dn-sunflower-media.qbox.me/img/renren_L@2x.png?imageMogr2/thumbnail/x80);
+}
+#footer #footer-sns a#renren:hover{
+    background-image: url(https://dn-sunflower-media.qbox.me/img/renren_F@2x.png?imageMogr2/thumbnail/x80);
 }
