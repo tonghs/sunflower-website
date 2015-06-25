@@ -37,17 +37,17 @@ body{
 /*    min-height: 80px; */
 
 a{
-        transition: all 0.5s;
-   -moz-transition: all 0.5s;  /* Firefox 4 */
--webkit-transition: all 0.5s;   /* Safari 和 Chrome */
-     -o-transition: all 0.5s;
+        transition: all 0.3s ease-out;
+   -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+-webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+     -o-transition: all 0.3s ease-out;
 }
 
 a:hover{
-        transition: all 0.5s;
-   -moz-transition: all 0.5s;  /* Firefox 4 */
--webkit-transition: all 0.5s;   /* Safari 和 Chrome */
-     -o-transition: all 0.5s;
+        transition: all 0.3s ease-out;
+   -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+-webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+     -o-transition: all 0.3s ease-out;
 }
 
 #footer{
