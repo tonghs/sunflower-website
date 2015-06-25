@@ -20,7 +20,6 @@ $(window).scroll ->
 
     $("#footer-sns #weixin").poshytip({
         className: 'tip-twitter',
-        showTimeout: 1,
         alignTo: 'target',
         alignX: 'center',
     })
