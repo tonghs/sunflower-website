@@ -28,8 +28,20 @@ body{
     width: 100%;
 }
 .jumbotron{
-    min-height: 500px;
     margin-bottom: 0px;
 }
 /*    min-height: 80px; */
 
+a{
+        transition: all 0.5s;
+   -moz-transition: all 0.5s;  /* Firefox 4 */
+-webkit-transition: all 0.5s;   /* Safari 和 Chrome */
+     -o-transition: all 0.5s;
+}
+
+a:hover{
+        transition: all 0.5s;
+   -moz-transition: all 0.5s;  /* Firefox 4 */
+-webkit-transition: all 0.5s;   /* Safari 和 Chrome */
+     -o-transition: all 0.5s;
+}

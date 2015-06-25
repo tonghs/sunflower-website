@@ -55,4 +55,20 @@
     background-repeat: no-repeat;
     background-size: auto 478px;
     background-position: center;
+    text-align: center;
+}
+#btn-reg-container{
+    margin-top: 365px;
+}
+
+#btn-reg{
+    color: #fff;
+    background: transparent;
+    border: solid 1px #fff;
+    padding: 12px 35px;
+    text-decoration: none;
+}
+
+#btn-reg:hover{
+    background: rgba(255,255,255,0.3);
 }
