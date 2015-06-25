@@ -23,9 +23,9 @@
     scroll_top = $(window).scrollTop();
     console.log(scroll_top);
     if (scroll_top > 0) {
-      return $('#to-top').css('display', '');
+      return $('#to-top').css('opacity', 1);
     } else {
-      return $('#to-top').css('display', 'none');
+      return $('#to-top').css('opacity', '0');
     }
   });
 

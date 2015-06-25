@@ -15,6 +15,6 @@ $(window).scroll ->
     console.log scroll_top
 
     if scroll_top > 0
-        $('#to-top').css('display', '')
+        $('#to-top').css('opacity', 1)
     else
-        $('#to-top').css('display', 'none')
+        $('#to-top').css('opacity', '0')
