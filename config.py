@@ -7,8 +7,8 @@ PORT = 8080
 
 APP = '向日葵传媒'
 
-HOST = 'http://c.cc:8080'
-STATIC_HOST = 'http://static.c.cc:8080'
+HOST = 'http://sunflower.tonghs.com'
+STATIC_HOST = 'http://static.tonghs.com'
 
 DB = 'SUNFLOWER'
 
