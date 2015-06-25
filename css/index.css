@@ -1,7 +1,10 @@
 #home{
     background-color: #000;
+    background-image: url(http://www.uniqueway.com/assets/welcome/welcome_banner-29b0aa78eac9329b9d505c377a994c14.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #fff;
-    height: 390px;
+    height: 550px;
 }
 
 #home-flower{
@@ -12,6 +15,7 @@
     margin-top: -250px;
     margin-bottom: -250px;
     background-color: transparent;
+
 }
 
 .odd-home{

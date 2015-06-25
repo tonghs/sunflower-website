@@ -59,13 +59,12 @@
     </nav>
 
     <!-- Main component for a primary marketing message or call to action -->
-    <div id="body">
-        ${next.body()}
-    </div>
+    ${next.body()}
 
+    <script src="${STATIC_HOST}/js/_lib/jquery/jquery-2.1.4.min.js"></script>
+    <script src="${STATIC_HOST}/js/_lib/stellar/jquery.stellar.min.js"></script>
+    <script src="${STATIC_HOST}/js/_lib/bootstrap/bootstrap.min.js"></script>
     <%block name="js">
-        <script src="${STATIC_HOST}/js/_lib/jquery/jquery-2.1.4.min.js"></script>
-        <script src="${STATIC_HOST}/js/_lib/bootstrap/bootstrap.min.js"></script>
     </%block>
     </body>
 </html>
