@@ -23,7 +23,7 @@
 }
 
 .even-home{
-    background-color: #fafafa;
+    background: transparent;
 }
 
 #home-p-content{
@@ -46,4 +46,38 @@
 
 #second-item{
     background: transparent;
+    min-height: 300px;
+}
+
+#program{
+    min-height: 478px;
+    background-image: url(http://dn-sunflower-media.qbox.me/img/program.png);
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: auto 478px;
+    background-position: center;
+    text-align: center;
+}
+#btn-reg-container{
+    margin-top: 365px;
+}
+
+#btn-reg{
+    color: #fff;
+    background: transparent;
+    border: solid 1px #fff;
+    padding: 12px 35px;
+    text-decoration: none;
+}
+
+#btn-reg:hover{
+    background: rgba(255,255,255,0.3);
+}
+
+#partner{
+    padding: 20px 0 30px;
+}
+
+#partner h3{
+    margin: 0 0 20px 0;
 }
