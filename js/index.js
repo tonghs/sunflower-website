@@ -2,7 +2,9 @@
 (function() {
 
   $(document).ready(function() {
-    return $.stellar();
+    return $(window).scroll(function() {
+      return $('#home').parallax();
+    });
   });
 
 }).call(this);

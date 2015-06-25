@@ -4,7 +4,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
-    height: 550px;
+    height: 600px;
 }
 
 #home-flower{
@@ -26,14 +26,14 @@
     background-color: #fafafa;
 }
 
-#home-p{
-    margin-top: 50px;
-}
-
 #home-p-content{
     letter-spacing: 20px;
     font-size: 25px;
     margin-top: 60px;
+}
+
+#home-p{
+    margin-top: 100px;
 }
 
 #home-logo{

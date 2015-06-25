@@ -1,2 +1,3 @@
 $(document).ready ->
-    $.stellar()
+    $(window).scroll ->
+        $('#home').parallax()
