@@ -19,11 +19,11 @@
 }
 
 .odd-home{
-    background-color: #f3f2f8;
+    background: transparent;
 }
 
 .even-home{
-    background-color: #fafafa;
+    background-color: #f3f2f8;
 }
 
 #home-p-content{
@@ -47,4 +47,13 @@
 #second-item{
     background: transparent;
     min-height: 300px;
+}
+
+#program{
+    min-height: 478px;
+    background-image: url(http://dn-sunflower-media.qbox.me/img/program.png);
+    background-repeat: no-repeat;
+    background-size: auto 478px;
+    background-position: center;
+    background-color: #fff;
 }
