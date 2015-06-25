@@ -11,4 +11,22 @@
     }
   });
 
+  $('#to-top').click(function() {
+    return $("html,body").animate({
+      scrollTop: $("#top").offset().top
+    }, 500);
+  });
+
+  $(window).scroll(function() {
+    var scroll_top;
+    $('#home').parallax();
+    scroll_top = $(window).scrollTop();
+    console.log(scroll_top);
+    if (scroll_top > 0) {
+      return $('#to-top').css('display', '');
+    } else {
+      return $('#to-top').css('display', 'none');
+    }
+  });
+
 }).call(this);
