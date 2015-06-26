@@ -19,7 +19,8 @@ def write_error(self, status_code, **kwargs):
     if status_code == 404:
         self.render('404.html')
     elif status_code == 500:
-        self.render('500.html')
+        self.template = '500.html'
+        self.render()
     else:
         self.write('error:' + str(status_code))
 
