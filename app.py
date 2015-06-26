@@ -15,6 +15,16 @@ settings = dict(
     template_path="html"
 )
 
+def write_error(self, status_code, **kwargs):
+    if status_code == 404:
+        self.render('404.html')
+    elif status_code == 500:
+        self.render('500.html')
+    else:
+        self.write('error:' + str(status_code))
+
+tornado.web.RequestHandler.write_error = write_error
+
 application = tornado.web.Application(route.url_list, **settings)
 
 if __name__ == "__main__":

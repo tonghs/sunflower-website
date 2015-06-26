@@ -32,9 +32,11 @@ class BaseHandler(tornado.web.RequestHandler):
         return template.render(**namespace)
 
     def render(self, **kwargs):
-        filename = "{0}.html".format(self.__class__.__name__.replace("Handler", ""))
-        filename = "{0}{1}".format(filename[0].lower(), filename[1:])
-        self.finish(self.render_string(filename, **kwargs))
+        if not hasattr(self, 'template') or  not self.template :
+            filename = "{0}.html".format(self.__class__.__name__)
+            self.template = "{0}{1}".format(filename[0].lower(), filename[1:])
+
+        self.finish(self.render_string(self.template, **kwargs))
 
     def get_current_user(self):
         # json = self.get_secure_cookie("user")
