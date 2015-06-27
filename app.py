@@ -7,6 +7,7 @@ import tornado.web
 from tornado.options import define, options
 from config import PORT, DEBUG
 import _url
+from model.db import mongo
 
 from _route import route
 
@@ -27,6 +28,10 @@ def write_error(self, status_code, **kwargs):
 tornado.web.RequestHandler.write_error = write_error
 
 application = tornado.web.Application(route.url_list, **settings)
+
+for k,v in mongo._registered_documents.iteritems():
+    print "indexing", k
+    v.generate_index(v._collection)
 
 if __name__ == "__main__":
     tornado.options.parse_command_line()

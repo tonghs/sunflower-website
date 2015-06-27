@@ -10,10 +10,10 @@ APP = '向日葵传媒'
 HOST = 'http://c.cc:8080'
 STATIC_HOST = 'http://static.c.cc:8080'
 
-DB = 'SUNFLOWER'
+DB = 'sunflower'
 
 MONGO_CONFIG = dict(
-    host = "mongodb://root:fxZc0EoW7K9G@10.9.9.100:27017",
+    host = "mongodb://127.0.0.1:27017",
 )
 
 REDIS_CONFIG = dict(
