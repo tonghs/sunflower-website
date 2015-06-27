@@ -11,9 +11,7 @@
     o.desc = '5';
     $scope.o = o;
     return $scope.submit = function() {
-      return $.postJSON('/j/reg', $scope.o, function(o) {
-        return window.location.href = '/reg_success';
-      });
+      return $.postJSON('/j/reg', $scope.o, function(o) {});
     };
   });
 

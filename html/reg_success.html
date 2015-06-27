@@ -1,0 +1,19 @@
+<%inherit file="_base.html" />
+<%block name="title_">
+一块投报名通道
+</%block>
+<%block name="css">
+    <link href="${STATIC_HOST}/css/reg_success.css" rel="stylesheet">
+</%block>
+<div class="container main">
+    <div id="msg" class="t-align-c">
+        <span class="title">报名成功</span>
+        <div id="tip" class="t-align-c">稍后我们的工作人员将联系您，请耐心等待。</div>
+    </div>
+    <div id="back-container" class="t-align-c">
+        <a href="/" type="button" class="btn btn-default">回首页</a>
+    </div>
+</div>
+<%block name="js">
+    <script src="${STATIC_HOST}/js/reg_success.js"></script>
+</%block>

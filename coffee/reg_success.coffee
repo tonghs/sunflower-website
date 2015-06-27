@@ -13,6 +13,5 @@ def_view(
 
         $scope.submit =->
             $.postJSON '/j/reg', $scope.o, (o)->
-                window.location.href = '/reg_success'
 
 )

@@ -14,6 +14,11 @@ class reg(BaseHandler):
     def get(self):
         self.render()
 
+@route('/reg_success')
+class reg_success(BaseHandler):
+    def get(self):
+        self.render()
+
 @route('/about')
 class about(BaseHandler):
     def get(self):

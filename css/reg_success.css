@@ -1,0 +1,20 @@
+#msg{
+    background-image: url(https://dn-sunflower-media.qbox.me/img/mark.png?imageMogr2/thumbnail/x512);
+    background-size: 256px;
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    padding-top: 215px;
+}
+
+#msg span.title{
+    font-size: 30px;
+}
+
+#tip{
+    font-size: 18px;
+}
+
+#back-container{
+    margin-top: 20px;
+}
+
