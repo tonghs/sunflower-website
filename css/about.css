@@ -1,0 +1,18 @@
+.container h2{
+    margin-bottom: 40px;
+    border-bottom: solid 1px #ddd;
+    padding-bottom: 20px;
+}
+
+.container p{
+    font-size: 20px;
+}
+
+.container #founder{
+    background-image: url(https://dn-sunflower-media.qbox.me/img/founder.png?imageMogr2/thumbnail/600x);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto 300px;
+    height: 300px;
+    padding-left: 215px;
+}

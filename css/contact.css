@@ -1,0 +1,30 @@
+.container h2{
+    margin-bottom: 40px;
+    border-bottom: solid 1px #ddd;
+    padding-bottom: 20px;
+}
+
+.container .item{
+    font-size: 25px;
+    padding-left: 50px;
+    height: 30px;
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto 30px;
+}
+
+#phone{
+    background-image: url(https://dn-sunflower-media.qbox.me/img/phone.png?imageMogr2/thumbnail/x60);
+    background-size: auto 25px;
+}
+#mail{
+    background-image: url(https://dn-sunflower-media.qbox.me/img/mail.png?imageMogr2/thumbnail/x60);
+    background-position: 1px center;
+}
+
+#location{
+    background-image: url(https://dn-sunflower-media.qbox.me/img/location.png?imageMogr2/thumbnail/x60);
+    background-position: 4px center;
+    margin-bottom: 40px;
+}

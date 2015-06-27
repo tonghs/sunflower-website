@@ -34,9 +34,11 @@ body{
     margin-bottom: 0;
     position: fixed;
     width: 100%;
+    top: 0;
 }
 .jumbotron{
     margin-bottom: 0px;
+    padding: 70px 0;
 }
 /*    min-height: 80px; */
 

@@ -9,6 +9,6 @@ from model.reg import Reg
 class reg(JsonHandler):
     def post(self):
         o = self.json
-        Reg.reg_new(o)
+        # Reg.reg_new(o)
 
         self.finish()
