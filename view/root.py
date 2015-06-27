@@ -8,3 +8,8 @@ from _route import route
 class index(BaseHandler):
     def get(self):
         self.render()
+
+@route('/reg')
+class reg(BaseHandler):
+    def get(self):
+        self.render()

@@ -23,3 +23,11 @@ $(window).scroll ->
         alignTo: 'target',
         alignX: 'center',
     })
+
+
+pathname = location.pathname
+$("#navbar>ul>li").removeClass('active')
+$("#navbar>ul>li").each ->
+    self = $(this)
+    if self.children("a").attr('href') == pathname
+        self.addClass('active')
