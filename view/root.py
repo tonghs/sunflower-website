@@ -13,3 +13,13 @@ class index(BaseHandler):
 class reg(BaseHandler):
     def get(self):
         self.render()
+
+@route('/about')
+class about(BaseHandler):
+    def get(self):
+        self.render()
+
+@route('/contact')
+class contact(BaseHandler):
+    def get(self):
+        self.render()
