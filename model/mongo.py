@@ -1,18 +1,9 @@
 #!/usr/bin/env python
-#coding: utf-8
-
-import mongokit
-from mongokit import Document, Connection
-from mongokit.document import DocumentProperties
-from bson.objectid import ObjectId
-import redis as _redis
-
-from config import MONGO_CONFIG, DB, REDIS_CONFIG
+#coding:utf-8
+import _env
+import mongokit.connection
 
 
-_iterables = (list, tuple, set, frozenset)
-
-mongo = Connection(**MONGO_CONFIG)
 
 class CallableMixin(object):
     """
@@ -28,6 +19,18 @@ class CallableMixin(object):
             fallback_lang=fallback_lang
         )
 mongokit.connection.CallableMixin = CallableMixin
+
+from z42.config import MONGO_CONFIG, APP
+from bson.objectid import ObjectId
+from mongokit import Document, Connection
+from mongokit.document import DocumentProperties
+from jsob import JsOb
+
+_iterables = (list, tuple, set, frozenset)
+
+
+#print MONGO_CONFIG
+mongo = Connection(**MONGO_CONFIG)
 
 class MetaDoc(DocumentProperties):
     def __new__(cls, name, bases, attrs):
@@ -50,7 +53,7 @@ class MetaDoc(DocumentProperties):
 
 class Doc(Document):
     __metaclass__ = MetaDoc
-    __database__ = DB
+    __database__ = APP
     use_dot_notation = True
     use_autorefs = False
     skip_validation = True
@@ -61,6 +64,9 @@ class Doc(Document):
         '''
         if doc is None:
             doc = {}
+        else:
+            if isinstance(doc, JsOb):
+                doc = doc.__dict__
         super(Doc, self).__init__(doc, *args, **kwds)
         for i in self.structure:
             if i not in doc:
@@ -70,7 +76,7 @@ class Doc(Document):
             if self.default_values:
                 self._set_default_fields(self, self.structure)
 
-    def upsert(self, spec):
+    def upsert(self, spec, multi=False):
 
         if isinstance(spec,basestring):
             spec = {'_id': ObjectId(spec)}
@@ -80,7 +86,8 @@ class Doc(Document):
         self.collection.update(
             spec,
             {'$set': update},
-            upsert=True
+            upsert=True,
+            multi=multi
         )
         #print spec
         #print {'$set': dict((k,v) for k,v in self.iteritems() if v is not None )},
@@ -106,6 +113,7 @@ class Doc(Document):
             result.append(i)
         return map(lambda doc:cls(doc, collection=cls._collection), result)
 
+#find_one(self, spec_or_id=None, *args, **kwargs) method of mongokit.collection.Collection instance
 
     @classmethod
     def find_one(cls, spec_or_id=None, *args, **kwds):
@@ -127,10 +135,22 @@ class Doc(Document):
         if spec_or_id:
             cls._collection.remove(spec_or_id=spec_or_id, safe=safe, multi=multi, **kwargs)
 
-
-redis = _redis.StrictRedis(**REDIS_CONFIG)
-
+    @classmethod
+    def iterdoc(cls, *args, **kwargs):
+        skip = kwargs.get('skip', 0)
+        limit = 100
+        while True:
+            kwargs.update(dict(skip=skip, limit=limit))
+            result = cls.find(*args, **kwargs)
+            if not result:
+                break
+            for doc in result:
+                yield doc
+            skip+=limit
 
 if __name__ == "__main__":
     pass
+    # mongo.SITE.abc.insert(dict(a=1, b=2))
+    # print C.bbb
+    # print C.__table__
 

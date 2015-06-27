@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     color: #fff;
     height: 600px;
+    margin-top: 48px;
 }
 
 #home-flower{
@@ -75,10 +76,7 @@
     background: rgba(255,255,255,0.3);
 }
 
-#partner{
-    padding: 20px 0 30px;
-}
 
 #partner h3{
-    margin: 0 0 20px 0;
+    margin: 0 0 50px 0;
 }

@@ -10,6 +10,8 @@ import logging
 
 from config import STATIC_HOST
 
+from model.jsob import JsOb
+
 reload(sys)
 sys.setdefaultencoding('utf8')
 
@@ -44,3 +46,12 @@ class BaseHandler(tornado.web.RequestHandler):
 
         # return user
         return dict()
+
+class JsonHandler(BaseHandler):
+    def prepare(self):
+        args = self.request.arguments
+        args = dict((k, v[0]) for k, v in args.iteritems())
+        self.json = JsOb(args)
+
+        super(JsonHandler, self).prepare()
+        
