@@ -46,4 +46,17 @@
     }
   });
 
+  window.def_view = function(module, ctrl, fun) {
+    return angular.module(module, []).controller(ctrl, fun);
+  };
+
+  $.postJSON = function(url, data, callback) {
+    return $.ajax({
+      url: url,
+      data: data,
+      type: 'post',
+      success: callback
+    });
+  };
+
 }).call(this);

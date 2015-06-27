@@ -31,3 +31,16 @@ $("#navbar>ul>li").each ->
     self = $(this)
     if self.children("a").attr('href') == pathname
         self.addClass('active')
+
+window.def_view = (module, ctrl, fun)->
+    angular.module(module, []).controller ctrl, fun
+
+
+$.postJSON = (url, data, callback) ->
+    $.ajax(
+        url: url,
+        data: data,
+        type: 'post',
+        success: callback
+    )
+
