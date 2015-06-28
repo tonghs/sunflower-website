@@ -14,6 +14,11 @@ class index(AdminHandler):
     def get(self):
         self.render()
 
+@route('/admin/settings')
+class settings(AdminHandler):
+    def get(self):
+        self.render()
+
 @route('/admin/logout')
 class logout(BaseHandler):
     def get(self):

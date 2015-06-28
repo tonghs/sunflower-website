@@ -103,3 +103,11 @@ body {
   display: inline-block;
   border-radius: 50%;
 }
+
+#user_info{
+  height: 100%;
+  color: #9d9d9d;
+  display: block;
+  line-height: 50px;
+  margin-left: 50px;
+}
