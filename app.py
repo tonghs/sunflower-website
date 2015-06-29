@@ -13,7 +13,8 @@ from _route import route
 
 settings = dict(
     debug=DEBUG,
-    template_path="html"
+    template_path="html",
+    cookie_secret="61oETzKXQAGaYdkL5gEmGeJJFuYh7EQnp2XdTP1o/Vo=",
 )
 
 def write_error(self, status_code, **kwargs):
