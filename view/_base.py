@@ -74,3 +74,14 @@ class AdminHandler(BaseHandler):
         return user
 
         
+class AdminJsonHandler(AdminHandler, BaseHandler):
+    def prepare(self):
+        if not self.current_user:
+            raise tornado.web.HTTPError(403, "请登录后操作！") 
+
+        args = self.request.arguments
+        args = dict((k, v[0]) for k, v in args.iteritems())
+        self.json = JsOb(args)
+
+        super(AdminJsonHandler, self).prepare()
+

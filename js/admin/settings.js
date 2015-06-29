@@ -5,8 +5,8 @@
     return def_view('SettingsApp', 'SettingsCtrl', function($scope) {
       $scope.o = o;
       return $scope.submit = function() {
-        return $.postJSON('', $scope.o, function(o) {
-          return window.location.href = '/reg_success';
+        return $.postJSON('/j/admin/settings', $scope.o, function(o) {
+          return alert(1);
         });
       };
     });

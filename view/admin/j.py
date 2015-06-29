@@ -3,12 +3,13 @@
 
 import json
 
-from view._base import JsonHandler
+from view._base import AdminJsonHandler, JsonHandler
 from _route import route
 from model.admin import Admin
+from model.web_info import WebInfo
 
 @route('/j/admin/login')
-class login(JsonHandler):
+class _(JsonHandler):
     def post(self):
         msg = ''
         success = False
@@ -22,4 +23,13 @@ class login(JsonHandler):
             msg = "登录错误"
 
         self.finish(dict(success=success, msg=msg))
+
+
+@route('/j/admin/settings')
+class _(AdminJsonHandler):
+    def post(self):
+        o = self.json
+        WebInfo.web_info_upsert(o)
+
+        self.finish()
 

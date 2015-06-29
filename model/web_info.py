@@ -28,9 +28,9 @@ class WebInfo(Doc):
     ]
 
     @classmethod
-    def web_info_new(cls, doc):
+    def web_info_upsert(cls, doc, id_=1):
         o = WebInfo(doc)
-        o.upsert(doc)
+        o.upsert(dict(id_=id_))
 
     def web_info_get(cls, id_=1):
         o = WebInfo.find_one(dict(id_=id_))

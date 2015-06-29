@@ -6,8 +6,8 @@ window.def_settings_view = (o)->
             $scope.o = o
 
             $scope.submit =->
-                $.postJSON '', $scope.o, (o)->
-                    window.location.href = '/reg_success'
+                $.postJSON '/j/admin/settings', $scope.o, (o)->
+                    alert 1
 
     )
 

@@ -64,6 +64,9 @@ class Doc(Document):
         else:
             if isinstance(doc, JsOb):
                 doc = doc.__dict__
+                if "_id" in doc:
+                    del doc["_id"]
+
         super(Doc, self).__init__(doc, *args, **kwds)
         for i in self.structure:
             if i not in doc:
