@@ -7,7 +7,7 @@ $.fn.extend(
 )
 
 $('#to-top').click ->
-    $("html,body").animate({scrollTop: $("#top").offset().top}, 500)
+    $("html,body").animate({scrollTop: $("#top").offset().top - 60}, 500)
 
 $(window).scroll ->
     $('#home').parallax()

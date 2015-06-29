@@ -16,6 +16,10 @@ html, body{
     padding-bottom: 89px;
 }
 
+#to-top{
+    opacity: 0;
+}
+
 .main{
     padding: 80px 20px 30px;
 }

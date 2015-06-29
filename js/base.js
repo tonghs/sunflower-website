@@ -14,7 +14,7 @@
 
   $('#to-top').click(function() {
     return $("html,body").animate({
-      scrollTop: $("#top").offset().top
+      scrollTop: $("#top").offset().top - 60
     }, 500);
   });
 
