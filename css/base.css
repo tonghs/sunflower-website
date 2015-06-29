@@ -62,6 +62,7 @@ a{
 }
 
 a:hover{
+        text-decoration: none;
         transition: all 0.3s ease-out;
    -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
 -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
