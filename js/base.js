@@ -47,7 +47,12 @@
   });
 
   window.def_view = function(module, ctrl, fun) {
-    return angular.module(module, []).controller(ctrl, fun);
+    var app;
+    app = angular.module(module, ["ngSanitize"]).controller(ctrl, fun);
+    app.filter('deal_str', function() {
+      return $.deal_str;
+    });
+    return app;
   };
 
   $.postJSON = function(url, data, callback) {
@@ -57,6 +62,16 @@
       type: 'post',
       success: callback
     });
+  };
+
+  $.deal_str = function(str) {
+    var r;
+    r = new RegExp('>', 'g');
+    str = str.replace(r, '&gt;');
+    r = new RegExp('<', 'g');
+    str = str.replace(r, '&lt;');
+    str = str.replace(/\n/g, "</p><p>");
+    return "<p>" + str + "</p>";
   };
 
 }).call(this);

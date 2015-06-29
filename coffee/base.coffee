@@ -33,7 +33,13 @@ $("#navbar>ul>li").each ->
         self.addClass('active')
 
 window.def_view = (module, ctrl, fun)->
-    angular.module(module, []).controller ctrl, fun
+    app = angular.module(module, ["ngSanitize"]).controller ctrl, fun
+
+    app.filter('deal_str', ->
+        return $.deal_str
+    )
+
+    return app
 
 
 $.postJSON = (url, data, callback) ->
@@ -43,4 +49,15 @@ $.postJSON = (url, data, callback) ->
         type: 'post',
         success: callback
     )
+
+$.deal_str = (str)->
+    r = new RegExp('>', 'g')
+    str = str.replace(r, '&gt;')
+
+    r = new RegExp('<', 'g')
+    str = str.replace(r, '&lt;')
+   
+    str = str.replace(/\n/g, "</p><p>")
+
+    return "<p>#{str}</p>"
 
