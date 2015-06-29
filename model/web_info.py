@@ -18,6 +18,7 @@ class WebInfo(Doc):
         weixin = basestring,
         weibo = basestring,
 
+        logo = basestring,
         desc = basestring,
         founder = basestring,
         founder_img = basestring
@@ -32,8 +33,12 @@ class WebInfo(Doc):
         o = WebInfo(doc)
         o.upsert(dict(id_=id_))
 
-    def web_info_get(cls, id_=1):
+    def web_info_get(cls, html=False, id_=1):
         o = WebInfo.find_one(dict(id_=id_))
+        if html:
+            desc = o.desc.replace('>', '&gt;').replace('<', '&lt;').replace('\n', '</p><p>')
+
+            o.desc = '<p>%s</p>' % desc
 
         return o
 
@@ -52,12 +57,13 @@ if __name__ == "__main__":
         weixin = 'tonghuashuai',
         weibo = 'http://weibo.com',
 
+        logo = 'https://dn-sunflower-media.qbox.me/img/logo-white.png',
         desc = '''由山东德兴集团、永安信控股和资深媒体人 共同建立的文化金融传媒机构.坐落于北京望京SOHO，注册资本5000万。
         作为现时代金融文化产品提供机构，我们致力于将中国优秀文化产品与金融服务相结合， 打造传媒与金融相结合的投融资服务平台；我们已聚合天使街、黑马会、天使汇、首都金融服务商会等多家金融投资机构， 真实呈现全民创投的热潮，打造线上线下金融超市；向日葵传媒已经发起种子基金计划， 为有优质创业项目的80、90后提供100——200万元的项目启动基金。
         同时，我们将借力互联网+的浪潮，吸纳最前沿的科技，开拓全新的TV 2 online形态 提升传统电视平台与wap、app端新媒体的粘性， 让观众在观看节目的同时参与到丰富多彩的互动。''',
         founder = '创始人简介',
         founder_img = 'https://dn-sunflower-media.qbox.me/img/founder.png?imageMogr2/thumbnail/600x' 
     )
-    WebInfo.web_info_new(doc)
+    WebInfo.web_info_upsert(doc)
     pass
 

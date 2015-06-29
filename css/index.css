@@ -1,6 +1,5 @@
 #home{
     background-color: #000;
-    background-image: url(http://www.uniqueway.com/assets/welcome/welcome_banner-29b0aa78eac9329b9d505c377a994c14.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -39,7 +38,6 @@
 }
 
 #home-logo{
-    background-image: url(https://dn-sunflower-media.qbox.me/img/logo-white.png);
     background-repeat: no-repeat;
     width: 200px;
     height: 200px;
@@ -53,7 +51,6 @@
 
 #program{
     min-height: 478px;
-    background-image: url(http://dn-sunflower-media.qbox.me/img/program.png);
     background-color: #000;
     background-repeat: no-repeat;
     background-size: auto 520px;

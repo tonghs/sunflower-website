@@ -12,6 +12,7 @@ from config import STATIC_HOST
 
 from model.jsob import JsOb
 from model.admin import Admin
+from model.web_info import WebInfo
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -28,11 +29,16 @@ class BaseHandler(tornado.web.RequestHandler):
 
     def render_string(self, filename, **kwargs):
         kwargs["current_user"] = self.current_user
+        kwargs["WEB_INFO"] = self.web_info
         kwargs["STATIC_HOST"] = str(STATIC_HOST)
         template = self.lookup.get_template(filename)
         namespace = self.get_template_namespace()
         namespace.update(kwargs)
         return template.render(**namespace)
+
+    @property
+    def web_info(self):
+        return WebInfo.web_info_get(True)
 
     def render(self, **kwargs):
         if not hasattr(self, 'template') or  not self.template :

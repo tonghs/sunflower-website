@@ -7,7 +7,7 @@ window.def_settings_view = (o)->
 
             $scope.submit =->
                 $.postJSON '/j/admin/settings', $scope.o, (o)->
-                    alert 1
+                    alert '保存成功'
 
     )
 
