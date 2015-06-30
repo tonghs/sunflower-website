@@ -24,6 +24,11 @@ class settings(AdminHandler):
         o = WebInfo.web_info_get()
         self.render(o=dict(o))
 
+@route('/admin/partner')
+class partner(AdminHandler):
+    def get(self):
+        self.render()
+
 
 @route('/admin/startups')
 class startups(AdminHandler):
