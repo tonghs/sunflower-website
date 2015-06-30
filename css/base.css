@@ -1,7 +1,25 @@
-@font-face { font-family:noto; src:url(http://tonghs-cdn-static.qiniudn.com/NotoSansHans-Light.otf);}
+@font-face { 
+    font-family:noto;
+    src:url(http://tonghs-cdn-static.qiniudn.com/NotoSansHans-Thin.otf);
+}
+
+@font-face {
+    font-family:'PingHei';
+    font-style:normal;
+    font-weight:200;
+    src:local('☺︎'), url("http://www.apple.com/wss/fonts/PingHei/v1/PingHei-light.woff") format("woff"), url("http://www.apple.com/wss/fonts/PingHei/v1/PingHei-light.ttf") format("truetype");
+    /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
+}
+
+@font-face {
+    font-family:'PingHei 200';
+    src:url("http://www.apple.com/wss/fonts/PingHei/v1/PingHei-light.eot");
+    /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
+}
+
 
 *{
-    font-family: noto, Helvetica, 'Microsoft Yahei Light', Arial ;
+    font-family: 'PiengHei', 'PingHei 200', noto, "Helvetica Neue","Helvetica","Arial","Verdana","sans-serif", 'Microsoft Yahei Light';
 }
 
 html, body{

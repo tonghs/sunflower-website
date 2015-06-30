@@ -8,7 +8,7 @@
       scroll_top = $(window).scrollTop();
       self = $(this);
       ratio = parseFloat(self.data('parallax-background-ratio'));
-      return self.css('background-position', "0 " + (scroll_top * ratio) + "px");
+      return self.css('background-position', "center " + (scroll_top * ratio) + "px");
     }
   });
 
@@ -20,7 +20,6 @@
 
   $(window).scroll(function() {
     var scroll_top;
-    $('#home').parallax();
     scroll_top = $(window).scrollTop();
     if (scroll_top > 0) {
       $('#to-top').css('opacity', 1);

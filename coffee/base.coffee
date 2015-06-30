@@ -3,14 +3,14 @@ $.fn.extend(
         scroll_top = $(window).scrollTop()
         self = $(this)
         ratio = parseFloat(self.data('parallax-background-ratio'))
-        self.css('background-position', "0 #{scroll_top * ratio}px")
+        self.css('background-position', "center #{scroll_top * ratio}px")
 )
 
 $('#to-top').click ->
     $("html,body").animate({scrollTop: $("#top").offset().top - 60}, 500)
 
 $(window).scroll ->
-    $('#home').parallax()
+    # $('#home').parallax()
     scroll_top = $(window).scrollTop()
 
     if scroll_top > 0
