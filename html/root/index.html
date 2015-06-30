@@ -1,5 +1,5 @@
 <%!
-from config import APP
+from config import APP, SLOGAN
 %>
 <%inherit file="../_base.html" />
 <%block name="title">
@@ -15,6 +15,7 @@ ${APP}
         <div id="home-p">
             <div id="home-logo" class="margin-auto" style="background-image: url(${WEB_INFO.logo});">&nbsp;</div>
             <div id="home-p-content" class="t-align-c">SUNFLOWER MEDIA</div>
+            <div id="home-p-slogan" class="t-align-c">${SLOGAN}</div>
         </div>
     </div>
 </div>

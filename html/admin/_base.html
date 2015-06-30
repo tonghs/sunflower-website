@@ -37,14 +37,12 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/admin/index">主页</a></li>
-                    <li><a href="/admin/settings">基本设置</a></li>
-                    <li><a href="/admin/logout">退出</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-left">
                     <li>
-                        <span id="user_info">您好：${current_user.user_name}</span>
+                        <span id="user_info">${current_user.user_name}</span>
                     </li>
+                    ## <li><a href="/admin/index">主页</a></li>
+                    ## <li><a href="/admin/settings">基本设置</a></li>
+                    <li><a href="/admin/logout">退出</a></li>
                 </ul>
             </div>
         </div>
@@ -56,7 +54,13 @@
                 <ul class="nav nav-sidebar">
                     <li><a href="/admin/index">主页</a></li>
                     <li><a href="/admin/settings">基本设置</a></li>
+                    <li><a href="/admin/partner">合作伙伴</a></li>
+                    <li><a href="/admin/administrators">管理员</a></li>
+                </ul>
+                <ul class="nav nav-sidebar">
                     <li><a href="/admin/startups">报名列表</a></li>
+                    <li><a href="/admin/startups_analysis">报名统计</a></li>
+                    <li><a href="/admin/startups_finalist">已入选项目</a></li>
                 </ul>
                 <ul class="nav nav-sidebar">
                     <li><a href="/" target="_blank">预览网站</a></li>

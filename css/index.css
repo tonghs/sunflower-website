@@ -12,7 +12,7 @@
     height: 500px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url(https://dn-sunflower-media.qbox.me/img/sunflower.png);
+    background-image: url(https://7xk1xj.com1.z0.glb.clouddn.com/img/sunflower.png);
     margin-top: -250px;
     margin-bottom: -250px;
     background-color: transparent;
@@ -30,9 +30,14 @@
 #home-p-content{
     letter-spacing: 20px;
     font-size: 32px;
-    margin-top: 60px;
+    margin-top: 50px;
 }
 
+#home-p-slogan{
+    letter-spacing: 20px;
+    font-size: 14px;
+    margin-top: 10px;
+}
 #home-p{
     margin-top: 20px;
 }
