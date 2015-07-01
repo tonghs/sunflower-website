@@ -1,0 +1,40 @@
+<%!
+    from config import APP
+%>
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="${STATIC_HOST}/css/_lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link href="${STATIC_HOST}/css/_lib/bootstrap-dialog.min.css" rel="stylesheet">
+        <link href="${STATIC_HOST}/css/base.css" rel="stylesheet">
+        <link href="${STATIC_HOST}/css/admin/base.css" rel="stylesheet">
+        <link href="${STATIC_HOST}/css/_lib/poshytip/tip-twitter/tip-twitter.css" rel="stylesheet">
+
+        <%block name="css">
+        </%block>
+        <title>
+            <%block name="title">
+                <%block name="title_"></%block> | ${APP} 后台
+            </%block>
+        </title>
+    </head>
+
+    <body>
+        ${next.body()}
+    </body>
+    <script src="${STATIC_HOST}/js/_lib/jquery/jquery-2.1.4.min.js"></script>
+    <script src="${STATIC_HOST}/js/_lib/bootstrap/bootstrap.min.js"></script>
+    <script src="${STATIC_HOST}/js/_lib/bootstrap-dialog.min.js"></script>
+    <script src="${STATIC_HOST}/js/_lib/poshytip/jquery.poshytip.min.js"></script>
+    <script src="${STATIC_HOST}/js/base.js"></script>
+    <script src="${STATIC_HOST}/js/admin/base.js"></script>
+    <script src="${STATIC_HOST}/js/_lib/angularjs/angular.min.js"></script>
+    <script src="${STATIC_HOST}/js/_lib/angularjs/angular-sanitize.js"></script>
+    <%block name="js">
+    </%block>
+</html>
+
