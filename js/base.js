@@ -12,25 +12,18 @@
     }
   });
 
-  $('#to-top').click(function() {
+  $('.to-top').click(function() {
     return $("html,body").animate({
       scrollTop: $("#top").offset().top - 60
     }, 500);
   });
 
-  $(window).scroll(function() {
-    var scroll_top;
-    scroll_top = $(window).scrollTop();
-    if (scroll_top > 0) {
-      $('#to-top').css('opacity', 1);
-    } else {
-      $('#to-top').css('opacity', '0');
-    }
-    return $("#footer-sns #weixin").poshytip({
-      className: 'tip-twitter',
-      alignTo: 'target',
-      alignX: 'center'
-    });
+  $(window).scroll(function() {});
+
+  $("#footer-sns #weixin").poshytip({
+    className: 'tip-twitter',
+    alignTo: 'target',
+    alignX: 'center'
   });
 
   pathname = location.pathname;

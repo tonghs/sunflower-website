@@ -42,7 +42,7 @@
             <li><a href="/contact">联系我们</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a id="to-top" href="javascript:void(0);">回顶部</a></li>
+            <li><a class="to-top" href="javascript:void(0);">回顶部</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -51,6 +51,11 @@
     <!-- Main component for a primary marketing message or call to action -->
     <div id="body">
         ${next.body()}
+    </div>
+    <div id="float-banner">
+        <img src="http://open.weixin.qq.com/qr/code/?username=${WEB_INFO.weixin}"/>
+        <p>扫描关注<br>一块投吧</p>
+        <p class="float-banner-item"><a href="javascript:void(0);" class="to-top">↑ TOP</a></p>
     </div>
     <div id="footer">
         <div class="container">
