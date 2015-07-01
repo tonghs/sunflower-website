@@ -1,91 +1,61 @@
 <%!
     from config import APP
 %>
-<!DOCTYPE html>
-<html lang="zh-cn">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="向日葵传媒">
-        <link href="${STATIC_HOST}/css/_lib/bootstrap/bootstrap.min.css" rel="stylesheet">
-        <link href="${STATIC_HOST}/css/base.css" rel="stylesheet">
-        <link href="${STATIC_HOST}/css/_lib/poshytip/tip-twitter/tip-twitter.css" rel="stylesheet">
-        <%block name="css">
-        </%block>
-        <title>
-            <%block name="title">
-                <%block name="title_"></%block> | ${APP}
-            </%block>
-        </title>
-    </head>
-    <body>
-    <div name="#top" id="top"></div>
+<%inherit file="_god.html" />
+<div name="#top" id="top"></div>
 
-        <!-- Static navbar -->
-    <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">${APP}</a>
+<!-- Static navbar -->
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">${APP}</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/">首页</a></li>
+        <li><a href="/reg">报名通道</a></li>
+        <li><a href="/about">关于我们</a></li>
+        <li><a href="/contact">联系我们</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="to-top" href="javascript:void(0);">回顶部</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+<!-- Main component for a primary marketing message or call to action -->
+<div id="body">
+    ${next.body()}
+</div>
+<div id="float-banner">
+    <img src="http://open.weixin.qq.com/qr/code/?username=${WEB_INFO.weixin}"/>
+    <p>扫描关注<br>一块投吧</p>
+    <p class="float-banner-item"><a href="javascript:void(0);" class="to-top">↑ TOP</a></p>
+</div>
+<div id="footer">
+    <div class="container">
+        <div id="footer-logo" style="background-image: url(${WEB_INFO.logo}?imageMogr2/thumbnail/x120)">&nbsp;</div>
+        <div id="footer-content">
+            <p>向日葵传媒有限公司</p>
+            <p>${WEB_INFO.location}</p>
+            <p>${WEB_INFO.phone}&nbsp;&nbsp;${WEB_INFO.email}</p>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="/">首页</a></li>
-            <li><a href="/reg">报名通道</a></li>
-            <li><a href="/about">关于我们</a></li>
-            <li><a href="/contact">联系我们</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a class="to-top" href="javascript:void(0);">回顶部</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-    <!-- Main component for a primary marketing message or call to action -->
-    <div id="body">
-        ${next.body()}
-    </div>
-    <div id="float-banner">
-        <img src="http://open.weixin.qq.com/qr/code/?username=${WEB_INFO.weixin}"/>
-        <p>扫描关注<br>一块投吧</p>
-        <p class="float-banner-item"><a href="javascript:void(0);" class="to-top">↑ TOP</a></p>
-    </div>
-    <div id="footer">
-        <div class="container">
-            <div id="footer-logo" style="background-image: url(${WEB_INFO.logo}?imageMogr2/thumbnail/x120)">&nbsp;</div>
-            <div id="footer-content">
-                <p>向日葵传媒有限公司</p>
-                <p>${WEB_INFO.location}</p>
-                <p>${WEB_INFO.phone}&nbsp;&nbsp;${WEB_INFO.email}</p>
+        <div id="footer-sns">
+            <div>
+                <img src="http://open.weixin.qq.com/qr/code/?username=${WEB_INFO.weixin}" style="display: none;"/>
+                <a id="weixin" href="javascript: void(0);" title="<img src='http://open.weixin.qq.com/qr/code/?username=${WEB_INFO.weixin}' width='180'/>">&nbsp;</a>
             </div>
-            <div id="footer-sns">
-                <div>
-                    <img src="http://open.weixin.qq.com/qr/code/?username=${WEB_INFO.weixin}" style="display: none;"/>
-                    <a id="weixin" href="javascript: void(0);" title="<img src='http://open.weixin.qq.com/qr/code/?username=${WEB_INFO.weixin}' width='180'/>">&nbsp;</a>
-                </div>
-                <div>
-                    <a id="weibo" href="${WEB_INFO.weibo}" target="_blank">&nbsp;</a>
-                </div>
+            <div>
+                <a id="weibo" href="${WEB_INFO.weibo}" target="_blank">&nbsp;</a>
             </div>
         </div>
-
     </div>
 
-    <script src="${STATIC_HOST}/js/_lib/jquery/jquery-2.1.4.min.js"></script>
-    <script src="${STATIC_HOST}/js/_lib/bootstrap/bootstrap.min.js"></script>
-    <script src="${STATIC_HOST}/js/_lib/poshytip/jquery.poshytip.min.js"></script>
-    <script src="${STATIC_HOST}/js/base.js"></script>
-    <script src="${STATIC_HOST}/js/_lib/angularjs/angular.min.js"></script>
-    <script src="${STATIC_HOST}/js/_lib/angularjs/angular-sanitize.js"></script>
-    <%block name="js">
-    </%block>
-    </body>
-</html>
-
+</div>

@@ -42,6 +42,22 @@ window.def_view = (module, ctrl, fun)->
     return app
 
 
+$(".nav>li").removeClass('active')
+$(".nav>li").each ->
+    self = $(this)
+    if self.children("a").attr('href') == pathname
+        self.addClass('active')
+
+$('.table-expandable>tbody>tr>td>a.open').click ->
+    obj = $(this).parent('td').parent('tr').next()
+    if obj.attr('class') and obj.attr('class').indexOf('collapse') >= 0
+        if obj.css('display') == 'none'
+            obj.slideDown()
+        else
+            obj.slideUp(0)
+
+
+
 $.postJSON = (url, data, callback) ->
     $.ajax(
         url: url,
@@ -60,4 +76,19 @@ $.deal_str = (str)->
     str = str.replace(/\n/g, "</p><p>")
 
     return "<p>#{str}</p>"
+
+$.alert =->
+    dialog = BootstrapDialog.show({
+        title: '提示',
+        message: '保存成功'
+        buttons: [{
+            label: '关闭',
+            action: (dialogItself)->
+                dialogItself.close()
+        }]
+    })
+    
+    setTimeout(->
+        dialog.close()
+    , 2000)
 

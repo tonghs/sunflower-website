@@ -1,87 +1,53 @@
 <%!
     from config import APP
 %>
-<!DOCTYPE html>
-<html lang="zh-cn">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link href="${STATIC_HOST}/css/_lib/bootstrap/bootstrap.min.css" rel="stylesheet">
-        <link href="${STATIC_HOST}/css/base.css" rel="stylesheet">
-        <link href="${STATIC_HOST}/css/admin/base.css" rel="stylesheet">
-        <link href="${STATIC_HOST}/css/_lib/poshytip/tip-twitter/tip-twitter.css" rel="stylesheet">
-
-        <%block name="css">
-        </%block>
-        <title>
-            <%block name="title">
-                <%block name="title_"></%block> | ${APP} 后台
-            </%block>
-        </title>
-    </head>
-
-    <body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/admin/index">${APP}后台管理</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <span id="user_info">${current_user.user_name}</span>
-                    </li>
-                    ## <li><a href="/admin/index">主页</a></li>
-                    ## <li><a href="/admin/settings">基本设置</a></li>
-                    <li><a href="/admin/logout">退出</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+<%inherit file="../_god.html" />
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-3 col-md-2 sidebar">
-                <ul class="nav nav-sidebar">
-                    <li><a href="/admin/index">主页</a></li>
-                    <li><a href="/admin/settings">基本设置</a></li>
-                    <li><a href="/admin/partner">合作伙伴</a></li>
-                    <li><a href="/admin/administrators">管理员</a></li>
-                </ul>
-                <ul class="nav nav-sidebar">
-                    <li><a href="/admin/startups">报名列表</a></li>
-                    <li><a href="/admin/startups_analysis">报名统计</a></li>
-                    <li><a href="/admin/startups_finalist">已入选项目</a></li>
-                </ul>
-                <ul class="nav nav-sidebar">
-                    <li><a href="/" target="_blank">预览网站</a></li>
-                    <li><a href="/admin/logout">退出</a></li>
-                </ul>
-            </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/admin/index">${APP}后台管理</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <span id="user_info">${current_user.user_name}</span>
+                </li>
+                ## <li><a href="/admin/index">主页</a></li>
+                ## <li><a href="/admin/settings">基本设置</a></li>
+                <li><a href="/admin/logout">退出</a></li>
+            </ul>
         </div>
     </div>
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-        ${next.body()}
-    </div>
+</nav>
 
-    <script src="${STATIC_HOST}/js/_lib/jquery/jquery-2.1.4.min.js"></script>
-    <script src="${STATIC_HOST}/js/_lib/bootstrap/bootstrap.min.js"></script>
-    <script src="${STATIC_HOST}/js/_lib/poshytip/jquery.poshytip.min.js"></script>
-    <script src="${STATIC_HOST}/js/base.js"></script>
-    <script src="${STATIC_HOST}/js/admin/base.js"></script>
-    <script src="${STATIC_HOST}/js/_lib/angularjs/angular.min.js"></script>
-    <script src="${STATIC_HOST}/js/_lib/angularjs/angular-sanitize.js"></script>
-    <%block name="js">
-    </%block>
-    </body>
-</html>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li><a href="/admin/index">主页</a></li>
+                <li><a href="/admin/settings">基本设置</a></li>
+                <li><a href="/admin/partner">合作伙伴</a></li>
+                <li><a href="/admin/administrators">管理员</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="/admin/startups">报名列表</a></li>
+                <li><a href="/admin/startups_analysis">报名统计</a></li>
+                <li><a href="/admin/startups_finalist">已入选项目</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="/" target="_blank">预览网站</a></li>
+                <li><a href="/admin/logout">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    ${next.body()}
+</div>
 
