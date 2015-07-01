@@ -109,5 +109,8 @@ body {
   color: #9d9d9d;
   display: block;
   line-height: 50px;
-  margin-left: 50px;
+}
+
+tr.collapse{
+    display: none;
 }

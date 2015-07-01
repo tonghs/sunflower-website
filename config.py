@@ -6,6 +6,7 @@ DEBUG = True
 PORT = 8080
 
 APP = '向日葵传媒'
+SLOGAN = '不辜负每一个梦想'
 
 HOST = 'http://sunflower.tonghs.com'
 STATIC_HOST = 'http://static.tonghs.com'

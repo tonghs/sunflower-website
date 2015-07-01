@@ -3,14 +3,14 @@ $.fn.extend(
         scroll_top = $(window).scrollTop()
         self = $(this)
         ratio = parseFloat(self.data('parallax-background-ratio'))
-        self.css('background-position', "0 #{scroll_top * ratio}px")
+        self.css('background-position', "center #{scroll_top * ratio}px")
 )
 
 $('#to-top').click ->
-    $("html,body").animate({scrollTop: $("#top").offset().top}, 500)
+    $("html,body").animate({scrollTop: $("#top").offset().top - 60}, 500)
 
 $(window).scroll ->
-    $('#home').parallax()
+    # $('#home').parallax()
     scroll_top = $(window).scrollTop()
 
     if scroll_top > 0
@@ -33,7 +33,13 @@ $("#navbar>ul>li").each ->
         self.addClass('active')
 
 window.def_view = (module, ctrl, fun)->
-    angular.module(module, []).controller ctrl, fun
+    app = angular.module(module, ["ngSanitize"]).controller ctrl, fun
+
+    app.filter('deal_str', ->
+        return $.deal_str
+    )
+
+    return app
 
 
 $.postJSON = (url, data, callback) ->
@@ -43,4 +49,15 @@ $.postJSON = (url, data, callback) ->
         type: 'post',
         success: callback
     )
+
+$.deal_str = (str)->
+    r = new RegExp('>', 'g')
+    str = str.replace(r, '&gt;')
+
+    r = new RegExp('<', 'g')
+    str = str.replace(r, '&lt;')
+   
+    str = str.replace(/\n/g, "</p><p>")
+
+    return "<p>#{str}</p>"
 

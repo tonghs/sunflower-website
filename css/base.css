@@ -1,7 +1,25 @@
-@font-face { font-family:noto; src:url(http://tonghs-cdn-static.qiniudn.com/NotoSansHans-Light.otf);}
+@font-face { 
+    font-family:noto;
+    src:url(http://tonghs-cdn-static.qiniudn.com/NotoSansHans-Thin.otf);
+}
+
+@font-face {
+    font-family:'PingHei';
+    font-style:normal;
+    font-weight:200;
+    src:local('☺︎'), url("http://www.apple.com/wss/fonts/PingHei/v1/PingHei-light.woff") format("woff"), url("http://www.apple.com/wss/fonts/PingHei/v1/PingHei-light.ttf") format("truetype");
+    /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
+}
+
+@font-face {
+    font-family:'PingHei 200';
+    src:url("http://www.apple.com/wss/fonts/PingHei/v1/PingHei-light.eot");
+    /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
+}
+
 
 *{
-    font-family: noto, Helvetica, 'Microsoft Yahei Light', Arial ;
+    font-family: 'PiengHei', 'PingHei 200', noto, "Helvetica Neue","Helvetica","Arial","Verdana","sans-serif", 'Microsoft Yahei Light';
 }
 
 html, body{
@@ -14,6 +32,10 @@ html, body{
     height: auto !important;
     height: 100%;
     padding-bottom: 89px;
+}
+
+#to-top{
+    opacity: 0;
 }
 
 .main{
@@ -58,6 +80,7 @@ a{
 }
 
 a:hover{
+        text-decoration: none;
         transition: all 0.3s ease-out;
    -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
 -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
@@ -79,7 +102,6 @@ a:hover{
 #footer #footer-logo{
     width: 60px;
     height: 60px;
-    background-image: url(https://dn-sunflower-media.qbox.me/img/logo-white.png?imageMogr2/thumbnail/x120);
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.8;
@@ -111,22 +133,22 @@ a:hover{
     margin-left: 10px;
 }
 #footer #footer-sns a#weixin{
-    background-image: url(https://dn-sunflower-media.qbox.me/img/wechat_L@2x.png?imageMogr2/thumbnail/x80);
+    background-image: url(https://7xk1xj.com1.z0.glb.clouddn.com/img/wechat_L@2x.png?imageMogr2/thumbnail/x80);
 }
 #footer #footer-sns a#weixin:hover{
-    background-image: url(https://dn-sunflower-media.qbox.me/img/wechat_F@2x.png?imageMogr2/thumbnail/x80);
+    background-image: url(https://7xk1xj.com1.z0.glb.clouddn.com/img/wechat_F@2x.png?imageMogr2/thumbnail/x80);
 }
 
 #footer #footer-sns a#weibo{
-    background-image: url(https://dn-sunflower-media.qbox.me/img/sina_weibo_L@2x.png?imageMogr2/thumbnail/x80);
+    background-image: url(https://7xk1xj.com1.z0.glb.clouddn.com/img/sina_weibo_L@2x.png?imageMogr2/thumbnail/x80);
 }
 #footer #footer-sns a#weibo:hover{
-    background-image: url(https://dn-sunflower-media.qbox.me/img/sina_weibo_F@2x.png?imageMogr2/thumbnail/x80);
+    background-image: url(https://7xk1xj.com1.z0.glb.clouddn.com/img/sina_weibo_F@2x.png?imageMogr2/thumbnail/x80);
 }
 
 #footer #footer-sns a#renren{
-    background-image: url(https://dn-sunflower-media.qbox.me/img/renren_L@2x.png?imageMogr2/thumbnail/x80);
+    background-image: url(https://7xk1xj.com1.z0.glb.clouddn.com/img/renren_L@2x.png?imageMogr2/thumbnail/x80);
 }
 #footer #footer-sns a#renren:hover{
-    background-image: url(https://dn-sunflower-media.qbox.me/img/renren_F@2x.png?imageMogr2/thumbnail/x80);
+    background-image: url(https://7xk1xj.com1.z0.glb.clouddn.com/img/renren_F@2x.png?imageMogr2/thumbnail/x80);
 }

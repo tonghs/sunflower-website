@@ -14,9 +14,9 @@
 <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 <div class="container main">
     <h2>联系我们</h2>
-    <div class="item" id="phone">010-53670611</div>
-    <div class="item" id="mail">sunflower@xrkmedia.com</div>
-    <div class="item" id="location">北京市朝阳区阜安西路望京soho塔2-B座-1802</div>
+    <div class="item" id="phone">${WEB_INFO.phone}</div>
+    <div class="item" id="mail"><a href="mailto:${WEB_INFO.email}">${WEB_INFO.email}</a></div>
+    <div class="item" id="location">${WEB_INFO.location}</div>
     <!--百度地图容器-->
     <div style="width:100%;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
 </div>
