@@ -16,6 +16,7 @@ class WebInfo(Doc):
         location = basestring,
 
         weixin = basestring,
+        program_weixin = basestring,
         weibo = basestring,
 
         logo = basestring,
