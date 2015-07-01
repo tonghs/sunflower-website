@@ -6,23 +6,23 @@ $.fn.extend(
         self.css('background-position', "center #{scroll_top * ratio}px")
 )
 
-$('#to-top').click ->
+$('.to-top').click ->
     $("html,body").animate({scrollTop: $("#top").offset().top - 60}, 500)
 
 $(window).scroll ->
     # $('#home').parallax()
-    scroll_top = $(window).scrollTop()
+    # scroll_top = $(window).scrollTop()
 
-    if scroll_top > 0
-        $('#to-top').css('opacity', 1)
-    else
-        $('#to-top').css('opacity', '0')
+    # if scroll_top > 0
+    #     $('.to-top').css('opacity', 1)
+    # else
+    #     $('.to-top').css('opacity', '0')
 
-    $("#footer-sns #weixin").poshytip({
-        className: 'tip-twitter',
-        alignTo: 'target',
-        alignX: 'center',
-    })
+$("#footer-sns #weixin").poshytip({
+    className: 'tip-twitter',
+    alignTo: 'target',
+    alignX: 'center',
+})
 
 
 pathname = location.pathname

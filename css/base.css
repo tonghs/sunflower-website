@@ -3,6 +3,11 @@
     src:url(http://tonghs-cdn-static.qiniudn.com/NotoSansHans-Thin.otf);
 }
 
+@font-face { 
+    font-family:noto-light;
+    src:url(http://tonghs-cdn-static.qiniudn.com/NotoSansHans-Light.otf);
+}
+
 @font-face {
     font-family:'PingHei';
     font-style:normal;
@@ -34,7 +39,7 @@ html, body{
     padding-bottom: 89px;
 }
 
-#to-top{
+.to-top{
     opacity: 0;
 }
 
@@ -85,6 +90,9 @@ a:hover{
    -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
 -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
      -o-transition: all 0.3s ease-out;
+}
+a:focus{
+    text-decoration: none;
 }
 
 #footer{
@@ -151,4 +159,33 @@ a:hover{
 }
 #footer #footer-sns a#renren:hover{
     background-image: url(https://7xk1xj.com1.z0.glb.clouddn.com/img/renren_F@2x.png?imageMogr2/thumbnail/x80);
+}
+
+#float-banner{
+    width: 100px;
+    position: fixed;
+    top: 200px;
+    right: -1px;
+    font-family: 'PiengHei', 'PingHei 200', noto-light, "Helvetica Neue","Helvetica","Arial","Verdana","sans-serif", 'Microsoft Yahei Light';
+    background-color: #fff;
+    border: solid 1px #eee;
+    border-radius: 3px;
+    text-align: center;
+    padding: 5px 0 0;
+}
+#float-banner p{
+    font-size: 12px;
+    text-align: center;
+}
+#float-banner p.float-banner-item{
+    border-top: solid 1px #eee;
+    padding-top: 10px;
+}
+#float-banner p a{
+    color:#000;
+    opacity: 1;
+}
+#float-banner img{
+    margin: auto;
+    width: 100px
 }
