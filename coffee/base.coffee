@@ -10,7 +10,7 @@ $('.to-top').click ->
     $("html,body").animate({scrollTop: $("#top").offset().top - 60}, 500)
 
 $(window).scroll ->
-    # $('#home').parallax()
+    $('#home').parallax()
     # scroll_top = $(window).scrollTop()
 
     # if scroll_top > 0
