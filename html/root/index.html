@@ -3,7 +3,7 @@ from config import APP, SLOGAN
 %>
 <%inherit file="../_base.html" />
 <%block name="title">
-${APP}
+${APP} | ${SLOGAN}
 </%block>
 <%block name="css">
     <link href="${STATIC_HOST}/css/index.css" rel="stylesheet">
@@ -66,6 +66,42 @@ ${APP}
 </div>
 
 <div class="jumbotron even-home" id="news">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 t-align-c">
+                <div class="item">
+                    <h2>最新消息</h2>
+                    <p class="content">
+                        如果你是一个80、90后创业者
+
+                        如果你有很多创意
+
+                        但是却遇到了各种问题，那么...
+
+                        来吧！
+
+                        加入向日葵种子基金
+
+                        实现人生梦想！
+                    </p>
+                </div>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4 t-align-c">
+                <div class="img-item">
+                    <div class="img" style="background-image: url(http://hello.themakers.cn/wp-content/uploads/2014/06/blog-1-420x315.jpg)" title="中国首档原创大型电视众筹节目《创客星球》第一财经震撼上线！">
+                        <div class="img-title">dkdkkdkdk</div>
+                    </div>
+                </div>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4 t-align-c">
+                <div class="img-item">
+                    <div class="img" style="background-image: url(http://hello.themakers.cn/wp-content/uploads/2014/06/blog-2-420x315.jpg)" title="中国首档原创大型电视众筹节目《创客星球》第一财经震撼上线！">
+                        <div class="img-title">dkdkkdkdk</div>
+                    </div>
+                </div>
+            </div><!-- /.col-lg-4 -->
+        </div>
+    </div>
 </div>
 <div class="jumbotron odd-home" id="partner">
     <div class="container">
@@ -83,6 +119,10 @@ ${APP}
                 <img src="http://angelcrunch.qiniudn.com/logo_wb_red.png">
             </div>
         </div>
+        <div id="slogan">
+            ${SLOGAN}
+        </div>
+
     </div>
 </div>
 <%block name="js">

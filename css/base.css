@@ -140,9 +140,6 @@ a:focus{
     margin-right: 30px;
 }
 
-#footer #footer-content{
-    padding-left: 30px;
-}
 
 #footer #footer-content a{
     color: rgba(255, 255, 255, 0.8); 
@@ -153,11 +150,6 @@ a:focus{
 #footer p{
     font-size: 13px;
     line-height: 13px;
-}
-
-#footer #footer-sns {
-    float: right;
-    margin-top: 10px;
 }
 
 #footer #footer-sns a{
