@@ -6,31 +6,97 @@
     <link href="${STATIC_HOST}/css/reg.css" rel="stylesheet">
 </%block>
 <div class="container main" ng-app="RegApp">
+    <h2 class="t-align-c">一块投吧报名通道</h2>
     <form ng-controller="RegCtrl">
-        <h2 class="t-align-c">一块投报名通道</h2>
-        <div class="form-group">
-            <label for="name">联系人姓名</label>
-            <input type="text" ng-model="o.name" class="form-control" id="name" name="name" placeholder="联系人姓名">
-        </div>
-        <div class="form-group">
-            <label for="name">项目名称</label>
-            <input type="text" ng-model="o.startup_name" class="form-control" id="startup_name" name="startup_name" placeholder="项目名称">
-        </div>
-        <div class="form-group">
-            <label for="name">电话</label>
-            <input type="phone" class="form-control" ng-model="o.phone" id="phone" name="phone" placeholder="电话">
-        </div>
-        <div class="form-group">
-            <label for="name">邮箱</label>
-            <input type="text" class="form-control" ng-model="o.email" id="email" name="email" placeholder="邮箱">
-        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">创始人简介</h3>
+            </div>
+            <div class="panel-body">
+                <table>
+                    <tr>
+                        <td><label for="name">姓名: </label></td>
+                        <td><input type="text" class="form-control " id="name" name="name" ng-model="o.name"  placeholder="姓名"></td>
 
-        <div class="form-group">
-            <label for="name">项目介绍</label>
-            <textarea class="form-control" rows="3" id="desc" ng-model="o.desc" name="desc"></textarea>
+                        <td><label for="name">性别: </label></td>
+                        <td>
+                            <label class="radio-inline f-left">
+                                <input type="radio" ng-model="o.sex" name="sex" id="male" value="1"> 男
+                            </label>
+                            <label class="radio-inline f-left">
+                                <input type="radio" ng-model="o.sex" name="sex" id="female" value="2"> 女 
+                            </label>
+                        </td>
+                        <td><label for="age">年龄: </label></td>
+                        <td><input type="text" class="form-control " id="age" name="age" ng-model="o.age"  placeholder="年龄"></td>
+                        <td><label for="blood">血型: </label></td>
+                        <td>
+                            <select ng-model="o.blood" class="form-control">
+                                <option value="O">O</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="AB">AB</option>
+                            </select>
+                        </td>
+                        <td><label for="tall">身高: </label></td>
+                        <td><input type="text" class="form-control " id="tall" name="tall" ng-model="o.tall"  placeholder="身高/cm"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="weight">体重: </label></td>
+                        <td><input type="text" class="form-control " id="weight" name="weight" ng-model="o.weight"  placeholder="体重/kg"></td>
+                        <td><label for="nation">民族: </label></td>
+                        <td><input type="text" class="form-control" id="nation" name="nation" ng-model="o.nation"  placeholder="民族"></td>
+                        <td><label for="birthday">出生日期: </label></td>
+                        <td><input type="text" class="form-control" id="birthday" name="birthday" ng-model="o.birthday"  placeholder="出生日期"></td>
+                        <td><label for="marry">婚否: </label></td>
+                        <td>
+                            <label class="radio-inline f-left">
+                                <input type="radio" ng-model="o.marry" name="marry" id="marry" value="0"> 未婚
+                            </label>
+                            <label class="radio-inline f-left">
+                                <input type="radio" ng-model="o.marry" name="marry" id="marry" value="1"> 已婚
+                            </label>
+                        </td>
+                        <td><label for="id">身份证: </label></td>
+                        <td><input type="text" class="form-control " id="id" name="id" ng-model="o.id"  placeholder="身份证号"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">手机: </label></td>
+                        <td><input type="text" class="form-control " id="phone" name="phone" ng-model="o.phone"  placeholder="手机"></td>
+                        <td><label for="email">Email: </label></td>
+                        <td><input type="text" class="form-control " email="email" name="email" ng-model="o.email"  placeholder="身份证号"></td>
+                        <td><label for="localtion">籍贯: </label></td>
+                        <td colspan="5"><input type="text" class="form-control " location="location" name="location" ng-model="o.location"  placeholder="身份证号"></td>
+                    </tr>
+                </table>
+            </div>
         </div>
-        <button type="button" ng-click="submit()" class="btn btn-default">Submit</button>
     </form>
+    ##<form ng-controller="RegCtrl">
+    ##    <h2 class="t-align-c">一块投报名通道</h2>
+    ##    <div class="form-group">
+    ##        <label for="name">联系人姓名</label>
+    ##        <input type="text" ng-model="o.name" class="form-control" id="name" name="name" placeholder="联系人姓名">
+    ##    </div>
+    ##    <div class="form-group">
+    ##        <label for="name">项目名称</label>
+    ##        <input type="text" ng-model="o.startup_name" class="form-control" id="startup_name" name="startup_name" placeholder="项目名称">
+    ##    </div>
+    ##    <div class="form-group">
+    ##        <label for="name">电话</label>
+    ##        <input type="phone" class="form-control" ng-model="o.phone" id="phone" name="phone" placeholder="电话">
+    ##    </div>
+    ##    <div class="form-group">
+    ##        <label for="name">邮箱</label>
+    ##        <input type="text" class="form-control" ng-model="o.email" id="email" name="email" placeholder="邮箱">
+    ##    </div>
+
+    ##    <div class="form-group">
+    ##        <label for="name">项目介绍</label>
+    ##        <textarea class="form-control" rows="3" id="desc" ng-model="o.desc" name="desc"></textarea>
+    ##    </div>
+    ##    <button type="button" ng-click="submit()" class="btn btn-default">Submit</button>
+    ##</form>
 </div>
 <%block name="js">
     <script src="${STATIC_HOST}/js/reg.js"></script>

@@ -39,6 +39,11 @@ window.def_view = (module, ctrl, fun)->
         return $.deal_str
     )
 
+    # angular js debug method
+    window.V = ()->
+        return angular.element($("[ng-controller=#{ctrl}]")).scope()
+
+
     return app
 
 

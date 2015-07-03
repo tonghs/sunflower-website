@@ -84,6 +84,15 @@ body{
     text-align: right;
 }
 
+.f-right{
+    float: right;
+}
+
+.f-left{
+    float: left;
+}
+
+
 .clear{
     clear: both;
 }
