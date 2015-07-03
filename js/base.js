@@ -18,9 +18,7 @@
     }, 500);
   });
 
-  $(window).scroll(function() {
-    return $('#home').parallax();
-  });
+  $(window).scroll(function() {});
 
   $("#footer-sns #weixin").poshytip({
     className: 'tip-twitter',

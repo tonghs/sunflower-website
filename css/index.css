@@ -5,6 +5,7 @@
     background-position: center;
     color: #fff;
     height: 500px;
+    padding: 35px 0;
 }
 
 #home-flower{
@@ -20,6 +21,7 @@
 
 #home #program-desc{
     font-size: 24px;
+    color: #a0f3ff;
 }
 
 .odd-home{
@@ -36,12 +38,17 @@
     min-height: 300px;
 }
 
-#second-item .container p{
-    letter-spacing: 15px;
+#second-item .container p, #fund .container p{
+    margin: 0;
 }
 
-#second-item .container{
-    padding-left: 200px;
+#second-item .container h2, #fund .container h2{
+    font-size: 40px;
+    margin-top: 0;
+}
+#second-item .container hr, #fund .container hr{
+    width: 100px;
+    border-top: solid 1px #eee;
 }
 
 #third-item{
@@ -60,17 +67,24 @@
 #third-item .item p{
     font-size: 100px;
     line-height: 200px;
+    color: #fff;
+}
+
+#third-item #comingsoon-en{
+    color: #fff;
+    letter-spacing: 20px;
+    font-size: 30px;
 }
 
 #third-item .item{
     width: 200px;
     height: 200px;
-    background-color: #fff;
     border-radius: 5px;
     margin: auto;
     opacity: 0.8;
 }
 
+/*
 #fund .container{
     background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/sunflower.gif);
     background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/sunflower.jpg?imageMogr2/thumbnail/x440);
@@ -79,6 +93,7 @@
     background-size: auto 220px;
     padding-left: 445px;
 }
+*/
 
 #news{
     background-color: #eee;
@@ -120,7 +135,7 @@
     display: block;
 }
 #btn-reg-container{
-    margin-top: 330px;
+    margin-top: 360px;
 }
 
 #btn-reg{
@@ -132,8 +147,24 @@
     border-radius: 3px;
 }
 
+#btn-join-container{
+    padding-top: 30px;
+}
+
 #btn-reg:hover{
     background: rgba(255,255,255,0.3);
+}
+#btn-join{
+    color: #000;
+    background: transparent;
+    border: solid 1px #000;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+#btn-join:hover{
+    background: rgba(200,200,200,0.1);
 }
 
 #partner{
