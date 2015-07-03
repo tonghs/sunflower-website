@@ -1,5 +1,5 @@
 <%!
-    from config import APP
+    from config import APP, SLOGAN
 %>
 <!DOCTYPE html>
 <html lang="zh-cn">
@@ -18,7 +18,7 @@
         </%block>
         <title>
             <%block name="title">
-                <%block name="title_"></%block> | ${APP} 后台
+            <%block name="title_"></%block> | ${APP} | ${SLOGAN}
             </%block>
         </title>
     </head>

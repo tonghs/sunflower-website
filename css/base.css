@@ -37,6 +37,7 @@ html, body{
     height: auto !important;
     height: 100%;
     padding-bottom: 89px;
+    margin-top: 30px;
 }
 
 .to-top{
@@ -54,6 +55,12 @@ html, body{
 .t-align-c{
     text-align: center;
 }
+.t-align-l{
+    text-align: left;
+}
+.t-align-r{
+    text-align: right;
+}
 
 .clear{
     clear: both;
@@ -70,6 +77,24 @@ html, body{
     position: fixed;
     width: 100%;
     top: 0;
+}
+.web .navbar .navbar-brand{
+    line-height: 50px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 45px;
+    padding-left: 55px;
+    font-size: 21px;
+}
+
+.web .navbar ul li a{
+    line-height: 50px;
+    height: 80px;
+    font-size: 18px;
+}
+.web .navbar .navbar-toggle{
+    height: 61px;
 }
 .jumbotron{
     margin-bottom: 0px;
@@ -104,7 +129,6 @@ a:focus{
 
 
 #footer .container div{
-    float: left;
 }
 
 #footer #footer-logo{
@@ -116,19 +140,16 @@ a:focus{
     margin-right: 30px;
 }
 
-#footer #footer-content{
-    padding-left: 30px;
-    border-left: solid 1px rgba(255, 255, 255, 0.8);
-}
 
+#footer #footer-content a{
+    color: rgba(255, 255, 255, 0.8); 
+}
+#footer #footer-content a:hover{
+    color: rgba(255, 255, 255, 1); 
+}
 #footer p{
     font-size: 13px;
     line-height: 13px;
-}
-
-#footer #footer-sns {
-    float: right;
-    margin-top: 10px;
 }
 
 #footer #footer-sns a{
