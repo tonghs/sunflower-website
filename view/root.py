@@ -28,3 +28,8 @@ class about(BaseHandler):
 class contact(BaseHandler):
     def get(self):
         self.render()
+
+@route('/joinus')
+class joinus(BaseHandler):
+    def get(self):
+        self.render()
