@@ -39,13 +39,32 @@
       major: '',
       degree: "" + CONST.ENUM.DEGREE.DIPLOMA
     };
+    o.team = [
+      {
+        name: 'test',
+        title: 'CTO',
+        desc: '描述描述描述',
+        story: '话说当年盘古开天辟地之时（省略万字），有个荷兰小伙叫做李纳斯创造出了Linux,blabla…然后就有了tmux。'
+      }, {
+        name: 'test',
+        title: 'CTO',
+        desc: '描述描述描述',
+        story: '前些天经朋友介绍认识了一个Linux利器，有了它，就能在Linux机器上为所欲为了，哦不，是更有效率的工作了。这个利器就是传说中的tmux，什么？没听说过，那且容我慢慢道来。'
+      }
+    ];
+    o.team_ = {
+      name: '',
+      title: '',
+      desc: '',
+      story: ''
+    };
     $scope.o = o;
     $scope.submit = function() {
       return $.postJSON('/j/reg', $scope.o, function(o) {
         return window.location.href = '/reg_success';
       });
     };
-    return $scope.edu_add = function() {
+    $scope.edu_add = function() {
       o.edu.push(jQuery.extend(true, {}, o.edu_));
       return o.edu_ = {
         start_date: '',
@@ -53,6 +72,15 @@
         school: '',
         major: '',
         degree: "" + CONST.ENUM.DEGREE.DIPLOMA
+      };
+    };
+    return $scope.team_add = function() {
+      o.team.push(jQuery.extend(true, {}, o.team_));
+      return o.team_ = {
+        name: '',
+        title: '',
+        desc: '',
+        story: ''
       };
     };
   });
