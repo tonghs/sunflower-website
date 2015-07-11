@@ -4,14 +4,13 @@
 
 from mako.template import Template
 from mako.lookup import TemplateLookup
-import sys
 import _env
 
-print sys.path
 
-mylookup = TemplateLookup(directories=['coffee'], output_encoding='utf-8')
+lookup = TemplateLookup(directories=['coffee'], output_encoding='utf-8')
 
-mytemplate = mylookup.get_template("const.coffee.mako")
-print(mytemplate.render())
+template = lookup.get_template("const.coffee.mako")
 
+with open('coffee/const.coffee', 'w+') as f:
+    f.write(template.render())
 

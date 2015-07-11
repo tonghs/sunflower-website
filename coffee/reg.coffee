@@ -31,4 +31,7 @@ def_view(
 
 $('#birthday').datetimepicker({
     format: 'yyyy-mm-dd'
+    autoclose: true
+    language: 'zh-CN'
+    minView: 2
 })

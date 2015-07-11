@@ -28,7 +28,10 @@
   });
 
   $('#birthday').datetimepicker({
-    format: 'yyyy-mm-dd'
+    format: 'yyyy-mm-dd',
+    autoclose: true,
+    language: 'zh-CN',
+    minView: 2
   });
 
 }).call(this);
