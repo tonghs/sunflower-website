@@ -84,6 +84,15 @@ body{
     text-align: right;
 }
 
+.f-right{
+    float: right;
+}
+
+.f-left{
+    float: left;
+}
+
+
 .clear{
     clear: both;
 }
@@ -200,17 +209,17 @@ a:focus{
     margin-left: 10px;
 }
 #footer #footer-sns a#weixin{
-    background-image: url(https://7xk1xj.com1.z0.glb.clouddn.com/img/wechat_L@2x.png?imageMogr2/thumbnail/x80);
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/wechat_L@2x.png?imageMogr2/thumbnail/x80);
 }
 #footer #footer-sns a#weixin:hover{
-    background-image: url(https://7xk1xj.com1.z0.glb.clouddn.com/img/wechat_F@2x.png?imageMogr2/thumbnail/x80);
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/wechat_F@2x.png?imageMogr2/thumbnail/x80);
 }
 
 #footer #footer-sns a#weibo{
-    background-image: url(https://7xk1xj.com1.z0.glb.clouddn.com/img/sina_weibo_L@2x.png?imageMogr2/thumbnail/x80);
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/sina_weibo_L@2x.png?imageMogr2/thumbnail/x80);
 }
 #footer #footer-sns a#weibo:hover{
-    background-image: url(https://7xk1xj.com1.z0.glb.clouddn.com/img/sina_weibo_F@2x.png?imageMogr2/thumbnail/x80);
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/sina_weibo_F@2x.png?imageMogr2/thumbnail/x80);
 }
 
 

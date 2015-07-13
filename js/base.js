@@ -44,6 +44,9 @@
     app.filter('deal_str', function() {
       return $.deal_str;
     });
+    window.V = function() {
+      return angular.element($("[ng-controller=" + ctrl + "]")).scope();
+    };
     return app;
   };
 
