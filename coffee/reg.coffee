@@ -57,6 +57,36 @@ def_view(
             story: ''
         }
 
+        o.startup = {
+            name: '天使汇'
+            amount: 500
+            stock: '10%'
+            purpose: '团队建设'
+            desc: '天使汇有什么好描述的'
+            target: '创业者和投资人'
+            point: '创业难啊'
+            use: '去网站自己看，angelcrunch.com'
+            advantage: '啥也不说了都在酒里'
+            pattern: '赚钱，赚钱'
+            sale: '营销模式'
+            finance: '过亿了'
+            risk: '没什么风险'
+            plan: '没什么鬼话'
+            equity: '没什么结构'
+            sign: 1
+        }
+
+        o.about_me = {
+            interest: '看书'
+            idol: '不知道'
+            dream: '吃饭不花钱'
+            desc: 'NB到不行'
+            motto: '还好还好'
+            competition: '挑战杯'
+            expectance: '请安啊'
+            exp: '那是相当的惨啊'
+        }
+
         $scope.o = o
 
         $scope.submit =->
