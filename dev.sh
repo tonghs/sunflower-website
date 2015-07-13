@@ -1,6 +1,6 @@
 while true
 do
-    python ./app.py
+    python /home/tonghs/sunflower-website/app.py
 
     for i in $(seq 5)
     do
