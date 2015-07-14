@@ -24,4 +24,19 @@
 .container form .panel table td label.f-left{
     float: left;
 }
+.container table td #ico{
+    background-image: url(https://cdn4.iconfinder.com/data/icons/linecon/512/photo-256.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px;
+    width: 218px;
+    height: 218px;
+    margin: auto;
+    box-shadow: 0 0 1px #000;
+    opacity: 0.3;
+}
 
+.container table td #ico_up{
+    border-radius: 0;
+    width: 100%;
+}
