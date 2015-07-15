@@ -3,6 +3,7 @@ def_view(
     'RegCtrl',
     ($scope) ->
         o = {}
+        o.ico = 0
         o.name = 'test'
         o.sex = '1'
         o.age = 20
@@ -87,6 +88,7 @@ def_view(
             exp: '那是相当的惨啊'
         }
 
+        $scope.percent = 0
         $scope.o = o
 
         $scope.submit =->
@@ -119,4 +121,19 @@ $('#birthday, #edu_start_date, #edu_end_date').datetimepicker({
     autoclose: true
     language: 'zh-CN'
     minView: 2
+})
+
+$('#ico_up').uploader({
+    uploading: (percent)->
+        V().percent = percent
+        V().$apply()
+        if percent == 100
+            percent = 0
+    uploaded: (id, url)->
+        V().o.ico = id
+        V().$apply()
+        $('#ico').css('background-image', "url(#{url}?imageView2/1/w/218/h/218)")
+        
+    error: (up, err, errTip)->
+        console.log errTip
 })

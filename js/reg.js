@@ -4,6 +4,7 @@
   def_view('RegApp', 'RegCtrl', function($scope) {
     var o;
     o = {};
+    o.ico = 0;
     o.name = 'test';
     o.sex = '1';
     o.age = 20;
@@ -86,6 +87,7 @@
       expectance: '请安啊',
       exp: '那是相当的惨啊'
     };
+    $scope.percent = 0;
     $scope.o = o;
     $scope.submit = function() {
       return $.postJSON('/j/reg', $scope.o, function(o) {
@@ -118,6 +120,24 @@
     autoclose: true,
     language: 'zh-CN',
     minView: 2
+  });
+
+  $('#ico_up').uploader({
+    uploading: function(percent) {
+      V().percent = percent;
+      V().$apply();
+      if (percent === 100) {
+        return percent = 0;
+      }
+    },
+    uploaded: function(id, url) {
+      V().o.ico = id;
+      V().$apply();
+      return $('#ico').css('background-image', "url(" + url + "?imageView2/1/w/218/h/218)");
+    },
+    error: function(up, err, errTip) {
+      return console.log(errTip);
+    }
   });
 
 }).call(this);

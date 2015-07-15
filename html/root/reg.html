@@ -42,7 +42,19 @@
                         </td>
                         <td width="230" rowspan="5">
                             <div id="ico">&nbsp;</div>
-                            <button type="button" id="ico_up" class="btn btn-info">点此上传头像</button>
+                            <button type="button" id="ico_up" class="btn btn-info">
+                                <span ng_if="percent!=0 && percent!=100">
+                                    上传中 {{percent}}% ...
+                                </span>
+                                <span ng_if="percent==0 || percent==100">
+                                    <span ng_if="o.ico == 0">
+                                        上传照片
+                                    </span>
+                                    <span ng_if="o.ico != 0">
+                                        重新上传照片
+                                    </span>
+                                </span>
+                            </button>
                         </td>
                     </tr>
                     <tr>
@@ -281,5 +293,8 @@
     </form>
 </div>
 <%block name="js">
+    <script src="${STATIC_HOST}/js/_lib/plupload.js"></script>
+    <script src="${STATIC_HOST}/js/_lib/qiniu.js"></script>
+    <script src="${STATIC_HOST}/js/misc/uploader.js"></script>
     <script src="${STATIC_HOST}/js/reg.js"></script>
 </%block>
