@@ -18,6 +18,7 @@
     o.phone = '189388477367';
     o.email = 'test@test.com';
     o.location = '北京市朝阳区西坝河北里201号院2号楼8单元502';
+    o.exp = '工作经历';
     o.edu = [
       {
         start_date: '1987-10-06',
