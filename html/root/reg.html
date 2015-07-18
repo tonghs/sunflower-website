@@ -96,6 +96,7 @@
                     </tr>
                 </table>
             </div>
+            <button class="save">保存该部分</button>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -140,6 +141,7 @@
                     </div>
                 </div>
             </div>
+            <button class="save">保存该部分</button>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -150,7 +152,7 @@
                     <div class="form-group">
                         <div class="row">
                             <div ng-repeat="team in o.team"class="col-lg-3 t-align-l">
-                                <div>{{team.name}}·{{team.title}}</div>
+                                <div class="team_name"><b>{{team.name}}</b>&nbsp;·&nbsp;{{team.title}}</div>
                                 <div>{{team.desc}}</div>
                                 <div>{{team.story}}</div>
                             </div><!-- /.col-lg-3 -->
@@ -177,6 +179,7 @@
                     </div>
                 </div>
             </div>
+            <button class="save">保存该部分</button>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -254,6 +257,7 @@
                     </label>
                 </div>
             </div>
+            <button class="save">保存该部分</button>
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -289,7 +293,9 @@
                     <textarea class="form-control" id="about_me_exp" name="about_me_exp" ng-model="o.about_me.exp"  placeholder="特殊经历/人生故事"></textarea>
                 </div>
             </div>
+            <button class="save">保存该部分</button>
         </div>
+        <button type="button" class="btn btn-primary">提交申请</button>
     </form>
 </div>
 <%block name="js">

@@ -41,12 +41,12 @@ def_view(
         }
 
         o.team = [{
-            name: 'test'
+            name: '仝华帅'
             title: 'CTO'
             desc: '描述描述描述'
             story: '话说当年盘古开天辟地之时（省略万字），有个荷兰小伙叫做李纳斯创造出了Linux,blabla…然后就有了tmux。'
         }, {
-            name: 'test'
+            name: 'LiLei'
             title: 'CTO'
             desc: '描述描述描述'
             story: '前些天经朋友介绍认识了一个Linux利器，有了它，就能在Linux机器上为所欲为了，哦不，是更有效率的工作了。这个利器就是传说中的tmux，什么？没听说过，那且容我慢慢道来。'
@@ -133,7 +133,7 @@ $('#ico_up').uploader({
     uploaded: (id, url)->
         V().o.ico = id
         V().$apply()
-        $('#ico').css('background-image', "url(#{url}?imageView2/1/w/218/h/218)")
+        $('#ico').css('background-image', "url(#{url}?imageView2/1/w/436/h/436)")
         
     error: (up, err, errTip)->
         console.log errTip

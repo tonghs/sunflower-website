@@ -8,11 +8,11 @@
     o.password = '';
     $scope.o = o;
     return $scope.submit = function() {
-      return $.postJSON('/j/admin/login', $scope.o, function(o) {
+      return $.postJSON('/j/login', $scope.o, function(o) {
         if (o.success) {
-          return window.location.href = '/admin/index';
+          return window.location.href = '/';
         } else {
-          return $.alert_fail(o.msg);
+          return alert(o.msg);
         }
       });
     };

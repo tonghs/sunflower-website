@@ -39,3 +39,29 @@
     border-radius: 0;
     width: 100%;
 }
+
+.team_name{
+    margin-bottom: 10px;
+}
+
+.panel .save{
+    display: none;
+    border: 0;
+    border-top: solid 1px #ddd;
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    background-color: #f5f5f5;
+        transition: all 0.3s ease-out;
+   -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+-webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+     -o-transition: all 0.3s ease-out;
+}
+
+.panel .save:hover{
+    background-color: #ddd;
+        transition: all 0.3s ease-out;
+   -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+-webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+     -o-transition: all 0.3s ease-out;
+}

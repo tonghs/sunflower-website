@@ -3,7 +3,7 @@
 
 from view._base import JsonHandler
 from _route import route
-# from model.reg import Reg
+from model.user import User
 from model.qiniu_ import qiniu_token
 from model.gid_ import gid
 
@@ -18,6 +18,20 @@ from model.gid_ import gid
 @route('/j/upload_token')
 class upload_token(JsonHandler):
     def get(self):
-        # TODO generate key
         key = gid()
         self.finish(qiniu_token(key))
+
+
+@route('/j/login')
+class _(JsonHandler):
+    def post(self):
+        o = self.json
+        user = User.user_login(o.user_name, o.password)
+        if user:
+            self.set_secure_cookie("user", json.dumps(dict(user)))
+        else:
+            self.err.msg = '登录错误'
+
+        self.finish(dict(err=self.err.__dict__))
+
+

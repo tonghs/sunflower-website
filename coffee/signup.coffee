@@ -1,4 +1,3 @@
-
 def_view(
     'LoginApp',
     'LoginCtrl',
@@ -10,10 +9,10 @@ def_view(
         $scope.o = o
 
         $scope.submit =->
-            $.postJSON '/j/admin/login', $scope.o, (o)->
+            $.postJSON '/j/login', $scope.o, (o)->
                 if o.success
-                    window.location.href = '/admin/index'
+                    window.location.href = '/'
                 else
-                    $.alert_fail o.msg
+                    alert o.msg
 
 )
