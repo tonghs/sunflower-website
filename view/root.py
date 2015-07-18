@@ -50,3 +50,9 @@ class signin(BaseHandler):
 class signup(BaseHandler):
     def get(self):
         self.render()
+
+@route('/signout')
+class signup(BaseHandler):
+    def get(self):
+        self.clear_cookie("user")
+        self.redirect("/")

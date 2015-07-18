@@ -8,7 +8,7 @@
     o.password = '';
     $scope.o = o;
     return $scope.submit = function() {
-      return $.postJSON('/j/login', $scope.o, function(o) {
+      return $.postJSON('/j/signin', $scope.o, function(o) {
         return window.location.href = '/';
       });
     };

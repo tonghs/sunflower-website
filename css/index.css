@@ -40,6 +40,7 @@
 
 #second-item .container p, #fund .container p{
     margin: 0;
+    line-height: 35px;
 }
 
 #second-item .container h2, #fund .container h2{

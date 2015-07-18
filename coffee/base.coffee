@@ -9,14 +9,6 @@ $.fn.extend(
 $('.to-top').click ->
     $("html,body").animate({scrollTop: $("#top").offset().top - 100}, 500)
 
-$(window).scroll ->
-    # $('#home').parallax()
-    # scroll_top = $(window).scrollTop()
-
-    # if scroll_top > 0
-    #     $('.to-top').css('opacity', 1)
-    # else
-    #     $('.to-top').css('opacity', '0')
 
 $("#footer-sns #weixin").poshytip({
     className: 'tip-twitter',
@@ -88,7 +80,7 @@ $.deal_str = (str)->
 
     return "<p>#{str}</p>"
 
-$.alert_success = (msg='操作成功')->
+$.alert_success = (msg='操作成功', callback)->
     dialog = BootstrapDialog.show({
         title: '提示',
         type: 'type-success',
@@ -98,6 +90,9 @@ $.alert_success = (msg='操作成功')->
             action: (dialogItself)->
                 dialogItself.close()
         }]
+        onhidden: ->
+            if callback
+                callback()
     })
     
     setTimeout(->
@@ -115,4 +110,7 @@ $.alert_fail = (msg='操作失败')->
             action: (dialogItself)->
                 dialogItself.close()
         }]
+        onhidden: ->
+            if callback
+                callback()
     })

@@ -3,16 +3,15 @@ def_view(
     'LoginCtrl',
     ($scope) ->
         o = {}
+        o.name = ''
         o.user_name = ''
         o.password = ''
 
         $scope.o = o
 
         $scope.submit =->
-            $.postJSON '/j/login', $scope.o, (o)->
-                if o.success
-                    window.location.href = '/'
-                else
-                    alert o.msg
-
+            $.postJSON '/j/signup', $scope.o, (o)->
+                $.alert_success('注册成功', ->
+                    window.location.href = '/signin'
+                )
 )

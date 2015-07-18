@@ -18,8 +18,6 @@
     }, 500);
   });
 
-  $(window).scroll(function() {});
-
   $("#footer-sns #weixin").poshytip({
     className: 'tip-twitter',
     alignTo: 'target',
@@ -100,7 +98,7 @@
     return "<p>" + str + "</p>";
   };
 
-  $.alert_success = function(msg) {
+  $.alert_success = function(msg, callback) {
     var dialog;
     if (msg == null) {
       msg = '操作成功';
@@ -116,7 +114,12 @@
             return dialogItself.close();
           }
         }
-      ]
+      ],
+      onhidden: function() {
+        if (callback) {
+          return callback();
+        }
+      }
     });
     return setTimeout(function() {
       return dialog.close();
@@ -139,7 +142,12 @@
             return dialogItself.close();
           }
         }
-      ]
+      ],
+      onhidden: function() {
+        if (callback) {
+          return callback();
+        }
+      }
     });
   };
 

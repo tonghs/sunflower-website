@@ -9,6 +9,6 @@ def_view(
         $scope.o = o
 
         $scope.submit =->
-            $.postJSON '/j/login', $scope.o, (o)->
+            $.postJSON '/j/signin', $scope.o, (o)->
                 window.location.href = '/'
 )
