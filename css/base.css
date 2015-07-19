@@ -24,7 +24,7 @@
 
 
 *{
-    font-family: 'PiengHei', 'PingHei 200', noto, "Helvetica Neue","Helvetica","Arial","Verdana","sans-serif", 'Microsoft Yahei Light';
+    font-family: 'PiengHei', 'PingHei 200', noto, "Helvetica Neue","Helvetica","Arial","Verdana","sans-serif", 'Microsoft Yahei Light' !important;
 }
 
 html, body{

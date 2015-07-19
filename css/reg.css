@@ -20,6 +20,9 @@
     float: right;
     margin-bottom: 0;
 }
+.container form .panel label{
+    font-weight: normal;
+}
 
 .container form .panel table td label.f-left{
     float: left;
@@ -38,6 +41,10 @@
 .container table td #ico_up{
     border-radius: 0;
     width: 100%;
+}
+
+input[name=edu_start_date], input[name=edu_end_date], input[name=edu_school], input[name=edu_major], select[name=edu_degree]{
+    width: 150px !important;
 }
 
 .team_name{
