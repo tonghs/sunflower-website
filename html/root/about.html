@@ -7,11 +7,13 @@
     <link href="${STATIC_HOST}/css/sub_page.css" rel="stylesheet">
 </%block>
 <div class="container main">
-    <h2>关于我们</h2>
-    <h3>公司简介</h3>
-    ${WEB_INFO.desc}
-    <h3>创始人</h3>
-    <p id="founder" style="background-image: url(${WEB_INFO.founder_img}?imageMogr2/thumbnail/600x);">${WEB_INFO.founder}</p>
+    <h2 class="s-font">关于我们</h2>
+    <h3 class="s-font">公司简介</h3>
+    <div class="s-font">
+        ${WEB_INFO.desc}
+    </div>
+    <h3 class="s-font">创始人</h3>
+    <p id="founder" style="background-image: url(${WEB_INFO.founder_img}?imageMogr2/thumbnail/600x);" class="s-font">${WEB_INFO.founder}</p>
 </div>
 <%block name="js">
     <script src="${STATIC_HOST}/js/about.js"></script>

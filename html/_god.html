@@ -8,12 +8,13 @@
         <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
         <link href="${STATIC_HOST}/css/_lib/bootstrap/bootstrap.min.css" rel="stylesheet">
         <link href="${STATIC_HOST}/css/_lib/bootstrap-dialog.min.css" rel="stylesheet">
         <link href="${STATIC_HOST}/css/base.css" rel="stylesheet">
         <link href="${STATIC_HOST}/css/_lib/poshytip/tip-twitter/tip-twitter.css" rel="stylesheet">
         <link href="${STATIC_HOST}/css/_lib/datepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+        <script type="text/javascript" src="http://www.youziku.com/webfont/FastJS/327797820c2b4afcada2f434e094f9c5.js"></script>
 
         <%block name="css_">
         </%block>
@@ -29,6 +30,11 @@
     <body>
         ${next.body()}
     </body>
+    <script  type="text/javascript">
+    $youziku.load(".s-font", "327797820c2b4afcada2f434e094f9c5", "Source-Han-Light");
+    $youziku.load(".d-font", "327797820c2b4afcada2f434e094f9c5", "Source-Han-Light");
+    $youziku.draw();
+    </script>
     <script src="${STATIC_HOST}/js/_lib/jquery/jquery-2.1.4.min.js"></script>
     <script src="${STATIC_HOST}/js/_lib/bootstrap/bootstrap.min.js"></script>
     <script src="${STATIC_HOST}/js/_lib/bootstrap-dialog.min.js"></script>

@@ -10,29 +10,26 @@
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
+                <span class="sr-only s-font">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/" style="background-image: url(${WEB_INFO.logo}?imageMogr2/thumbnail/x90)">${APP}</a>
+            <a class="navbar-brand s-font" href="/" style="background-image: url(${WEB_INFO.logo}?imageMogr2/thumbnail/x90)">${APP}</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/">首页</a></li>
-                ## <li><a href="/reg">平台介绍</a></li>
-                <li><a href="/reg">报名通道</a></li>
-                <li><a href="/fund">种子基金</a></li>
-                ## <li><a href="/about">关于我们</a></li>
-                ## <li><a href="/contact">联系我们</a></li>
+                <li><a class="s-font" href="/">首页</a></li>
+                <li><a class="s-font" href="/reg">报名通道</a></li>
+                <li><a class="s-font" href="/fund">种子基金</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 % if current_user:
-                    <li><a href="">${current_user.name}</a></li>
-                    <li><a href="/signout">退出</a></li>
+                    <li><a class="s-font" href="">${current_user.name}</a></li>
+                    <li><a class="s-font" href="/signout">退出</a></li>
                 % else:
-                    <li><a href="/signup">注册</a></li>
-                    <li><a href="/signin">登录</a></li>
+                    <li><a class="s-font" href="/signup">注册</a></li>
+                    <li><a class="s-font" href="/signin">登录</a></li>
                 % endif
             </ul>
         </div><!--/.nav-collapse -->
@@ -45,18 +42,16 @@
     </div>
     <div id="float-banner">
         <img src="http://open.weixin.qq.com/qr/code/?username=${WEB_INFO.program_weixin}"/>
-        <p>扫描关注<br>一块投吧</p>
-        ## <img src="http://open.weixin.qq.com/qr/code/?username=${WEB_INFO.weixin}"/>
-        ## <p>扫描关注<br>向日葵传媒</p>
-        <p class="float-banner-item to-top">↑ TOP</p>
+        <p class="s-font">扫描关注<br>一块投吧</p>
+        <p class="float-banner-item to-top s-font">↑ TOP</p>
     </div>
     <div id="footer">
         <div class="container">
             <div id="footer-logo" style="background-image: url(${WEB_INFO.logo}?imageMogr2/thumbnail/x120)">&nbsp;</div>
             <div id="footer-content">
-                <p><a href="/about">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/contact">联系我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/joinus">招聘信息</a></p>
-                <p>京ICP备 2015CDDD 号</p>
-                <p>2015 &copy; ${APP}有限责任公司</p>
+                <p><a href="/about" class="s-font">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/contact" class="s-font">联系我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="s-font" href="/joinus">招聘信息</a></p>
+                <p class="s-font">京ICP备 2015CDDD 号</p>
+                <p class="s-font">2015 &copy; ${APP}有限责任公司</p>
             </div>
             <div id="footer-sns">
                 <div>
