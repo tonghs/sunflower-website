@@ -4,6 +4,7 @@
 <%inherit file="../_god.html" />
 <%block name="css_">
     <link href="${STATIC_HOST}/css/admin/base.css" rel="stylesheet">
+    <link href="${STATIC_HOST}/css/_lib/simditor/simditor.css" rel="stylesheet">
 </%block>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
@@ -44,6 +45,10 @@
                 <li><a href="/admin/startups_finalist">已入选项目</a></li>
             </ul>
             <ul class="nav nav-sidebar">
+                <li><a href="/admin/news">新闻管理</a></li>
+                <li><a href="/admin/add_news">添加新闻</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
                 <li><a href="/" target="_blank">预览网站</a></li>
                 <li><a href="/admin/logout">退出</a></li>
             </ul>
@@ -53,7 +58,7 @@
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
     ${next.body()}
 </div>
-<%block name="js">
+<%block name="js_">
     <script src="${STATIC_HOST}/js/admin/base.js"></script>
 </%block>
 
