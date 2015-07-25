@@ -6,6 +6,7 @@ DEBUG = True
 PORT = 8080
 
 APP = '向日葵传媒'
+APP_CN = 'Sunflower Media'
 SLOGAN = '不辜负每一个梦想'
 
 HOST = 'http://c.cc:8080'

@@ -47,10 +47,6 @@ html, body{
     height: 100%;
 }
 
-body{
-    padding-top: 80px;
-}
-
 .web{
     min-height: 100%;
     height: 100%;
@@ -116,22 +112,82 @@ body{
 /***** 重写 bootstrap ******/
 
 .navbar-default{
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0);
+    background-color: none;
+    background-color: transparent;
+    border-color: none;
+    border-width: 0;
 }
+
+.navbar-default .navbar-brand{
+    color: #fff;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
+    color: #aaa;
+}
+
+.navbar-default .navbar-nav>li>a{
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+    color: #aaa;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+    color: #aaa;
+    background-color: rgba(255, 255, 255, 0);
+    background-color: none;
+    background-color: transparent;
+}
+
 .navbar{
     margin-bottom: 0;
-    position: fixed;
     width: 100%;
-    top: 0;
+    position: absolute;
 }
+
+.navbar #nav-login{
+    border: solid 1px #fff;
+    padding: 5px;
+    font-size: 15px;
+    color: #fff;
+    background-color: none;
+    background-color: transparent;
+    background-color: rgba(204, 204, 204, 0);
+        transition: all 0.3s ease-out;
+   -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+-webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+     -o-transition: all 0.3s ease-out;
+}
+
+.navbar-default .navbar-nav>li>a:focus>span#nav-login, .navbar-default .navbar-nav>li>a:hover>span#nav-login{
+    color: #fff;
+    background-color: rgba(204, 204, 204, 0.4);
+        transition: all 0.3s ease-out;
+   -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+-webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+     -o-transition: all 0.3s ease-out;
+}
+
+.navbar #nav-login:hover{
+    color: #fff;
+    background-color: rgba(204, 204, 204, 0.4);
+        transition: all 0.3s ease-out;
+   -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+-webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+     -o-transition: all 0.3s ease-out;
+}
+
 .web .navbar .navbar-brand{
-    line-height: 50px;
+    line-height: 28px;
     height: 80px;
     background-repeat: no-repeat;
     background-position: left center;
-    background-size: 45px;
-    padding-left: 55px;
-    font-size: 21px;
+    background-size: 55px;
+    padding-left: 65px;
+    font-size: 18px;
 }
 
 .web .navbar ul li a{

@@ -1,5 +1,5 @@
 <%!
-    from config import APP
+    from config import APP, APP_CN
 %>
 <%inherit file="_god.html" />
 <div name="#top" id="top"></div>
@@ -15,21 +15,25 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand s-font" href="/" style="background-image: url(${WEB_INFO.logo}?imageMogr2/thumbnail/x90)">${APP}</a>
+            <a class="navbar-brand s-font" href="/" style="background-image: url(${WEB_INFO.logo}?imageMogr2/thumbnail/x110)">${APP_CN}<br>${APP}</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
                 <li><a class="s-font" href="/">首页</a></li>
                 <li><a class="s-font" href="/reg">报名通道</a></li>
                 <li><a class="s-font" href="/fund">种子基金</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
                 % if current_user:
                     <li><a class="s-font" href="">${current_user.name}</a></li>
                     <li><a class="s-font" href="/signout">退出</a></li>
                 % else:
-                    <li><a class="s-font" href="/signup">注册</a></li>
-                    <li><a class="s-font" href="/signin">登录</a></li>
+                    ## <li><a class="s-font" href="/signup">注册</a></li>
+                    <li>
+                        <a class="s-font" href="/signin">
+                            <span id="nav-login">登录/注册</span>
+                        </a>
+                    </li>
                 % endif
             </ul>
         </div><!--/.nav-collapse -->
