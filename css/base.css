@@ -1,7 +1,8 @@
 *{
-    font-family: 'Roboto Condensed', "Helvetica Neue","Helvetica","Arial","Verdana","sans-serif", 'Microsoft Yahei Light';
+    font-family: 'Microsoft Yahei Light',  'Microsoft Yahei', '微软雅黑', "Helvetica Neue","Helvetica","Arial","Verdana","sans-serif",'Roboto Condensed';
 }
 
+/*
 .s-font{
     font-family: initial; 
 }
@@ -9,11 +10,12 @@
 .d-font{
     font-family: initial; 
 }
+*/
 
 html, body{
     font-size: 14px;
     height: 100%;
-    background-color: #f3f4f9;
+    background-color: #f1f4f9;
 }
 
 .web{
@@ -93,16 +95,16 @@ html, body{
         color: #fff;
     }
     .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
-        color: #aaa;
+        color: #ddd;
     }
     .navbar-default .navbar-nav>li>a{
         color: #fff;
     }
     .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
-        color: #aaa;
+        color: #ddd;
     }
     .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
-        color: #aaa;
+        color: #ddd;
         background-color: rgba(255, 255, 255, 0);
         background-color: none;
         background-color: transparent;
