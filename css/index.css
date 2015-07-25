@@ -38,7 +38,7 @@
 .home-item{
    box-shadow: 0 0 1px 1px #ccc;
    background-color: #fff;
-    color: #616161;
+   color: #616161;
 }
 
 .home-item .item-content{
@@ -46,7 +46,6 @@
     background-position: center;
     background-repeat: no-repeat;
     margin: auto;
-    height: 200px;
 }
 
 .home-item .item-title{
@@ -57,15 +56,30 @@
 
 .home-item .item-title .item-title-p{
     font-weight: bold;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .home-item .item-title .item-title-s{
     font-size: 10px;
     display: block;
+    width: 80%;
+    margin: auto;
 }
 
 #news{
     width: 200px;
+    float: right;
+}
+
+#news .item-content{
+    height: 240px;
+}
+
+#startups{
+    width: 400px;
     margin: auto;
+    margin-top: -30px;
+}
+#startups .item-content{
+    height: 300px;
 }
