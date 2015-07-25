@@ -1,35 +1,3 @@
-/*
-@font-face { 
-    font-family:noto;
-    src:url(http://tonghs-cdn-static.qiniudn.com/NotoSansHans-Thin.otf);
-}
-
-@font-face { 
-    font-family:noto-light;
-    src:url(http://tonghs-cdn-static.qiniudn.com/NotoSansHans-Light.otf);
-}
-
-@font-face {
-    font-family:'PingHei';
-    font-style:normal;
-    font-weight:200;
-    src:local('☺︎'), url("http://www.apple.com/wss/fonts/PingHei/v1/PingHei-light.woff") format("woff"), url("http://www.apple.com/wss/fonts/PingHei/v1/PingHei-light.ttf") format("truetype");
-*/
-    /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
-/*
-}
-
-@font-face {
-    font-family:'PingHei 200';
-    src:url("http://www.apple.com/wss/fonts/PingHei/v1/PingHei-light.eot");
-*/
-    /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
-/*
-}
-*/
-
-
-
 *{
     font-family: 'Roboto Condensed', "Helvetica Neue","Helvetica","Arial","Verdana","sans-serif", 'Microsoft Yahei Light';
 }
@@ -45,6 +13,7 @@
 html, body{
     font-size: 14px;
     height: 100%;
+    background-color: #f3f4f9;
 }
 
 .web{
@@ -111,35 +80,33 @@ html, body{
 
 /***** 重写 bootstrap ******/
 
-.navbar-default{
-    background-color: rgba(255, 255, 255, 0);
-    background-color: none;
-    background-color: transparent;
-    border-color: none;
-    border-width: 0;
-}
+@media (min-width: 768px){
+    .navbar-default{
+        background-color: rgba(255, 255, 255, 0);
+        background-color: none;
+        background-color: transparent;
+        border-color: none;
+        border-width: 0;
+    }
 
-.navbar-default .navbar-brand{
-    color: #fff;
-}
-
-.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
-    color: #aaa;
-}
-
-.navbar-default .navbar-nav>li>a{
-    color: #fff;
-}
-
-.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
-    color: #aaa;
-}
-
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
-    color: #aaa;
-    background-color: rgba(255, 255, 255, 0);
-    background-color: none;
-    background-color: transparent;
+    .navbar-default .navbar-brand{
+        color: #fff;
+    }
+    .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
+        color: #aaa;
+    }
+    .navbar-default .navbar-nav>li>a{
+        color: #fff;
+    }
+    .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+        color: #aaa;
+    }
+    .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+        color: #aaa;
+        background-color: rgba(255, 255, 255, 0);
+        background-color: none;
+        background-color: transparent;
+    }
 }
 
 .navbar{
@@ -148,36 +115,36 @@ html, body{
     position: absolute;
 }
 
-.navbar #nav-login{
-    border: solid 1px #fff;
-    padding: 5px;
-    font-size: 15px;
-    color: #fff;
-    background-color: none;
-    background-color: transparent;
-    background-color: rgba(204, 204, 204, 0);
-        transition: all 0.3s ease-out;
-   -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
--webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
-     -o-transition: all 0.3s ease-out;
-}
-
-.navbar-default .navbar-nav>li>a:focus>span#nav-login, .navbar-default .navbar-nav>li>a:hover>span#nav-login{
-    color: #fff;
-    background-color: rgba(204, 204, 204, 0.4);
-        transition: all 0.3s ease-out;
-   -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
--webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
-     -o-transition: all 0.3s ease-out;
-}
-
-.navbar #nav-login:hover{
-    color: #fff;
-    background-color: rgba(204, 204, 204, 0.4);
-        transition: all 0.3s ease-out;
-   -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
--webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
-     -o-transition: all 0.3s ease-out;
+@media (min-width: 768px){
+    .navbar #nav-login{
+        border: solid 1px #fff;
+        padding: 5px;
+        font-size: 15px;
+        color: #fff;
+        background-color: none;
+        background-color: transparent;
+        background-color: rgba(204, 204, 204, 0);
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+    }
+    .navbar-default .navbar-nav>li>a:focus>span#nav-login, .navbar-default .navbar-nav>li>a:hover>span#nav-login{
+        color: #fff;
+        background-color: rgba(204, 204, 204, 0.4);
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+    }
+    .navbar #nav-login:hover{
+        color: #fff;
+        background-color: rgba(204, 204, 204, 0.4);
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+    }
 }
 
 .web .navbar .navbar-brand{
@@ -201,6 +168,7 @@ html, body{
 .jumbotron{
     margin-bottom: 0px;
     padding: 70px 0;
+    background: none;
 }
 /*    min-height: 80px; */
 
@@ -293,32 +261,41 @@ a:focus{
     background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/sina_weibo_F@2x.png?imageMogr2/thumbnail/x80);
 }
 
+@media (max-width: 768px){
+    #float-banner img{
+        display: none;
+        margin: auto;
+        width: 100px
+    }
+}
 
-#float-banner{
-    width: 100px;
-    position: fixed;
-    top: 200px;
-    right: -1px;
-    font-family: 'PiengHei', 'PingHei 200', noto-light, "Helvetica Neue","Helvetica","Arial","Verdana","sans-serif", 'Microsoft Yahei Light';
-    background-color: #fff;
-    border: solid 1px #eee;
-    border-radius: 3px;
-    text-align: center;
-    padding: 5px 0 0;
-}
-#float-banner p{
-    font-size: 12px;
-    text-align: center;
-}
-#float-banner p.float-banner-item{
-    border-top: solid 1px #eee;
-    padding-top: 10px;
-}
-#float-banner p a{
-    color:#000;
-    opacity: 1;
-}
-#float-banner img{
-    margin: auto;
-    width: 100px
+@media (min-width: 768px){
+    #float-banner{
+        width: 100px;
+        position: fixed;
+        top: 200px;
+        right: -1px;
+        font-family: 'PiengHei', 'PingHei 200', noto-light, "Helvetica Neue","Helvetica","Arial","Verdana","sans-serif", 'Microsoft Yahei Light';
+        background-color: #fff;
+        border: solid 1px #eee;
+        border-radius: 3px;
+        text-align: center;
+        padding: 5px 0 0;
+    }
+    #float-banner p{
+        font-size: 12px;
+        text-align: center;
+    }
+    #float-banner p.float-banner-item{
+        border-top: solid 1px #eee;
+        padding-top: 10px;
+    }
+    #float-banner p a{
+        color:#000;
+        opacity: 1;
+    }
+    #float-banner img{
+        margin: auto;
+        width: 100px
+    }
 }
