@@ -39,6 +39,7 @@
    box-shadow: 0 0 1px 1px #ccc;
    background-color: #fff;
    color: #616161;
+   margin-bottom: 30px;
 }
 
 .home-item .item-content{
@@ -67,32 +68,45 @@
 }
 
 #news .item-content{
-    height: 240px;
+    height: 310px;
+}
+
+#startups .item-content{
+    height: 300px;
+}
+
+#fund .item-content{
+    height: 200px;
 }
 
 @media (min-width: 768px){
-    #startups{
-        width: 300px;
-        margin: auto;
-        margin-top: -30px;
-    }
     #news{
+        width: 300px;
+        float: right;
+    }
+    #startups{
+        width: 370px;
+        margin: auto;
+        margin-top: -60px;
+    }
+    #fund{
         width: 200px;
         float: right;
     }
 
 }
 @media (max-width: 768px){
-    #startups{
+    #news{
         width: 300px;
+        margin: auto;
+    }
+    #startups{
+        width: 370px;
         margin: auto;
         margin-top: 0px;
     }
-    #news{
+    #fund{
         width: 200px;
         margin: auto;
     }
-}
-#startups .item-content{
-    height: 200px;
 }
