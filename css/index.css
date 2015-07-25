@@ -1,3 +1,65 @@
+@media (min-width: 768px){
+    .navbar-default{
+        background-color: rgba(255, 255, 255, 0);
+        background-color: none;
+        background-color: transparent;
+        border-color: none;
+        border-width: 0;
+    }
+
+    .navbar-default .navbar-brand{
+        color: #fff;
+    }
+    .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
+        color: #ddd;
+    }
+    .navbar-default .navbar-nav>li>a{
+        color: #fff;
+    }
+    .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+        color: #ddd;
+    }
+    .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+        color: #ddd;
+        background-color: rgba(255, 255, 255, 0);
+        background-color: none;
+        background-color: transparent;
+    }
+    .navbar #nav-login{
+        border: solid 1px #fff;
+        padding: 5px;
+        font-size: 15px;
+        color: #fff;
+        background-color: none;
+        background-color: transparent;
+        background-color: rgba(204, 204, 204, 0);
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+    }
+    .navbar-default .navbar-nav>li>a:focus>span#nav-login, .navbar-default .navbar-nav>li>a:hover>span#nav-login{
+        color: #fff;
+        background-color: rgba(204, 204, 204, 0.4);
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+    }
+    .navbar #nav-login:hover{
+        color: #fff;
+        background-color: rgba(204, 204, 204, 0.4);
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+    }
+}
+
+#body{
+    padding-top: 0;
+}
+
 #home{
     background-color: #000;
     background-size: cover;
