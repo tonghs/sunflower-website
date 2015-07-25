@@ -190,14 +190,39 @@ a:focus{
 }
 
 #footer{
-    background-color: #000;
+    background-color: #272727;
     color: rgba(255, 255, 255, 0.8);
-    padding: 15px 0 5px;
+    padding: 50px 0 40px;
     margin-top: -89px;
 }
 
 
-#footer .container div{
+#footer .container h3{
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+#footer .container p{
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+#footer .container #txt-search{
+    background-color: #000;
+    border: none;
+    width: 310px;
+    padding: 8px;
+    outline: none;
+}
+#footer .container #btn-search{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    width: 40px;
+    margin-left: -2px;
+    outline: none
 }
 
 #footer #footer-logo{
