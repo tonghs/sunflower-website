@@ -134,7 +134,7 @@ a:focus{
 
 #footer{
     background-color: #272727;
-    color: rgba(255, 255, 255, 0.8);
+    color: #737373;
     padding: 50px 0 40px;
     margin-top: -89px;
 }
@@ -150,6 +150,30 @@ a:focus{
     line-height: 25px;
     margin-bottom: 20px;
 }
+
+#footer .container p span{
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    padding-left: 22px;
+}
+
+#footer .container p span a{
+    color: #737373;
+}
+
+#footer .container p span#location{
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/location_128.png?imageMogr2/thumbnail/15x);
+}
+
+#footer .container p span#mail{
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/mail_128.png?imageMogr2/thumbnail/15x);
+}
+
+#footer .container p span#phone{
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/phone_128.png?imageMogr2/thumbnail/10x);
+    background-position-x: 2px;
+}
+
 
 #footer .container #txt-search{
     background-color: #000;
