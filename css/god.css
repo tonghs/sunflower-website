@@ -129,6 +129,7 @@ a:focus{
 
 #footer .container p span#location{
     background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/location_128.png?imageMogr2/thumbnail/15x);
+    padding-left: 21px;
 }
 
 #footer .container p span#mail{
