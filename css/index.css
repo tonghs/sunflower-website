@@ -183,22 +183,35 @@
         margin-top: -80px;
         float: right;
     }
+    #news{
+        width: 390px;
+    }
+    #fund{
+        width: 300px;
+    }
 }
 @media (max-width: 768px){
     #startups{
-        width: 455px;
+        width: 100%;
     }
     #logo{
-        width: 220px;
+        width: 100%;
     }
     #video{
-        width: 650px;
+        width: 100%;
     }
 
     #programs{
         color: #fff;
         font-size: 45px;
         line-height: 85px;
+        width: 100%;
+    }
+    #news{
+        width: 100%;
+    }
+    #fund{
+        width: 100%;
     }
 
 }
@@ -212,9 +225,3 @@ a #startups:hover{
 }
 
 
-#news{
-    width: 390px;
-}
-#fund{
-    width: 300px;
-}

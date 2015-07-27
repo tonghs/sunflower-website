@@ -219,11 +219,9 @@ a:focus{
 }
 
 @media (max-width: 768px){
-    #float-banner img{
+    #float-banner{
         display: none;
-        margin: auto;
-        width: 100px
-    }
+    }   
 }
 
 @media (min-width: 768px){
