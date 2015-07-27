@@ -27,8 +27,7 @@ html, body{
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    padding-bottom: 89px;
-    padding-top: 85px;
+    padding-top: 80px;
 }
 
 .to-top{
@@ -136,7 +135,6 @@ a:focus{
     background-color: #272727;
     color: #737373;
     padding: 50px 0 40px;
-    margin-top: -89px;
 }
 
 

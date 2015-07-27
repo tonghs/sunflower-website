@@ -66,16 +66,7 @@
     background-repeat: no-repeat;
     background-position: center;
     color: #fff;
-    height: 630px;
-}
-
-#home-img-decoration{
-    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/home-decoration.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 155px;
-    margin-top: -150px;
+    height: 750px;
 }
 
 #program-desc{
@@ -160,25 +151,52 @@
     height: 350px;
 }
 
+#logo .item-content{
+    height: 300px;
+    background-size: 220px;
+}
+
+
+#programs{
+    color: #fff;
+    font-size: 45px;
+    line-height: 336px;
+}
+
 @media (min-width: 768px){
     #startups{
-        width: 497px;
-        margin-top: -60px;
+        width: 455px;
+        margin-top: -90px;
 
+    }
+    #logo{
+        width: 220px;
+        margin-top: -60px;
+        float: right;
     }
     #video{
         width: 650px;
-        margin-top: -60px;
-
+        margin-top: -80px;
+        float: right;
     }
 }
 @media (max-width: 768px){
     #startups{
-        width: 497px;
+        width: 455px;
+    }
+    #logo{
+        width: 220px;
     }
     #video{
         width: 650px;
     }
+
+    #programs{
+        color: #fff;
+        font-size: 45px;
+        line-height: 85px;
+    }
+
 }
 
 #news{
@@ -186,10 +204,4 @@
 }
 #fund{
     width: 300px;
-}
-
-#programs{
-    color: #fff;
-    font-size: 45px;
-    line-height: 336px;
 }
