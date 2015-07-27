@@ -213,6 +213,13 @@
     #fund{
         width: 100%;
     }
+    .home-item{
+       box-shadow: 0 0 1px 1px #ccc;
+       background-color: #fff;
+       color: #616161;
+       margin: auto;
+       margin-bottom: 0px;
+    }
 
 }
 
