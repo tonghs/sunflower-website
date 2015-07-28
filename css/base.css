@@ -1,122 +1,22 @@
-@font-face { 
-    font-family:noto;
-    src:url(http://tonghs-cdn-static.qiniudn.com/NotoSansHans-Thin.otf);
-}
-
-@font-face { 
-    font-family:noto-light;
-    src:url(http://tonghs-cdn-static.qiniudn.com/NotoSansHans-Light.otf);
-}
-
-@font-face {
-    font-family:'PingHei';
-    font-style:normal;
-    font-weight:200;
-    src:local('☺︎'), url("http://www.apple.com/wss/fonts/PingHei/v1/PingHei-light.woff") format("woff"), url("http://www.apple.com/wss/fonts/PingHei/v1/PingHei-light.ttf") format("truetype");
-    /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
-}
-
-@font-face {
-    font-family:'PingHei 200';
-    src:url("http://www.apple.com/wss/fonts/PingHei/v1/PingHei-light.eot");
-    /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
-}
-
-
-*{
-    font-family: 'PiengHei', 'PingHei 200', noto, "Helvetica Neue","Helvetica","Arial","Verdana","sans-serif", 'Microsoft Yahei Light';
-}
-
-html, body{
-    font-size: 14px;
-    height: 100%;
-}
-
-body{
-    padding-top: 80px;
-}
-
-.web{
-    min-height: 100%;
-    height: 100%;
-}
-
-#body{
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    padding-bottom: 89px;
-}
-
-.to-top{
-    background-color: #fff;
-    cursor: pointer;
-    margin: 0;
-    padding-bottom: 10px;
-        transition: all 0.3s ease-out;
-   -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
--webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
-     -o-transition: all 0.3s ease-out;
-}
-
-.to-top:hover{
-    background-color: #eee;
-        transition: all 0.3s ease-out;
-   -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
--webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
-     -o-transition: all 0.3s ease-out;
-}
-.main{
-    margin-bottom: 40px;
-}
-
-.margin-auto{
-    margin: auto;
-}
-
-.t-align-c{
-    text-align: center;
-}
-.t-align-l{
-    text-align: left;
-}
-.t-align-r{
-    text-align: right;
-}
-
-.f-right{
-    float: right;
-}
-
-.f-left{
-    float: left;
-}
-
-
-.clear{
-    clear: both;
-}
 
 
 /***** 重写 bootstrap ******/
 
-.navbar-default{
-    background-color: rgba(255, 255, 255, 0.9);
-}
 .navbar{
     margin-bottom: 0;
-    position: fixed;
     width: 100%;
-    top: 0;
+    position: absolute;
+    background-color: #fff;
 }
+
 .web .navbar .navbar-brand{
-    line-height: 50px;
+    line-height: 28px;
     height: 80px;
     background-repeat: no-repeat;
     background-position: left center;
-    background-size: 45px;
-    padding-left: 55px;
-    font-size: 21px;
+    background-size: 55px;
+    padding-left: 65px;
+    font-size: 18px;
 }
 
 .web .navbar ul li a{
@@ -129,125 +29,5 @@ body{
 }
 .jumbotron{
     margin-bottom: 0px;
-    padding: 70px 0;
-}
-/*    min-height: 80px; */
-
-a{
-        transition: all 0.3s ease-out;
-   -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
--webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
-     -o-transition: all 0.3s ease-out;
-}
-
-a:hover{
-        text-decoration: none;
-        transition: all 0.3s ease-out;
-   -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
--webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
-     -o-transition: all 0.3s ease-out;
-}
-a:focus{
-    text-decoration: none;
-}
-
-#footer{
-    background-color: #000;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 15px 0 5px;
-    margin-top: -89px;
-}
-
-
-#footer .container div{
-}
-
-#footer #footer-logo{
-    width: 60px;
-    height: 60px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 0.8;
-    margin-right: 30px;
-    float: left;
-}
-
-#footer #footer-content{
-    padding-left: 30px;
-    border-left: solid 1px rgba(255, 255, 255, 0.8);
-    float: left;
-}
-
-
-#footer #footer-content a{
-    color: rgba(255, 255, 255, 0.8); 
-}
-#footer #footer-content a:hover{
-    color: rgba(255, 255, 255, 1); 
-}
-#footer p{
-    font-size: 13px;
-    line-height: 13px;
-}
-
-#footer #footer-sns{
-    float: right;
-    padding-top: 10px;
-}
-
-#footer #footer-sns div{
-    float: right;
-}
-
-#footer #footer-sns a{
-    display: block;
-    height: 40px;
-    width: 40px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-decoration: none;
-    margin-left: 10px;
-}
-#footer #footer-sns a#weixin{
-    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/wechat_L@2x.png?imageMogr2/thumbnail/x80);
-}
-#footer #footer-sns a#weixin:hover{
-    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/wechat_F@2x.png?imageMogr2/thumbnail/x80);
-}
-
-#footer #footer-sns a#weibo{
-    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/sina_weibo_L@2x.png?imageMogr2/thumbnail/x80);
-}
-#footer #footer-sns a#weibo:hover{
-    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/sina_weibo_F@2x.png?imageMogr2/thumbnail/x80);
-}
-
-
-#float-banner{
-    width: 100px;
-    position: fixed;
-    top: 200px;
-    right: -1px;
-    font-family: 'PiengHei', 'PingHei 200', noto-light, "Helvetica Neue","Helvetica","Arial","Verdana","sans-serif", 'Microsoft Yahei Light';
-    background-color: #fff;
-    border: solid 1px #eee;
-    border-radius: 3px;
-    text-align: center;
-    padding: 5px 0 0;
-}
-#float-banner p{
-    font-size: 12px;
-    text-align: center;
-}
-#float-banner p.float-banner-item{
-    border-top: solid 1px #eee;
-    padding-top: 10px;
-}
-#float-banner p a{
-    color:#000;
-    opacity: 1;
-}
-#float-banner img{
-    margin: auto;
-    width: 100px
+    background: none;
 }

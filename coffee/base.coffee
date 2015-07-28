@@ -7,16 +7,8 @@ $.fn.extend(
 )
 
 $('.to-top').click ->
-    $("html,body").animate({scrollTop: $("#top").offset().top - 60}, 500)
+    $("html,body").animate({scrollTop: $("#top").offset().top - 100}, 500)
 
-$(window).scroll ->
-    # $('#home').parallax()
-    # scroll_top = $(window).scrollTop()
-
-    # if scroll_top > 0
-    #     $('.to-top').css('opacity', 1)
-    # else
-    #     $('.to-top').css('opacity', '0')
 
 $("#footer-sns #weixin").poshytip({
     className: 'tip-twitter',
@@ -65,10 +57,16 @@ $('.table-expandable>tbody>tr>td>a.open').click ->
 
 $.postJSON = (url, data, callback) ->
     $.ajax(
-        url: url,
-        data: data,
-        type: 'post',
-        success: callback
+        url: url
+        data: data
+        type: 'post'
+        success: (o)->
+            if o.err
+                $.alert_fail o.err.msg
+            else
+                callback o
+        error: (o)->
+            $.alert_fail()
     )
 
 $.deal_str = (str)->
@@ -82,18 +80,37 @@ $.deal_str = (str)->
 
     return "<p>#{str}</p>"
 
-$.alert =->
+$.alert_success = (msg='操作成功', callback)->
     dialog = BootstrapDialog.show({
         title: '提示',
-        message: '保存成功'
+        type: 'type-success',
+        message: msg
         buttons: [{
             label: '关闭',
             action: (dialogItself)->
                 dialogItself.close()
         }]
+        onhidden: ->
+            if callback
+                callback()
     })
     
     setTimeout(->
         dialog.close()
     , 2000)
 
+
+$.alert_fail = (msg='操作失败')->
+    dialog = BootstrapDialog.show({
+        title: '提示',
+        type: 'type-danger',
+        message: msg
+        buttons: [{
+            label: '关闭',
+            action: (dialogItself)->
+                dialogItself.close()
+        }]
+        onhidden: ->
+            if callback
+                callback()
+    })

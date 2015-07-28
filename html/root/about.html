@@ -1,17 +1,26 @@
 <%inherit file="../_base.html" />
 <%block name="title_">
-关于我们
+一块投吧 介绍
 </%block>
 <%block name="css">
     <link href="${STATIC_HOST}/css/about.css" rel="stylesheet">
     <link href="${STATIC_HOST}/css/sub_page.css" rel="stylesheet">
 </%block>
-<div class="container main">
-    <h2>关于我们</h2>
-    <h3>公司简介</h3>
-    ${WEB_INFO.desc}
-    <h3>创始人</h3>
-    <p id="founder" style="background-image: url(${WEB_INFO.founder_img}?imageMogr2/thumbnail/600x);">${WEB_INFO.founder}</p>
+<div class="jumbotron t-align-c" id="home" style="" data-parallax-background-ratio="0.5">
+    <div class="container t-align-c">
+    </div>
+</div>
+<div class="container">
+    <h3 class="t-align-c">《一块投吧》节目介绍</h2>
+
+    <hr>
+
+    <p>是全国首档全民参与的大型投创类电视节目，我们的口号是“和最会赚钱的人一起投资”，打造一档明星领投，全民跟投的真赚钱TV Show。</p>
+
+    <p>节目把侧重点放在投资这一和百姓有更多契合点的选题上，现场投资人进行背对背博弈，对于优质项目展开奋力争夺；节目不但还原投资本身，同时也戏剧化放大投资眼光。另外，节目最大化强调了观众的地位，现场观众有着超越所有嘉宾的“上帝视角”，他们才是节目的方向盘！在电视机前的观众也可用节目的线上端与节目进行多屏互动，动一动手指让电视节目不再单调而且可以获得投资所得！</p>
+    <div class="t-align-c">
+        <a href="/reg" class="btn btn-primary btn-lg" class="s-font">我要上节目</a>
+    </div>
 </div>
 <%block name="js">
     <script src="${STATIC_HOST}/js/about.js"></script>

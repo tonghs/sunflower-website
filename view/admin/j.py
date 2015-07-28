@@ -16,7 +16,7 @@ class _(JsonHandler):
         o = self.json
         admin = Admin.admin_login(o.user_name, o.password)
         if admin:
-            self.set_secure_cookie("user", json.dumps(dict(admin)))
+            self.set_secure_cookie("admin", json.dumps(dict(admin)))
             msg = ''
             success = True 
         else:

@@ -149,7 +149,7 @@ class Doc(Document):
             skip+=limit
 
 
-# redis = _redis.StrictRedis(**REDIS_CONFIG)
+redis = _redis.StrictRedis(**REDIS_CONFIG)
 
 
 if __name__ == "__main__":

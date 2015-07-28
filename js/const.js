@@ -21,4 +21,6 @@
     'PHD': 40
   };
 
+  CONST.QINIU_HOST = 'http://7xk1xj.com1.z0.glb.clouddn.com';
+
 }).call(this);

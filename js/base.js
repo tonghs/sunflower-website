@@ -14,11 +14,9 @@
 
   $('.to-top').click(function() {
     return $("html,body").animate({
-      scrollTop: $("#top").offset().top - 60
+      scrollTop: $("#top").offset().top - 100
     }, 500);
   });
-
-  $(window).scroll(function() {});
 
   $("#footer-sns #weixin").poshytip({
     className: 'tip-twitter',
@@ -77,7 +75,16 @@
       url: url,
       data: data,
       type: 'post',
-      success: callback
+      success: function(o) {
+        if (o.err) {
+          return $.alert_fail(o.err.msg);
+        } else {
+          return callback(o);
+        }
+      },
+      error: function(o) {
+        return $.alert_fail();
+      }
     });
   };
 
@@ -91,11 +98,15 @@
     return "<p>" + str + "</p>";
   };
 
-  $.alert = function() {
+  $.alert_success = function(msg, callback) {
     var dialog;
+    if (msg == null) {
+      msg = '操作成功';
+    }
     dialog = BootstrapDialog.show({
       title: '提示',
-      message: '保存成功',
+      type: 'type-success',
+      message: msg,
       buttons: [
         {
           label: '关闭',
@@ -103,11 +114,41 @@
             return dialogItself.close();
           }
         }
-      ]
+      ],
+      onhidden: function() {
+        if (callback) {
+          return callback();
+        }
+      }
     });
     return setTimeout(function() {
       return dialog.close();
     }, 2000);
+  };
+
+  $.alert_fail = function(msg) {
+    var dialog;
+    if (msg == null) {
+      msg = '操作失败';
+    }
+    return dialog = BootstrapDialog.show({
+      title: '提示',
+      type: 'type-danger',
+      message: msg,
+      buttons: [
+        {
+          label: '关闭',
+          action: function(dialogItself) {
+            return dialogItself.close();
+          }
+        }
+      ],
+      onhidden: function() {
+        if (callback) {
+          return callback();
+        }
+      }
+    });
   };
 
 }).call(this);

@@ -20,8 +20,55 @@
     float: right;
     margin-bottom: 0;
 }
+.container form .panel label{
+    font-weight: normal;
+}
 
 .container form .panel table td label.f-left{
     float: left;
 }
+.container table td #ico{
+    background-image: url(https://cdn4.iconfinder.com/data/icons/linecon/512/photo-256.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 218px;
+    height: 218px;
+    margin: auto;
+    box-shadow: 0 0 1px #000;
+}
 
+.container table td #ico_up{
+    border-radius: 0;
+    width: 100%;
+}
+
+input[name=edu_start_date], input[name=edu_end_date], input[name=edu_school], input[name=edu_major], select[name=edu_degree]{
+    width: 150px !important;
+}
+
+.team_name{
+    margin-bottom: 10px;
+}
+
+.panel .save{
+    display: none;
+    border: 0;
+    border-top: solid 1px #ddd;
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    background-color: #f5f5f5;
+        transition: all 0.3s ease-out;
+   -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+-webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+     -o-transition: all 0.3s ease-out;
+}
+
+.panel .save:hover{
+    background-color: #ddd;
+        transition: all 0.3s ease-out;
+   -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+-webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+     -o-transition: all 0.3s ease-out;
+}

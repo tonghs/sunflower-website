@@ -20,3 +20,17 @@ class JsOb(object):
 
     def __repr__(self):
         return str(self.__dict__)
+
+    def __len__(self):
+        return self.__dict__.__len__()
+
+    def to_dict(self):
+        if self.__dict__:
+            return self.__dict__
+        else:
+            return None
+
+if __name__ == '__main__':
+    jsob = JsOb()
+
+    print jsob.to_dict()

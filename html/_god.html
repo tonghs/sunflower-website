@@ -5,14 +5,17 @@
 <html lang="zh-cn">
     <head>
         <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link href='http://fonts.useso.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
         <link href="${STATIC_HOST}/css/_lib/bootstrap/bootstrap.min.css" rel="stylesheet">
         <link href="${STATIC_HOST}/css/_lib/bootstrap-dialog.min.css" rel="stylesheet">
-        <link href="${STATIC_HOST}/css/base.css" rel="stylesheet">
         <link href="${STATIC_HOST}/css/_lib/poshytip/tip-twitter/tip-twitter.css" rel="stylesheet">
         <link href="${STATIC_HOST}/css/_lib/datepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+        ## <script type="text/javascript" src="http://www.youziku.com/webfont/FastJS/2b740e45cd8f4234baeab437ea141793.js"></script>
+
+        <link href="${STATIC_HOST}/css/god.css" rel="stylesheet">
 
         <%block name="css_">
         </%block>
@@ -28,16 +31,24 @@
     <body>
         ${next.body()}
     </body>
+    <script  type="text/javascript">
+    //$youziku.load(".s-font", "327797820c2b4afcada2f434e094f9c5", "Source-Han-Light");
+    //$youziku.load(".d-font", "327797820c2b4afcada2f434e094f9c5", "Source-Han-Light");
+    //$youziku.load("#id1", "2b740e45cd8f4234baeab437ea141793", "Microsoft_YaHei");
+    //$youziku.draw();
+    </script>
+    <script src="${STATIC_HOST}/js/const.js"></script>
     <script src="${STATIC_HOST}/js/_lib/jquery/jquery-2.1.4.min.js"></script>
     <script src="${STATIC_HOST}/js/_lib/bootstrap/bootstrap.min.js"></script>
     <script src="${STATIC_HOST}/js/_lib/bootstrap-dialog.min.js"></script>
     <script src="${STATIC_HOST}/js/_lib/poshytip/jquery.poshytip.min.js"></script>
     <script src="${STATIC_HOST}/js/_lib/datepicker/bootstrap-datetimepicker.min.js"></script>
     <script src="${STATIC_HOST}/js/_lib/datepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
-    <script src="${STATIC_HOST}/js/base.js"></script>
-    <script src="${STATIC_HOST}/js/const.js"></script>
     <script src="${STATIC_HOST}/js/_lib/angularjs/angular.min.js"></script>
     <script src="${STATIC_HOST}/js/_lib/angularjs/angular-sanitize.js"></script>
+    <script src="${STATIC_HOST}/js/base.js"></script>
+    <%block name="js_">
+    </%block>
     <%block name="js">
     </%block>
 </html>
