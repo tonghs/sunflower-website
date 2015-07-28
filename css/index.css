@@ -63,7 +63,8 @@
 #home-container{
     overflow: hidden;
     height: 750px;
-
+    position: absolute;
+    width: 100%;
 }
 
 #home{
@@ -118,9 +119,20 @@
     background-color: #E5E5F9;
 }
 
+#light{
+        width: 258px;
+    margin: auto;
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/light.png?imageMogr/thumbnail/300x);
+    background-size: 300px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 285px;
+
+}
+
 .home-item{
    box-shadow: 0 0 1px 1px #ccc;
-   background-color: #fff;
+   background-color: #e4e4e4;
    color: #616161;
    margin: auto;
    margin-bottom: 30px;
@@ -170,7 +182,7 @@
 }
 
 #logo .item-content{
-    height: 300px;
+    height: 416px;
     background-size: 220px;
 }
 
@@ -192,28 +204,34 @@
 
     }
     #logo{
-        width: 220px;
-        margin-top: -60px;
+        width: 100%;
+        margin-top: -62px;
         float: right;
     }
-    #video{
-        width: 650px;
+    #logo img{
+        width: 225px;
+        margin: auto;
         margin-top: -80px;
+    }
+    #video{
+        width: 725px;
+        margin-top: -130px;
         float: right;
     }
     #news{
-        width: 390px;
+        width: 365px;
     }
     #fund{
         width: 300px;
     }
 }
+
 @media (max-width: 768px){
     #startups{
         width: 100%;
     }
     #logo{
-        width: 100%;
+        display: none;
     }
     #video{
         width: 100%;
