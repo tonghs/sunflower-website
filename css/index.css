@@ -60,6 +60,12 @@
     padding-top: 0;
 }
 
+#home-container{
+    overflow: hidden;
+    height: 750px;
+
+}
+
 #home{
     background-color: #000;
     background-size: cover;
@@ -67,6 +73,18 @@
     background-position: center;
     color: #fff;
     height: 750px;
+}
+
+#home-decoration{
+    position: absolute;
+    height: 1382px;
+    border-style: solid;
+    border-color: #f1f4f9;
+    border-width: 258px 43px;
+    width: 5000px;
+    border-radius: 50%;
+    top: -403px;
+    right: -774px;
 }
 
 #program-desc{
