@@ -1,8 +1,10 @@
 # sunflower-website
 sunflower-website
 
-* 依赖见 misc/reqirement.txt
+* 技术栈为 python tornado mako coffeescript jquery angularjs nginx supervisor docker qiniu
+* 依赖见 misc/requirement.txt
 * 部署在阿里云的 docker 中
+* 使用 supervisor 和 nginx 部署
 
 docker 运行环境的 Dockerfile 见：https://github.com/tonghuashuai/docker_learn/blob/master/tonghs-dev/Dockerfile
 
