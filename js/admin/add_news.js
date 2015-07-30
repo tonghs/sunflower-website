@@ -13,6 +13,8 @@
     $scope.o = o;
     $scope.percent = 0;
     return $scope.submit = function() {
+      V().o.content = $('#content').val();
+      V().$apply();
       return $.postJSON('/j/admin/add_news', $scope.o, function(o) {
         return $.alert_success('保存成功');
       });

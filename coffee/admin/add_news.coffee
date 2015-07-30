@@ -12,6 +12,8 @@ def_view(
         $scope.percent = 0
 
         $scope.submit =->
+            V().o.content = $('#content').val()
+            V().$apply()
             $.postJSON '/j/admin/add_news', $scope.o, (o)->
                 $.alert_success '保存成功'
 )
