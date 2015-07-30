@@ -67,6 +67,13 @@
     width: 100%;
 }
 
+#home-content{
+    position: absolute;
+    z-index: 1;
+    margin: auto;
+    width: 100%;
+}
+
 #home{
     background-color: #000;
     background-size: cover;
@@ -120,19 +127,19 @@
 }
 
 #light{
-        width: 258px;
+    width: 258px;
     margin: auto;
     background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/light.png?imageMogr/thumbnail/300x);
     background-size: 300px auto;
     background-repeat: no-repeat;
-    background-position: center;
-    height: 285px;
+    background-position: -33px center;
+    height: 227px;
 
 }
 
 .home-item{
    box-shadow: 0 0 1px 1px #ccc;
-   background-color: #e4e4e4;
+   background-color: #fff;
    color: #616161;
    margin: auto;
    margin-bottom: 30px;
@@ -153,6 +160,7 @@
 
 .home-item .item-title .item-title-p{
     font-size: 20px;
+    color: #000;
 }
 
 .home-item .item-title .item-title-s{
@@ -204,6 +212,7 @@
 
     }
     #logo{
+        background-color: #e4e4e4;
         width: 100%;
         margin-top: -62px;
         float: right;
@@ -231,6 +240,7 @@
         width: 100%;
     }
     #logo{
+        background-color: #e4e4e4;
         display: none;
     }
     #video{
@@ -259,7 +269,7 @@
 
 }
 
-a #startups:hover{
+a .item-title:hover, a .item-content:hover{
     opacity: 0.8;
             transition: all 0.3s ease-out;
        -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
