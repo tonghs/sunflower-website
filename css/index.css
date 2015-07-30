@@ -67,9 +67,14 @@
     width: 100%;
 }
 
-#home{
+#home-content{
     position: absolute;
+    z-index: 1;
+    margin: auto;
     width: 100%;
+}
+
+#home{
     background-color: #000;
     background-size: cover;
     background-repeat: no-repeat;
@@ -122,13 +127,13 @@
 }
 
 #light{
-        width: 258px;
+    width: 258px;
     margin: auto;
     background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/light.png?imageMogr/thumbnail/300x);
     background-size: 300px auto;
     background-repeat: no-repeat;
-    background-position: center;
-    height: 285px;
+    background-position: -33px center;
+    height: 227px;
 
 }
 
