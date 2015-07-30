@@ -283,4 +283,15 @@ a .item-title:hover, a .item-content:hover{
          -o-transition: all 0.3s ease-out;
 }
 
+#fund-container{
+    width: 311px;
+    height: 412px;
+    overflow: hidden;
+}
 
+#fund-container iframe{
+    margin-top: -131px;
+    border: 0;
+    width: 322px;
+    height: 641px;
+}
