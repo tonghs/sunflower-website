@@ -202,6 +202,9 @@
 }
 
 @media (min-width: 768px){
+    .container{
+        min-width: 1200px;
+    }
     #startups{
         width: 455px;
         margin-top: -90px;
