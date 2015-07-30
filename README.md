@@ -13,7 +13,7 @@ sunflower-website
 * 联系我要相关帐号
   * 七牛
   * 阿里云
-  * 域名转移
+  * 域名转移（DNSPod）
   * 阿里云及 Docker container 添加 ssk-key
 
 
