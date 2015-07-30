@@ -236,6 +236,9 @@
 }
 
 @media (max-width: 768px){
+    #light{
+        display: none;
+    }
     #startups{
         width: 100%;
     }
