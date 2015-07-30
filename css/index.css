@@ -186,7 +186,7 @@
 }
 
 #video .item-content{
-    height: 350px;
+    height: 410px;
 }
 
 #logo .item-content{
@@ -197,8 +197,8 @@
 
 #programs{
     color: #fff;
-    font-size: 45px;
-    line-height: 336px;
+    font-size: 55px;
+    line-height: 410px;
 }
 
 @media (min-width: 768px){
@@ -227,7 +227,7 @@
     }
     #video{
         width: 725px;
-        margin-top: -130px;
+        margin-top: -120px;
         float: right;
     }
     #news{
@@ -283,4 +283,15 @@ a .item-title:hover, a .item-content:hover{
          -o-transition: all 0.3s ease-out;
 }
 
+#fund-container{
+    width: 311px;
+    height: 412px;
+    overflow: hidden;
+}
 
+#fund-container iframe{
+    margin-top: -131px;
+    border: 0;
+    width: 322px;
+    height: 641px;
+}

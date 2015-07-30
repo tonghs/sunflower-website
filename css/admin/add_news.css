@@ -1,0 +1,11 @@
+.preview{
+    width: 435px;
+    height: 365px;
+}
+
+#img-preview{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+}

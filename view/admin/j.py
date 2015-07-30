@@ -7,6 +7,7 @@ from view._base import AdminJsonHandler, JsonHandler
 from _route import route
 from model.admin import Admin
 from model.web_info import WebInfo
+from model.news import News 
 
 @route('/j/admin/login')
 class _(JsonHandler):
@@ -33,3 +34,11 @@ class _(AdminJsonHandler):
 
         self.finish()
 
+
+@route('/j/admin/add_news')
+class add_news(AdminJsonHandler):
+    def post(self):
+        o = self.json
+        News.news_upsert(o)
+
+        self.finish()
