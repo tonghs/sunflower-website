@@ -21,7 +21,7 @@ class WebInfo(Doc):
 
         logo = basestring,
         desc = basestring,
-        founder = basestring,
+        program = basestring,
         founder_img = basestring
     )
 
@@ -40,6 +40,10 @@ class WebInfo(Doc):
             desc = o.desc.replace('>', '&gt;').replace('<', '&lt;').replace('\n', '</p><p class="s-font">')
 
             o.desc = '<p class="s-font">%s</p>' % desc
+
+            program = o.program.replace('>', '&gt;').replace('<', '&lt;').replace('\n', '</p><p class="s-font">')
+
+            o.program = '<p class="s-font">%s</p>' % program
 
         return o
 
