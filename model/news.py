@@ -29,10 +29,16 @@ class News(Doc):
         else:
             id_ = doc.id_
 
-        o.upsert(dict(id=id_))
+            
+        o.upsert(dict(id_=id_))
 
     def news_get(cls, id_):
-        o = News.find_one(dict(id_=id_))
+        o = None
+        try:
+            o = News.find_one(dict(id_=int(id_)))
+        except:
+            pass
+
         return o
 
 

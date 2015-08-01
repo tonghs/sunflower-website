@@ -1,0 +1,19 @@
+<%!
+from config import APP, SLOGAN
+%>
+<%inherit file="../../_base.html" />
+<%block name="title">
+${APP} | ${SLOGAN}
+</%block>
+<%block name="css">
+    <link href="${STATIC_HOST}/css/news/index.css" rel="stylesheet">
+</%block>
+<div class="container main" id="news">
+    <h3 class="d-font t-align-c">${news.title}</h3>
+    ## <h4 class="d-font t-align-c">向日葵传媒硅谷行</h4>
+    <div class="content">
+        ${news.content}
+    </div>
+</div>
+<%block name="js">
+</%block>

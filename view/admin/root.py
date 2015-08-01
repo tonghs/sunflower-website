@@ -5,6 +5,7 @@ from view._base import BaseHandler, AdminHandler
 from _route import route
 
 from model.web_info import WebInfo
+from model.news import News
 
 @route('/admin')
 class admin(BaseHandler):
@@ -41,9 +42,21 @@ class news(AdminHandler):
         self.render()
 
 @route('/admin/add_news')
+@route('/admin/add_news/(\d+)?')
 class add_news(AdminHandler):
-    def get(self):
-        self.render()
+    def get(self, news_id=None):
+        news = None
+        if news_id:
+            news = News.news_get(news_id)
+
+        if not news:
+            news = {
+                'title' : '',
+                'summary' : '',
+                'img' : '',
+                'content' : ''
+            }
+        self.render(news=news)
 
 
 @route('/admin/logout')

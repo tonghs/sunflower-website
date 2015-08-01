@@ -41,11 +41,9 @@
         <div class="form-group">
             <label for="desc">新闻内容</label>
             <textarea class="form-control" rows="5" id="content" ng-model="o.content" name="content" placeholder="新闻内容"></textarea>
-            ##<span ng-bind-html="o.desc | deal_str"></span>
         </div>
         <button type="button" ng-click="submit()" class="btn btn-primary">保存</button>
     </form>
-</div>
 </div>
 <%block name="js">
     <script src="${STATIC_HOST}/js/_lib/plupload.js"></script>
@@ -56,4 +54,7 @@
     <script src="${STATIC_HOST}/js/_lib/simditor/uploader.js"></script>
     <script src="${STATIC_HOST}/js/_lib/simditor/simditor.js"></script>
     <script src="${STATIC_HOST}/js/admin/add_news.js"></script>
+    <script>
+        def_news(${json_encode(news)|n});
+    </script>
 </%block>
