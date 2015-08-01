@@ -1,5 +1,9 @@
 <%!
-from config import APP, SLOGAN
+from config import APP, SLOGAN, QINIU
+from model.news import News
+news = News.news(limit=1)
+if news:
+    news = news[0]
 %>
 <%inherit file="../_base.html" />
 <%block name="title">
@@ -35,16 +39,17 @@ ${APP} - ${SLOGAN}
         <div class="row">
             <div class="col-sm-4">
                 <div class="home-item" id="news">
-                    <div class="item-content" style="background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/news/1_1.png);">
+                    ## <div class="item-content" style="background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/news/1_1.png);">
+                        <div class="item-content" style="background-image: url(${QINIU.HOST}/${news.img});">
                         &nbsp;
                     </div>
                     <div class="item-title">
                         <span class="item-title-p d-font">
-                            向日葵传媒新闻
+                            ${news.title}
                         </span>
                         <br>
                         <span class="item-title-s d-font">
-                            向日葵传媒新闻向日葵传媒新闻
+                            ${news.summary}
                         </span>
                     </div>
                 </div>

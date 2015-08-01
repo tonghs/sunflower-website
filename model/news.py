@@ -44,8 +44,9 @@ class News(Doc):
 
         return o
 
-    def news(cls, spec=dict()):
-        return News.find(spec, sort=[('time', -1)])
+    def news(cls, spec=dict(), offset=0, limit=0):
+        return News.find(spec, sort=[('time', -1)], offset=offset, limit=limit)
+
 
 if __name__ == "__main__":
     pass

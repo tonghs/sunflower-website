@@ -49,7 +49,7 @@ class add_news(AdminHandler):
             news = {
                 'title' : '',
                 'summary' : '',
-                'img' : '',
+                'img' : 0,
                 'content' : ''
             }
         self.render(news=news)
