@@ -2,6 +2,7 @@
 #coding: utf-8
 
 import _env
+import time
 from db import Doc
 from config import HOST
 from gid_ import gid
@@ -12,7 +13,8 @@ class News(Doc):
         title = basestring,
         summary = basestring,
         img = int,
-        content = basestring 
+        content = basestring,
+        time = int,
     )
 
     indexes = [
@@ -22,14 +24,15 @@ class News(Doc):
 
     @classmethod
     def news_upsert(cls, doc):
-        o = News(doc)
         id_ = 0
         if not doc.id_:
             id_ = gid() 
+            doc.__dict__.update(time=int(time.time()))
         else:
             id_ = doc.id_
 
-            
+        o = News(doc)
+
         o.upsert(dict(id_=id_))
 
     def news_get(cls, id_):
@@ -41,6 +44,8 @@ class News(Doc):
 
         return o
 
+    def news(cls, spec=dict()):
+        return News.find(spec, sort=[('time', -1)])
 
 if __name__ == "__main__":
     pass

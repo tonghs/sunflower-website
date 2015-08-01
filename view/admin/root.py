@@ -36,10 +36,6 @@ class startups(AdminHandler):
     def get(self):
         self.render()
 
-@route('/admin/news')
-class news(AdminHandler):
-    def get(self):
-        self.render()
 
 @route('/admin/add_news')
 @route('/admin/add_news/(\d+)?')
@@ -58,6 +54,13 @@ class add_news(AdminHandler):
             }
         self.render(news=news)
 
+@route('/admin/news')
+class news(AdminHandler):
+    def get(self):
+        news_list = News.news()
+        print '>>>kdkdkdkkd', news_list
+
+        self.render(news_list=news_list)
 
 @route('/admin/logout')
 class logout(BaseHandler):
