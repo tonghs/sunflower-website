@@ -294,4 +294,5 @@ a .item-title:hover, a .item-content:hover{
     border: 0;
     width: 322px;
     height: 641px;
+    margin-left: -2px;
 }
