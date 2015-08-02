@@ -56,33 +56,27 @@ ${APP} - ${SLOGAN}
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="home-item" id="news">
-                        % if news:
-                        <div class="item-content" style="background-image: url(${QINIU.HOST}/${news.img});">
-                        % else:
-                        <div class="item-content" style="background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/news/1_1.png);">
-                        % endif
-                        &nbsp;
+                <a href="/news/${news.id_}" title="${news.title}">
+                    <div class="home-item" id="news">
+                            % if news:
+                            <div class="item-content" style="background-image: url(${QINIU.HOST}/${news.img});">
+                            % else:
+                            <div class="item-content" style="background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/news/1_1.png);">
+                            % endif
+                            &nbsp;
                     </div>
+                </a>
+                <a href="/news/${news.id_}" title="${news.title}">
                     <div class="item-title">
                         <span class="item-title-p d-font">
-                            % if news:
-                                ${news.title}
-                            % else:
-                                向日葵传媒新闻
-                            % endif
+                            ${news.title}
                         </span>
                         <br>
                         <span class="item-title-s d-font">
-                            % if news:
-                                ${news.summary}
-                            % else:
-                                向日葵传媒新闻
-                            % endif
+                            ${news.summary}
                         </span>
                     </div>
-                </div>
-                <div class="clear"></div>
+                </a>
             </div>
         </div>
         <div class="row">
