@@ -39,17 +39,28 @@ ${APP} - ${SLOGAN}
         <div class="row">
             <div class="col-sm-4">
                 <div class="home-item" id="news">
-                    ## <div class="item-content" style="background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/news/1_1.png);">
+                        % if news:
                         <div class="item-content" style="background-image: url(${QINIU.HOST}/${news.img});">
+                        % else:
+                        <div class="item-content" style="background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/news/1_1.png);">
+                        % endif
                         &nbsp;
                     </div>
                     <div class="item-title">
                         <span class="item-title-p d-font">
-                            ${news.title}
+                            % if news:
+                                ${news.title}
+                            % else:
+                                向日葵传媒新闻
+                            % endif
                         </span>
                         <br>
                         <span class="item-title-s d-font">
-                            ${news.summary}
+                            % if news:
+                                ${news.summary}
+                            % else:
+                                向日葵传媒新闻
+                            % endif
                         </span>
                     </div>
                 </div>
