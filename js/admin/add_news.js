@@ -2,25 +2,6 @@
 (function() {
   var editor;
 
-  def_view('NewsApp', 'NewsCtrl', function($scope) {
-    var o;
-    o = {
-      title: '',
-      summary: '',
-      img: '',
-      content: ''
-    };
-    $scope.o = o;
-    $scope.percent = 0;
-    return $scope.submit = function() {
-      V().o.content = $('#content').val();
-      V().$apply();
-      return $.postJSON('/j/admin/add_news', $scope.o, function(o) {
-        return $.alert_success('保存成功');
-      });
-    };
-  });
-
   editor = new Simditor({
     upload: {
       fileKey: 'file',
@@ -29,8 +10,30 @@
         "token": "/j/upload_token"
       }
     },
-    textarea: $('#content')
+    textarea: $('#content'),
+    toolbar: ['title', 'bold', 'italic', 'underline', 'strikethrough', 'color', 'ol', 'ul', 'blockquote', 'code', 'table', 'link', 'image', 'hr', 'indent', 'outdent', 'alignment']
   });
+
+  window.def_news = function(o) {
+    if (o.img) {
+      $('#img-preview').css('background-image', "url(" + CONST.QINIU_HOST + "/" + o.img + "?imageView2/1/w/436/h/436)");
+      $('#img-preview').addClass('preview');
+    }
+    if (o.content) {
+      editor.setValue(o.content);
+    }
+    return def_view('NewsApp', 'NewsCtrl', function($scope) {
+      $scope.o = o;
+      $scope.percent = 0;
+      return $scope.submit = function() {
+        V().o.content = editor.getValue();
+        V().$apply();
+        return $.postJSON('/j/admin/add_news', $scope.o, function(o) {
+          return $.alert_success('保存成功');
+        });
+      };
+    });
+  };
 
   $('#img_up').uploader({
     uploading: function(percent) {

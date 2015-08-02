@@ -1,23 +1,3 @@
-def_view(
-    'NewsApp',
-    'NewsCtrl',
-    ($scope) ->
-        o =
-            title : ''
-            summary: ''
-            img: ''
-            content : ''
-
-        $scope.o = o
-        $scope.percent = 0
-
-        $scope.submit =->
-            V().o.content = $('#content').val()
-            V().$apply()
-            $.postJSON '/j/admin/add_news', $scope.o, (o)->
-                $.alert_success '保存成功'
-)
-
 editor = new Simditor({
     upload:
         fileKey: 'file',
@@ -25,8 +5,51 @@ editor = new Simditor({
         params: {
             "token": "/j/upload_token"
         }
+
     textarea: $('#content')
+    toolbar: [
+      'title'
+      'bold'
+      'italic'
+      'underline'
+      'strikethrough'
+      'color'
+      'ol'             # ordered list
+      'ul'             # unordered list
+      'blockquote'
+      'code'           # code block
+      'table'
+      'link'
+      'image'
+      'hr'             # horizontal ruler
+      'indent'
+      'outdent'
+      'alignment'
+    ]
+    
 })
+
+window.def_news = (o)->
+    if o.img
+        $('#img-preview').css('background-image', "url(#{CONST.QINIU_HOST}/#{o.img}?imageView2/1/w/436/h/436)")
+        $('#img-preview').addClass('preview')
+
+    if o.content
+        editor.setValue(o.content)
+
+    def_view(
+        'NewsApp',
+        'NewsCtrl',
+        ($scope) ->
+            $scope.o = o
+            $scope.percent = 0
+
+            $scope.submit =->
+                V().o.content = editor.getValue()
+                V().$apply()
+                $.postJSON '/j/admin/add_news', $scope.o, (o)->
+                    $.alert_success '保存成功'
+    )
 
 
 $('#img_up').uploader({

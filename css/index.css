@@ -126,17 +126,6 @@
     background-color: #E5E5F9;
 }
 
-#light{
-    width: 258px;
-    margin: auto;
-    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/light.png?imageMogr/thumbnail/300x);
-    background-size: 300px auto;
-    background-repeat: no-repeat;
-    background-position: -33px center;
-    height: 227px;
-
-}
-
 .home-item{
    box-shadow: 0 0 1px 1px #ccc;
    background-color: #fff;
@@ -189,11 +178,6 @@
     height: 410px;
 }
 
-#logo .item-content{
-    height: 416px;
-    background-size: 220px;
-}
-
 
 #programs{
     color: #fff;
@@ -205,33 +189,23 @@
     .container{
         min-width: 1200px;
     }
+
     #startups{
-        width: 455px;
-        margin-top: -90px;
+        width: 700px;
             transition: all 0.3s ease-out;
        -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
     -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
          -o-transition: all 0.3s ease-out;
 
     }
-    #logo{
-        background-color: #e4e4e4;
-        width: 100%;
-        margin-top: -62px;
-        float: right;
-    }
-    #logo img{
-        width: 225px;
-        margin: auto;
-        margin-top: -80px;
-    }
     #video{
         width: 725px;
-        margin-top: -120px;
+        margin-top: 30px;
         float: right;
     }
     #news{
         width: 365px;
+        margin-top: -22px;
     }
     #fund{
         width: 300px;
@@ -239,15 +213,8 @@
 }
 
 @media (max-width: 768px){
-    #light{
-        display: none;
-    }
     #startups{
         width: 100%;
-    }
-    #logo{
-        background-color: #e4e4e4;
-        display: none;
     }
     #video{
         width: 100%;
@@ -294,4 +261,5 @@ a .item-title:hover, a .item-content:hover{
     border: 0;
     width: 322px;
     height: 641px;
+    margin-left: -2px;
 }
