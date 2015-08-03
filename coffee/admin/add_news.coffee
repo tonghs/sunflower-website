@@ -8,23 +8,23 @@ editor = new Simditor({
 
     textarea: $('#content')
     toolbar: [
-      'title'
-      'bold'
-      'italic'
-      'underline'
-      'strikethrough'
-      'color'
-      'ol'             # ordered list
-      'ul'             # unordered list
-      'blockquote'
-      'code'           # code block
-      'table'
-      'link'
-      'image'
-      'hr'             # horizontal ruler
-      'indent'
-      'outdent'
-      'alignment'
+        'title'
+        'bold'
+        'italic'
+        'underline'
+        'strikethrough'
+        'color'
+        'ol'             # ordered list
+        'ul'             # unordered list
+        'blockquote'
+        'code'           # code block
+        'table'
+        'link'
+        'image'
+        'hr'             # horizontal ruler
+        #'indent'
+        #'outdent'
+        'alignment'
     ]
     toolbarFloat: true
     toolbarFloatOffset: 50
