@@ -9,7 +9,7 @@
 
 
 
-@media (max-width: 768px){
+@media (max-width: 1001px){
     #news .content img{
         width: 100% !important;
     }
