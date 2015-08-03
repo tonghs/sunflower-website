@@ -163,7 +163,7 @@
 }
 
 #news .item-content{
-    height: 435px;
+    height: 457px;
 }
 
 #startups .item-content{
@@ -205,9 +205,10 @@
     }
     #news{
         width: 365px;
-        margin-top: -22px;
+        margin-top: -48px;
     }
     #fund{
+        margin-left: 74px;
         width: 300px;
     }
     #fund-container{
