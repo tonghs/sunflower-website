@@ -132,7 +132,7 @@ Uploader = (function(superClass) {
     formData.append("original_filename", file.name);
 
     $.ajax({
-        url: file.params.token, 
+        url: file.params.token_url, 
         success: function(token){
             file.params.token = token;
         },
