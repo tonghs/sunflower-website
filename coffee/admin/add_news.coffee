@@ -26,6 +26,8 @@ editor = new Simditor({
       'outdent'
       'alignment'
     ]
+    toolbarFloat: true
+    toolbarFloatOffset: 50
     
 })
 

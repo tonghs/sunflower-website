@@ -11,7 +11,9 @@
       }
     },
     textarea: $('#content'),
-    toolbar: ['title', 'bold', 'italic', 'underline', 'strikethrough', 'color', 'ol', 'ul', 'blockquote', 'code', 'table', 'link', 'image', 'hr', 'indent', 'outdent', 'alignment']
+    toolbar: ['title', 'bold', 'italic', 'underline', 'strikethrough', 'color', 'ol', 'ul', 'blockquote', 'code', 'table', 'link', 'image', 'hr', 'indent', 'outdent', 'alignment'],
+    toolbarFloat: true,
+    toolbarFloatOffset: 50
   });
 
   window.def_news = function(o) {
