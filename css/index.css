@@ -241,7 +241,13 @@
     }
 
 }
-
+a .item-title, a .item-content{
+    opacity: 1;
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+}
 a .item-title:hover, a .item-content:hover{
     opacity: 0.8;
             transition: all 0.3s ease-out;
