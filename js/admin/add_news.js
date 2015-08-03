@@ -11,7 +11,7 @@
       }
     },
     textarea: $('#content'),
-    toolbar: ['title', 'bold', 'italic', 'underline', 'strikethrough', 'color', 'ol', 'ul', 'blockquote', 'code', 'table', 'link', 'image', 'hr', 'alignment'],
+    toolbar: ['title', 'bold', 'italic', 'underline', 'strikethrough', 'color', 'alignment', 'ol', 'ul', 'blockquote', 'code', 'table', 'link', 'image', 'hr'],
     toolbarFloat: true,
     toolbarFloatOffset: 50
   });

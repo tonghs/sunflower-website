@@ -14,6 +14,7 @@ editor = new Simditor({
         'underline'
         'strikethrough'
         'color'
+        'alignment'
         'ol'             # ordered list
         'ul'             # unordered list
         'blockquote'
@@ -24,7 +25,6 @@ editor = new Simditor({
         'hr'             # horizontal ruler
         #'indent'
         #'outdent'
-        'alignment'
     ]
     toolbarFloat: true
     toolbarFloatOffset: 50
