@@ -7,7 +7,7 @@
       fileKey: 'file',
       url: 'http://up.qiniu.com/',
       params: {
-        "token": "/j/upload_token"
+        "token_url": "/j/upload_token"
       }
     },
     textarea: $('#content'),
