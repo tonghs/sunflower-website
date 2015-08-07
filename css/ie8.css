@@ -1,0 +1,94 @@
+*{
+    font-family: 'Microsoft Yahei Light',  'Microsoft Yahei', '微软雅黑', "Helvetica Neue","Helvetica","Arial","Verdana","sans-serif",'Roboto Condensed';
+}
+
+html, body{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 900px;
+    margin: auto;
+}
+
+.clear{
+    clear: both;
+}
+
+#header{
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    border-style: solid;
+    border-bottom-width: 1px;
+    padding: 10px 0;
+}
+
+#header #logo{
+    float: left;
+
+}
+
+#header #logo a{
+    color: #000;
+    display: block;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 55px;
+    padding-left: 65px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#header #logo a:hover{
+    color: #000;
+    text-decoration: none;
+}
+
+#header #menu{
+    float: right;
+
+}
+
+#header #menu ul{
+    margin: 0;
+    padding: 0;
+}
+
+#header #menu ul li{
+    float: right;
+    list-style: none;
+}
+
+#header #menu ul li a{
+    font-size: 18px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding-left: 20px;
+    height: 60px;
+    line-height: 60px;
+}
+
+#header #menu ul li a:hover{
+    color: #000;
+    text-decoration: none;
+}
+
+#main #text{
+   text-align: center; 
+}
+
+#main #broswers .item{
+    width: 225px;
+    float: left;
+    text-align: center;
+}
+
+#footer .item{
+    width: 300px;
+    float: left;
+}
+

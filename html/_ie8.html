@@ -1,0 +1,83 @@
+<%!
+    from config import APP, SLOGAN, APP_CN
+%>
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            ${APP} - ${SLOGAN}
+        </title>
+        <meta name="keywords" content="${APP},${SLOGAN},一块投吧,北京传媒公司,传媒,xrkmedia,投创,众筹电视节目,投创类电视节目,投创类节目"/>
+        <meta name="description" content="向日葵传媒有限责任公司（简称：向日葵传媒）是一家现时代金融文化产品提供机构，致力于将中国优秀文化产品与金融服务相结合，打造传媒与金融相结合的投融资服务平台。" />
+        <link href="${STATIC_HOST}/css/ie8.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <img src="${WEB_INFO.logo}?imageMogr2/thumbnail/121x75" style="display: none;"/>
+        <img src="${WEB_INFO.logo}?imageMogr2/thumbnail/75x75" style="display: none;"/>
+        <div>
+            <div id="header">
+                <div class="container">
+                    <div id="logo">
+                        <a href="/" style="background-image: url(${WEB_INFO.logo}?imageMogr2/thumbnail/x55)">
+                            ${APP_CN}<br>${APP}
+                        </a>
+
+                    </div>
+                    <div id="menu">
+                        <ul>
+                            <li><a href="javascript: void(0);">种子基金</a></li>
+                            <li><a href="javascript: void(0);">报名通道</a></li>
+                            <li><a href="javascript: void(0);">首页</a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div id="main">
+                <div class="container">
+                    <div id="text">
+                        <h1>向日葵传媒不支持您的浏览器</h1>
+                        <h3>为了获得更佳的浏览体验我们向您推荐以下更佳优秀的浏览器</h3>
+                    </div>
+                    <div id="broswers">
+                        <div class="item">
+                            Chrome
+                        </div>
+                        <div class="item">
+                            Firefox
+                        </div>
+                        <div class="item">
+                            Safari 
+                        </div>
+                        <div class="item">
+                            Internet Explorer(9.0 及以上)
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="footer">
+                <div class="container">
+                    <div class="item">
+                        <h3>关于我们</h3>
+                    </div>
+                    <div class="item">
+                        <h3>联系我们</h3>
+                    </div>
+                    <div class="item">
+                        <h3>合作伙伴</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script  type="text/javascript">
+    </script>
+</html>
+
