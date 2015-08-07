@@ -8,6 +8,13 @@ html, body{
     padding: 0;
 }
 
+a{
+    border: 0;
+    outline: 0;
+    color: #000;
+    text-decoration: none;
+}
+
 .container{
     width: 900px;
     margin: auto;
@@ -17,12 +24,15 @@ html, body{
     clear: both;
 }
 
+.active{
+    background-color: #e7e7e7;
+}
+
 #header{
     background-color: #f8f8f8;
     border-color: #e7e7e7;
     border-style: solid;
     border-bottom-width: 1px;
-    padding: 10px 0;
 }
 
 #header #logo{
@@ -37,7 +47,7 @@ html, body{
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 55px;
-    padding-left: 65px;
+    padding:  10px 0 10px 65px;
     font-size: 18px;
     line-height: 1.5;
 }
@@ -67,7 +77,7 @@ html, body{
     display: block;
     color: #000;
     text-decoration: none;
-    padding-left: 20px;
+    padding: 10px 15px;
     height: 60px;
     line-height: 60px;
 }
@@ -79,16 +89,60 @@ html, body{
 
 #main #text{
    text-align: center; 
+   padding: 50px 0;
+}
+
+#main #broswers{
+    margin-bottom: 30px;
 }
 
 #main #broswers .item{
     width: 225px;
     float: left;
     text-align: center;
+    background: url(http://7xk1xj.com1.z0.glb.clouddn.com/browsers.png) no-repeat;
+    height: 90px;
 }
 
-#footer .item{
-    width: 300px;
+#main #broswers #chrome{
+    background-position: 80px 0px;
+}
+
+#main #broswers #firefox{
+    background-position: 78px -189px;
+}
+
+#main #broswers #safari{
+    background-position: -396px -189px;
+}
+#main #broswers #ie{
+    background-position: 78px -281px;
+}
+
+#main #broswers p{
+    width: 225px;
     float: left;
+    text-align: center;
 }
 
+#main hr{
+    margin-top: 80px;
+    border-top: dashed 1px #272727;
+    width: 300px;
+}
+
+#footer{
+    background-color: #272727;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#footer .container p{
+    text-align: center;
+    color: #737373;
+    font-size; 11px;
+    margin: 0;
+    line-height: 1.5;
+}
