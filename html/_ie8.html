@@ -1,0 +1,92 @@
+<%!
+    from config import APP, SLOGAN, APP_CN
+%>
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            ${APP} - ${SLOGAN}
+        </title>
+        <meta name="keywords" content="${APP},${SLOGAN},一块投吧,北京传媒公司,传媒,xrkmedia,投创,众筹电视节目,投创类电视节目,投创类节目"/>
+        <meta name="description" content="向日葵传媒有限责任公司（简称：向日葵传媒）是一家现时代金融文化产品提供机构，致力于将中国优秀文化产品与金融服务相结合，打造传媒与金融相结合的投融资服务平台。" />
+        <link href="${STATIC_HOST}/css/ie8.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <img src="${WEB_INFO.logo}?imageMogr2/thumbnail/121x75" style="display: none;"/>
+        <img src="${WEB_INFO.logo}?imageMogr2/thumbnail/75x75" style="display: none;"/>
+        <div>
+            <div id="header">
+                <div class="container">
+                    <div id="logo">
+                        <a href="/" style="background-image: url(${WEB_INFO.logo}?imageMogr2/thumbnail/x55)">
+                            ${APP}<br>
+                            ${APP_CN}
+                        </a>
+
+                    </div>
+                    <div id="menu">
+                        <ul>
+                            <li><a href="/fund">种子基金</a></li>
+                            <li><a href="/reg">报名通道</a></li>
+                            <li><a href="/">首页</a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div id="main">
+                <div class="container">
+                    <div id="text">
+                        <h1>向日葵传媒不支持您的浏览器</h1>
+                        <h3>为了获得更佳的浏览体验我们向您推荐以下更加优秀的浏览器</h3>
+                    </div>
+                    <div id="broswers">
+                        <div class="item" id="chrome">
+                            &nbsp;
+                        </div>
+                        <div class="item" id="firefox">
+                            &nbsp;
+                        </div>
+                        <div class="item" id="safari">
+                            &nbsp;
+                        </div>
+                        <div class="item" id="ie">
+                            &nbsp;
+                        </div>
+                        <div>
+                            <p>
+                                Chrome
+                            </p>
+                            <p>
+                                Firefox
+                            </p>
+                            <p>
+                                Safari 
+                            </p>
+                            <p>
+                                Internet Explorer（9.0 及以上）
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="container">
+                    <p>北京市朝阳区阜安西路望京 soho 塔 2-B 座-1802</p>
+                    <p>sunflower@xrkmedia.com 010-53670611</p>
+                    <p>2015 &copy; ${APP}  京ICP备15039324</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="http://libs.useso.com/js/jquery/1.9.1/jquery.min.js"></script>
+    <script src="${STATIC_HOST}/js/ie8.js"></script>
+</html>
+

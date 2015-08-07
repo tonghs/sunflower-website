@@ -2,6 +2,7 @@
 #coding:utf-8
 
 import sys
+import re
 import tornado.web
 import mako.lookup
 import mako.template
@@ -21,6 +22,26 @@ sys.setdefaultencoding('utf8')
 
 
 class BaseHandler(tornado.web.RequestHandler):
+    def prepare(self):
+        super(BaseHandler, self).prepare()
+        if self._is_ie_lt_8():
+            self.template = '_ie8.html'
+            self.render
+
+    def _is_ie_lt_8(self):
+        ret = False
+
+        p = re.compile('.*?MSIE (\d+).0;.*?')
+        m = re.findall(p, self.request.headers.get('User-Agent'))
+        try:
+            if m and int(m[0]) <= 8:
+                ret = True
+
+        except:
+            pass
+        
+        return ret
+
     def initialize(self):
         template_path = self.get_template_path()
         self.lookup = mako.lookup.TemplateLookup(directories=template_path,
@@ -41,7 +62,7 @@ class BaseHandler(tornado.web.RequestHandler):
         return WebInfo.web_info_get(True)
 
     def render(self, **kwargs):
-        if not hasattr(self, 'template') or  not self.template :
+        if not hasattr(self, 'template') or not self.template :
             module_name = self.__module__.replace('view.', '').replace('.', '/')
             filename = "{0}/{1}.html".format(module_name, self.__class__.__name__)
             self.template = "{0}{1}".format(filename[0].lower(), filename[1:])

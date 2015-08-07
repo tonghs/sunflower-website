@@ -114,3 +114,4 @@ $.alert_fail = (msg='操作失败')->
             if callback
                 callback()
     })
+

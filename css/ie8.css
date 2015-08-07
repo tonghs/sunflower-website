@@ -1,0 +1,148 @@
+*{
+    font-family: 'Microsoft Yahei Light',  'Microsoft Yahei', '微软雅黑', "Helvetica Neue","Helvetica","Arial","Verdana","sans-serif",'Roboto Condensed';
+}
+
+html, body{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    border: 0;
+    outline: 0;
+    color: #000;
+    text-decoration: none;
+}
+
+.container{
+    width: 900px;
+    margin: auto;
+}
+
+.clear{
+    clear: both;
+}
+
+.active{
+    background-color: #e7e7e7;
+}
+
+#header{
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    border-style: solid;
+    border-bottom-width: 1px;
+}
+
+#header #logo{
+    float: left;
+
+}
+
+#header #logo a{
+    color: #000;
+    display: block;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 55px;
+    padding:  10px 0 10px 65px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#header #logo a:hover{
+    color: #000;
+    text-decoration: none;
+}
+
+#header #menu{
+    float: right;
+
+}
+
+#header #menu ul{
+    margin: 0;
+    padding: 0;
+}
+
+#header #menu ul li{
+    float: right;
+    list-style: none;
+}
+
+#header #menu ul li a{
+    font-size: 18px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 15px;
+    height: 60px;
+    line-height: 60px;
+}
+
+#header #menu ul li a:hover{
+    color: #000;
+    text-decoration: none;
+}
+
+#main #text{
+   text-align: center; 
+   padding: 50px 0;
+}
+
+#main #broswers{
+    margin-bottom: 30px;
+}
+
+#main #broswers .item{
+    width: 225px;
+    float: left;
+    text-align: center;
+    background: url(http://7xk1xj.com1.z0.glb.clouddn.com/browsers.png) no-repeat;
+    height: 90px;
+}
+
+#main #broswers #chrome{
+    background-position: 80px 0px;
+}
+
+#main #broswers #firefox{
+    background-position: 78px -189px;
+}
+
+#main #broswers #safari{
+    background-position: -396px -189px;
+}
+#main #broswers #ie{
+    background-position: 78px -281px;
+}
+
+#main #broswers p{
+    width: 225px;
+    float: left;
+    text-align: center;
+}
+
+#main hr{
+    margin-top: 80px;
+    border-top: dashed 1px #272727;
+    width: 300px;
+}
+
+#footer{
+    background-color: #272727;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#footer .container p{
+    text-align: center;
+    color: #737373;
+    font-size; 11px;
+    margin: 0;
+    line-height: 1.5;
+}
