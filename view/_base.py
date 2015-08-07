@@ -12,12 +12,12 @@ from config import STATIC_HOST
 
 from model.jsob import JsOb
 from model.admin import Admin
+from model.user import User
 from model.web_info import WebInfo
 
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-# from model.user import User
 
 
 class BaseHandler(tornado.web.RequestHandler):
@@ -49,17 +49,20 @@ class BaseHandler(tornado.web.RequestHandler):
         self.finish(self.render_string(self.template, **kwargs))
 
     def get_current_user(self):
-        # json = self.get_secure_cookie("user")
-        # user = User.get_from_json(json)
+        user = None
+        json_ = self.get_secure_cookie("user")
+        if json_:
+            user = User.from_json(json_)
 
-        # return user
-        return dict()
+        return user
+
 
 class JsonHandler(BaseHandler):
     def prepare(self):
         args = self.request.arguments
         args = dict((k, v[0]) for k, v in args.iteritems())
         self.json = JsOb(args)
+        self.err = JsOb()
 
         super(JsonHandler, self).prepare()
         
@@ -73,7 +76,7 @@ class AdminHandler(BaseHandler):
 
     def get_current_user(self):
         user = None
-        json_ = self.get_secure_cookie("user")
+        json_ = self.get_secure_cookie("admin")
         if json_:
             user = Admin.from_json(json_)
 

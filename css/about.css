@@ -1,7 +1,23 @@
-.container #founder{
+#home{
     background-repeat: no-repeat;
-    background-position: left center;
-    background-size: auto 300px;
+    background-position: center;
+    background-size: cover;
     height: 300px;
-    padding-left: 215px;
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/S3_03.jpg?imageView2/1/w/1200/h/600);
 }
+
+
+h3{
+    margin-top: 45px;
+}
+
+hr{
+    width: 120px;
+    border-bottom: #ccc 1px dashed;
+}
+
+.btn{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+

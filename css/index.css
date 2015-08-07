@@ -1,188 +1,285 @@
+@media (min-width: 768px){
+    .navbar-default{
+        background-color: rgba(255, 255, 255, 0);
+        background-color: none;
+        background-color: transparent;
+        border-color: none;
+        border-width: 0;
+    }
+
+    .navbar-default .navbar-brand{
+        color: #fff;
+    }
+    .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
+        color: #ddd;
+    }
+    .navbar-default .navbar-nav>li>a{
+        color: #fff;
+    }
+    .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+        color: #ddd;
+    }
+    .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+        color: #ddd;
+        background-color: rgba(255, 255, 255, 0);
+        background-color: none;
+        background-color: transparent;
+    }
+    .navbar #nav-login{
+        border: solid 1px #fff;
+        padding: 5px;
+        font-size: 15px;
+        color: #fff;
+        background-color: none;
+        background-color: transparent;
+        background-color: rgba(204, 204, 204, 0);
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+    }
+    .navbar-default .navbar-nav>li>a:focus>span#nav-login, .navbar-default .navbar-nav>li>a:hover>span#nav-login{
+        color: #fff;
+        background-color: rgba(204, 204, 204, 0.4);
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+    }
+    .navbar #nav-login:hover{
+        color: #fff;
+        background-color: rgba(204, 204, 204, 0.4);
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+    }
+}
+
+#body{
+    padding-top: 0;
+}
+
+#home-container{
+    overflow: hidden;
+    height: 750px;
+    position: absolute;
+    width: 100%;
+}
+
+#home-content{
+    position: absolute;
+    z-index: 1;
+    margin: auto;
+    width: 100%;
+}
+
 #home{
     background-color: #000;
-    background-size: auto 520px;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: #fff;
-    height: 500px;
-    padding: 35px 0;
-}
-
-#home-flower{
-    height: 500px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url(https://7xk1xj.com1.z0.glb.clouddn.com/img/sunflower.png);
-    margin-top: -250px;
-    margin-bottom: -250px;
-    background-color: transparent;
-
-}
-
-#home #program-desc{
-    font-size: 24px;
-    color: #a0f3ff;
-}
-
-.odd-home{
-    background-color: #ffffff;
-}
-
-.even-home{
-    background: #fff;
-}
-
-
-#second-item{
-    background: transparent;
-    min-height: 300px;
-}
-
-#second-item .container p, #fund .container p{
-    margin: 0;
-}
-
-#second-item .container h2, #fund .container h2{
-    font-size: 40px;
-    margin-top: 0;
-}
-#second-item .container hr, #fund .container hr{
-    width: 100px;
-    border-top: solid 1px #eee;
-}
-
-#third-item{
-    min-height: 378px;
-    background-color: #000;
-    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    text-align: center;
-}
-
-#third-item .row .col-lg-3{
-    padding: 5px;
-}
-
-#third-item .item p{
-    font-size: 100px;
-    line-height: 200px;
-    color: #fff;
-}
-
-#third-item #comingsoon-en{
-    color: #fff;
-    letter-spacing: 20px;
-    font-size: 30px;
-}
-
-#third-item .item{
-    width: 200px;
-    height: 200px;
-    border-radius: 5px;
-    margin: auto;
-    opacity: 0.8;
-}
-
-/*
-#fund .container{
-    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/sunflower.gif);
-    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/sunflower.jpg?imageMogr2/thumbnail/x440);
     background-repeat: no-repeat;
-    background-position: 210px 28px;
-    background-size: auto 220px;
-    padding-left: 445px;
-}
-*/
-
-#news{
-    background-color: #eee;
-}
-
-#news .row .item{
-    text-align: left;    
-}
-
-#news .row .img-item{
-    text-align: center;    
-}
-
-#news .row .img-item .img{
-    width: 380px;
-    height: 260px;
-    background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
+    color: #fff;
+    height: 750px;
 }
 
-#news .row .img-title{
-    background-color: rgba(0,0,0,0.3);
-    color: #fff;
-    height: 30px;
-    line-height: 30px;
-    padding: 0 10px;
+#home-decoration{
     position: absolute;
-    bottom: 0;
-    width: 380px;
-    text-align: left;
+    height: 1382px;
+    border-style: solid;
+    border-color: #f1f4f9;
+    border-width: 258px 43px;
+    width: 5000px;
+    border-radius: 50%;
+    top: -403px;
+    right: -774px;
 }
 
-#news .row .item p.content{
-    color: #888;
+#program-desc{
+    font-size: 50px;
+    margin-top: 120px;
 }
 
-#news .row a:hover .img-title{
-    display: block;
+#program-desc-sub{
+    font-size: 20px;
+    width: 65%;
+    margin: auto;
+    padding-top: 10px;
 }
+
 #btn-reg-container{
-    margin-top: 360px;
+    margin-top: 60px;
 }
 
-#btn-reg{
-    color: #fff;
-    background: transparent;
-    border: solid 1px #fff;
-    padding: 15px 40px;
-    text-decoration: none;
-    border-radius: 3px;
+#btn-reg-container #btn-reg{
+    background-color: #f1f4f9;
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/camera.png);
+    background-repeat: no-repeat;
+    background-position: 44px center;
+    border-radius: 30px;
+    padding: 20px 50px 18px 110px;
+    font-size: 18px;
+    color: #2a4251;
 }
 
-#btn-join-container{
-    padding-top: 30px;
+#btn-reg-container #btn-reg:hover{
+    background-color: #E5E5F9;
 }
 
-#btn-reg:hover{
-    background: rgba(255,255,255,0.3);
-}
-#btn-join{
-    color: #000;
-    background: transparent;
-    border: solid 1px #000;
-    padding: 15px 40px;
-    text-decoration: none;
-    border-radius: 3px;
+.home-item{
+   box-shadow: 0 0 1px 1px #ccc;
+   background-color: #fff;
+   color: #616161;
+   margin: auto;
+   margin-bottom: 30px;
 }
 
-#btn-join:hover{
-    background: rgba(200,200,200,0.1);
+.home-item .item-content{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: auto;
 }
 
-#partner{
-    padding: 30px 0;
-}
-
-#partner h3{
-    margin: 0 0 30px 0;
-}
-#partner #slogan{
-    border-top: solid 1px #eee;
-    padding-top: 20px;
-    margin-top: 20px;
+.home-item .item-title{
+    width: 100%;
+    padding: 20px 0;
     text-align: center;
-    letter-spacing: 25px;
-    font-size: 14px;
-    padding-left: 18px;
 }
-#partner .item{
-    line-height: 66px;
+
+.home-item .item-title .item-title-p{
+    font-size: 20px;
+    color: #000;
 }
+
+.home-item .item-title .item-title-s{
+    font-size: 12px;
+    color: #a2a2a2;
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+
+}
+
+#news .item-content{
+    height: 457px;
+}
+
+#startups .item-content{
+    height: 350px;
+}
+
+#fund .item-content{
+    height: 274px;
+}
+
+#video .item-content{
+    height: 410px;
+}
+
+
+#programs{
+    color: #fff;
+    font-size: 55px;
+    line-height: 410px;
+}
+
+@media (min-width: 768px){
+    .container{
+        min-width: 1200px;
+    }
+
+    #startups{
+        width: 700px;
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+
+    }
+    #video{
+        width: 725px;
+        margin-top: 30px;
+        float: right;
+    }
+    #news{
+        width: 365px;
+        margin-top: -48px;
+    }
+    #fund{
+        margin-left: 74px;
+        width: 300px;
+    }
+    #fund-container{
+        width: 311px;
+        height: 412px;
+        overflow: hidden;
+    }
+
+    #fund-container iframe{
+        margin-top: -131px;
+        border: 0;
+        width: 322px;
+        height: 641px;
+        margin-left: -2px;
+    }
+}
+
+@media (max-width: 768px){
+    #startups{
+        width: 100%;
+    }
+    #video{
+        width: 100%;
+    }
+
+    #programs{
+        color: #fff;
+        font-size: 45px;
+        line-height: 85px;
+        width: 100%;
+    }
+    #news{
+        width: 100%;
+    }
+    #fund{
+        width: 100%;
+    }
+    .home-item{
+       box-shadow: 0 0 1px 1px #ccc;
+       background-color: #fff;
+       color: #616161;
+       margin: auto;
+       margin-bottom: 0px;
+    }
+    #fund-container{
+        width: 100%;
+        height: 412px;
+        overflow: hidden;
+    }
+
+    #fund-container iframe{
+        margin-top: -131px;
+        border: 0;
+        width: 100%;
+        height: 641px;
+        margin-left: -2px;
+    }
+
+}
+a .item-title, a .item-content{
+    opacity: 1;
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+}
+a .item-title:hover, a .item-content:hover{
+    opacity: 0.8;
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+}
+

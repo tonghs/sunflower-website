@@ -8,6 +8,7 @@ from tornado.options import define, options
 from config import PORT, DEBUG
 import _url
 from model.db import mongo
+from view._base import JsonHandler
 
 from _route import route
 
@@ -21,8 +22,11 @@ def write_error(self, status_code, **kwargs):
     if status_code == 404:
         self.render('404.html')
     elif status_code == 500:
-        self.template = '500.html'
-        self.render()
+        if isinstance(self, JsonHandler):
+            raise tornado.web.HTTPError(500)
+        else:
+            self.template = '500.html'
+            self.render()
     else:
         self.write('error:' + str(status_code))
 

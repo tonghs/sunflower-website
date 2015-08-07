@@ -21,7 +21,7 @@ class WebInfo(Doc):
 
         logo = basestring,
         desc = basestring,
-        founder = basestring,
+        program = basestring,
         founder_img = basestring
     )
 
@@ -37,9 +37,13 @@ class WebInfo(Doc):
     def web_info_get(cls, html=False, id_=1):
         o = WebInfo.find_one(dict(id_=id_))
         if html:
-            desc = o.desc.replace('>', '&gt;').replace('<', '&lt;').replace('\n', '</p><p>')
+            desc = o.desc.replace('>', '&gt;').replace('<', '&lt;').replace('\n', '</p><p class="s-font">')
 
-            o.desc = '<p>%s</p>' % desc
+            o.desc = '<p class="s-font">%s</p>' % desc
+
+            program = o.program.replace('>', '&gt;').replace('<', '&lt;').replace('\n', '</p><p class="s-font">')
+
+            o.program = '<p class="s-font">%s</p>' % program
 
         return o
 

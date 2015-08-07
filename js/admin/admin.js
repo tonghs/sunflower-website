@@ -4,15 +4,15 @@
   def_view('LoginApp', 'LoginCtrl', function($scope) {
     var o;
     o = {};
-    o.user_name = 'tonghs';
-    o.password = 'tonghs';
+    o.user_name = '';
+    o.password = '';
     $scope.o = o;
     return $scope.submit = function() {
       return $.postJSON('/j/admin/login', $scope.o, function(o) {
         if (o.success) {
           return window.location.href = '/admin/index';
         } else {
-          return alert(o.msg);
+          return $.alert_fail(o.msg);
         }
       });
     };

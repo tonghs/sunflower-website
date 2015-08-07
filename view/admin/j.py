@@ -7,6 +7,7 @@ from view._base import AdminJsonHandler, JsonHandler
 from _route import route
 from model.admin import Admin
 from model.web_info import WebInfo
+from model.news import News 
 
 @route('/j/admin/login')
 class _(JsonHandler):
@@ -16,7 +17,7 @@ class _(JsonHandler):
         o = self.json
         admin = Admin.admin_login(o.user_name, o.password)
         if admin:
-            self.set_secure_cookie("user", json.dumps(dict(admin)))
+            self.set_secure_cookie("admin", json.dumps(dict(admin)))
             msg = ''
             success = True 
         else:
@@ -33,3 +34,11 @@ class _(AdminJsonHandler):
 
         self.finish()
 
+
+@route('/j/admin/add_news')
+class add_news(AdminJsonHandler):
+    def post(self):
+        o = self.json
+        News.news_upsert(o)
+
+        self.finish()

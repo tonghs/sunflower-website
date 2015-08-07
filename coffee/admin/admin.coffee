@@ -4,8 +4,8 @@ def_view(
     'LoginCtrl',
     ($scope) ->
         o = {}
-        o.user_name = 'tonghs'
-        o.password = 'tonghs'
+        o.user_name = ''
+        o.password = ''
 
         $scope.o = o
 
@@ -14,6 +14,6 @@ def_view(
                 if o.success
                     window.location.href = '/admin/index'
                 else
-                    alert o.msg
+                    $.alert_fail o.msg
 
 )
