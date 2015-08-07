@@ -22,7 +22,9 @@ class WebInfo(Doc):
         logo = basestring,
         desc = basestring,
         program = basestring,
-        founder_img = basestring
+        founder_img = basestring,
+
+        fund = basestring
     )
 
     indexes = [
@@ -36,14 +38,21 @@ class WebInfo(Doc):
 
     def web_info_get(cls, html=False, id_=1):
         o = WebInfo.find_one(dict(id_=id_))
-        if html:
-            desc = o.desc.replace('>', '&gt;').replace('<', '&lt;').replace('\n', '</p><p class="s-font">')
+        if html and o:
+            if o.desc:
+                desc = o.desc.replace('>', '&gt;').replace('<', '&lt;').replace('\n', '</p><p class="s-font">')
 
-            o.desc = '<p class="s-font">%s</p>' % desc
+                o.desc = '<p class="s-font">%s</p>' % desc
 
-            program = o.program.replace('>', '&gt;').replace('<', '&lt;').replace('\n', '</p><p class="s-font">')
+            if o.program:
+                program = o.program.replace('>', '&gt;').replace('<', '&lt;').replace('\n', '</p><p class="s-font">')
 
-            o.program = '<p class="s-font">%s</p>' % program
+                o.program = '<p class="s-font">%s</p>' % program
+            
+            if o.fund:
+                fund = o.fund.replace('>', '&gt;').replace('<', '&lt;').replace('\n', '</p><p class="s-font">')
+
+                o.fund = '<p class="s-font">%s</p>' % fund
 
         return o
 

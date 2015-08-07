@@ -1,9 +1,10 @@
 <%!
 from config import APP, SLOGAN, QINIU
 from model.news import News
-news = News.news(limit=1)
-if news:
-    news = news[0]
+news_ = News.news(limit=1)
+news = None
+if news_:
+    news = news_[0]
 %>
 <%inherit file="../_base.html" />
 <%block name="title">
@@ -56,24 +57,37 @@ ${APP} - ${SLOGAN}
                 </div>
             </div>
             <div class="col-sm-4">
+
+                % if news:
                 <a href="/news/${news.id_}" title="${news.title}">
+                % else:
+                <a href="javascript: void(0);" title="向日葵传媒新闻">
+                % endif
                     <div class="home-item" id="news">
-                            % if news:
-                            <div class="item-content" style="background-image: url(${QINIU.HOST}/${news.img});">
-                            % else:
-                            <div class="item-content" style="background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/news/1_1.png);">
-                            % endif
-                            &nbsp;
+                        % if news:
+                        <div class="item-content" style="background-image: url(${QINIU.HOST}/${news.img});">
+                        % else:
+                        <div class="item-content" style="background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/news/1_1.png);">
+                        % endif
+                        &nbsp;
                     </div>
                 </a>
+                % if news:
                 <a href="/news/${news.id_}" title="${news.title}">
+                % else:
+                <a href="javascript: void(0);" title="向日葵传媒新闻">
+                % endif
                     <div class="item-title">
                         <span class="item-title-p d-font">
+                        % if news:
                             ${news.title}
+                        % endif
                         </span>
                         <br>
                         <span class="item-title-s d-font">
+                        % if news:
                             ${news.summary}
+                        % endif
                         </span>
                     </div>
                 </a>
@@ -91,11 +105,11 @@ ${APP} - ${SLOGAN}
         </div>
         <div class="col-sm-8">
             <div class="home-item" id="video">
-                <a href="/news/10000009" title="${news.title}">
+                <a href="/news/10000009" title="一块投吧投创类电视节目 ">
                     <div class="item-content" id="programs" style="background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/10000024?imageMogr2/thumbnail/1400x);">
                     </div>
                 </a>
-                <a href="/news/10000009" title="${news.title}">
+                <a href="/news/10000009" title="一块投吧投创类电视节目 ">
                     <div class="item-title">
                         <span class="item-title-p d-font">
                             一块投吧投创类电视节目 
