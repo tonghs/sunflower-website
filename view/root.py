@@ -27,6 +27,10 @@ class about(BaseHandler):
     def get(self):
         self.render()
         
+@route('/fund')
+class fund(BaseHandler):
+    def get(self):
+        self.render()
 
 @route('/contact')
 class contact(BaseHandler):
