@@ -1,12 +1,8 @@
-
-
 /***** 重写 bootstrap ******/
-
 .navbar{
     margin-bottom: 0;
     width: 100%;
     position: absolute;
-    background-color: #fff;
 }
 
 .web .navbar .navbar-brand{
@@ -18,6 +14,7 @@
     padding-left: 65px;
     font-size: 18px;
 }
+
 
 .web .navbar ul li a{
     line-height: 50px;

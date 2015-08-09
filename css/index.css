@@ -1,10 +1,13 @@
+body{
+    background-color: #f1f4f9;
+}
+
 @media (min-width: 768px){
     .navbar-default{
         background-color: rgba(255, 255, 255, 0);
         background-color: none;
         background-color: transparent;
-        border-color: none;
-        border-width: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .navbar-default .navbar-brand{
@@ -17,13 +20,12 @@
         color: #fff;
     }
     .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
-        color: #ddd;
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.1);
     }
     .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
-        color: #ddd;
-        background-color: rgba(255, 255, 255, 0);
-        background-color: none;
-        background-color: transparent;
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.1);
     }
     .navbar #nav-login{
         border: solid 1px #fff;
