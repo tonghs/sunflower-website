@@ -1,9 +1,23 @@
 .container h4{
     margin: 0;
     padding: 10px 0 5px;
-    font-size: 22px;
+    font-size: 20px;
+}
+
+.container h3 b{
+    color: #99d055;
+}
+
+h3{
+    margin-top: 45px;
+}
+
+.container p{
+    color: #555555; 
+    font-size: 18px;
 }
 
 .container hr{
-    border-top: dashed 1px #eee;
+    width: 120px;
+    border-bottom: #ccc 1px dashed;
 }
