@@ -4,6 +4,8 @@
 from view._base import BaseHandler
 from _route import route
 
+from model.news import News
+
 @route('/')
 class index(BaseHandler):
     def get(self):
@@ -31,6 +33,12 @@ class about(BaseHandler):
 class fund(BaseHandler):
     def get(self):
         self.render()
+
+@route('/news')
+class news(BaseHandler):
+    def get(self):
+        li = News.news()
+        self.render(li=li)
 
 @route('/contact')
 class contact(BaseHandler):
