@@ -1,0 +1,28 @@
+<%!
+from config import APP, SLOGAN
+from model.util import time_fmt 
+from model.news import News 
+%>
+<%inherit file="../_base.html" />
+<%block name="title_">
+    全部新闻
+</%block>
+<%block name="css">
+    <link href="${STATIC_HOST}/css/news.css" rel="stylesheet">
+</%block>
+<div class="container main">
+    <div id="news">
+        % for o in li:
+        <div class="item">
+            <div class="title">
+                <a href="/news/${o.id_}" title="${o.title}" target="_blank">${o.title}</a>
+            </div>
+            <div class="time">${time_fmt(o.time, '%Y-%m-%d')}</div>
+            <div class="content">
+                ${News._desc_get(o.content)}&nbsp;
+                <a href="/news/${o.id_}" title="${o.title}" target="_blank">[阅读全部]</a>
+            </div>
+        </div>
+        % endfor
+    </div>
+</div>

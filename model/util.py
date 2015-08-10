@@ -3,6 +3,6 @@
 
 import time
 
-def time_fmt(timestamp): 
-    return time.strftime('%Y-%m-%d %H:%M:%d', time.localtime(timestamp))
+def time_fmt(timestamp, fmt='%Y-%m-%d %H:%M:%d'): 
+    return time.strftime(fmt, time.localtime(timestamp))
 

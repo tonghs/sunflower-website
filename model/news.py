@@ -3,6 +3,7 @@
 
 import _env
 import time
+import re
 from db import Doc
 from config import HOST
 from gid_ import gid
@@ -35,6 +36,7 @@ class News(Doc):
 
         o.upsert(dict(id_=id_))
 
+    @classmethod
     def news_get(cls, id_):
         o = None
         try:
@@ -44,10 +46,18 @@ class News(Doc):
 
         return o
 
+    @classmethod
     def news(cls, spec=dict(), offset=0, limit=0):
         return News.find(spec, sort=[('time', -1)], offset=offset, limit=limit)
 
 
+    @classmethod
+    def _desc_get(cls, html):
+        p = re.compile('<.*?>')
+        txt = p.sub('', html)
+
+        return '%s...' % txt[0: 160]
+
+
 if __name__ == "__main__":
     pass
-
