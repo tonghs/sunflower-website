@@ -4,7 +4,7 @@ from model.news import News
 news_ = News.news(limit=1)
 news = None
 if news_:
-    news = news_[0]
+    news = news_[1]
 %>
 <%inherit file="../_base.html" />
 <%block name="title">
@@ -103,20 +103,23 @@ ${APP} - ${SLOGAN}
                 </div>
             </div>
         </div>
+        <%
+            news_startup = News.news_get(10000064)
+        %>
         <div class="col-sm-8">
             <div class="home-item" id="video">
-                <a href="/news/10000009" title="一块投吧投创类电视节目 ">
-                    <div class="item-content" id="programs" style="background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/10000024?imageMogr2/thumbnail/1400x);">
+                <a href="/news/${news_startup.id_}" title="${news_startup.title}">
+                    <div class="item-content" id="programs" style="background-image: url(${news_startup.img}?imageMogr2/thumbnail/1000x);">
                     </div>
                 </a>
-                <a href="/news/10000009" title="一块投吧投创类电视节目 ">
+                <a href="/news/${news_startup.id_}" title="${news_startup.title}">
                     <div class="item-title">
                         <span class="item-title-p d-font">
-                            一块投吧投创类电视节目 
+                            ${news_startup.title}
                         </span>
                         <br>
                         <span class="item-title-s d-font">
-                            路演项目完美来袭!
+                            ${news_startup.summary}
                         </span>
                     </div>
                 </a>
