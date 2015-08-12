@@ -1,7 +1,7 @@
 <%!
 from config import APP, SLOGAN, QINIU
 from model.news import News
-news_ = News.news(limit=1)
+news_ = News.news(limit=2)
 news = None
 if news_:
     news = news_[1]
