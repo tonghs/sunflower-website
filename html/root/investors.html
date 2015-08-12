@@ -1,0 +1,23 @@
+<%inherit file="../_base.html" />
+<%block name="title_">
+一块投吧 介绍
+</%block>
+<%block name="css">
+    <link href="${STATIC_HOST}/css/investors.css" rel="stylesheet">
+    <link href="${STATIC_HOST}/css/sub_page.css" rel="stylesheet">
+</%block>
+<div class="jumbotron t-align-c" id="home" style="" data-parallax-background-ratio="0.5">
+    <div class="container t-align-c">
+    </div>
+</div>
+<div class="container">
+    <h3 class="t-align-c">《一块投吧》节目介绍</h2>
+
+    <hr>
+
+    ${WEB_INFO.program}
+
+    <div class="t-align-c">
+        <a href="/reg" class="btn btn-primary btn-lg" class="s-font">我要上节目</a>
+    </div>
+</div>

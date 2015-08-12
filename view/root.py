@@ -29,6 +29,11 @@ class about(BaseHandler):
     def get(self):
         self.render()
         
+@route('/1nvestors')
+class investors(BaseHandler):
+    def get(self):
+        self.render()
+
 @route('/fund')
 class fund(BaseHandler):
     def get(self):
