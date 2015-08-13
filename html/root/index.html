@@ -57,72 +57,54 @@ ${APP} - ${SLOGAN}
                 </div>
             </div>
             <div class="col-sm-4">
-
-                % if news:
-                <a href="/news/${news.id_}" title="${news.title}">
-                % else:
-                <a href="javascript: void(0);" title="向日葵传媒新闻">
-                % endif
-                    <div class="home-item" id="news">
-                        % if news:
+                <div class="home-item" id="news">
+                    <a href="/news/${news.id_}" title="${news.title}">
                         <div class="item-content" style="background-image: url(${QINIU.HOST}/${news.img});">
-                        % else:
-                        <div class="item-content" style="background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/news/1_1.png);">
-                        % endif
-                        &nbsp;
-                    </div>
-                </a>
-                % if news:
-                <a href="/news/${news.id_}" title="${news.title}">
-                % else:
-                <a href="javascript: void(0);" title="向日葵传媒新闻">
-                % endif
-                    <div class="item-title">
-                        <span class="item-title-p d-font">
-                        % if news:
-                            ${news.title}
-                        % endif
-                        </span>
-                        <br>
-                        <span class="item-title-s d-font">
-                        % if news:
-                            ${news.summary}
-                        % endif
-                        </span>
-                    </div>
-                </a>
-            </div>
-        </div>
-        
-    </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="home-item" id="fund">
-                <div id="fund-container">
-                    <iframe src="http://www.70c.com/w/CCSSSSQ" width="322" height="641"></iframe>
+                        </div>
+                    </a>
+                    <a href="/news/${news.id_}" title="${news.title}">
+                        <div class="item-title">
+                            <span class="item-title-p d-font">
+                                ${news.title}
+                            </span>
+                            <br>
+                            <span class="item-title-s d-font">
+                                ${news.summary}
+                            </span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
-        <%
-            news_startup = News.news_get(10000064)
-        %>
-        <div class="col-sm-8">
-            <div class="home-item" id="video">
-                <a href="/news/${news_startup.id_}" title="${news_startup.title}">
-                    <div class="item-content" id="programs" style="background-image: url(${QINIU.HOST}/${news_startup.img}?imageMogr2/thumbnail/1000x);">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="home-item" id="fund">
+                    <div id="fund-container">
+                        <iframe src="http://www.70c.com/w/CCSSSSQ" width="322" height="641">&nbsp;</iframe>
                     </div>
-                </a>
-                <a href="/news/${news_startup.id_}" title="${news_startup.title}">
-                    <div class="item-title">
-                        <span class="item-title-p d-font">
-                            ${news_startup.title}
-                        </span>
-                        <br>
-                        <span class="item-title-s d-font">
-                            ${news_startup.summary}
-                        </span>
-                    </div>
-                </a>
+                </div>
+            </div>
+            <%
+                news_startup = News.news_get(10000064)
+            %>
+            <div class="col-sm-8">
+                <div class="home-item" id="video">
+                    <a href="/news/${news_startup.id_}" title="${news_startup.title}">
+                        <div class="item-content" style="background-image: url(${QINIU.HOST}/${news_startup.img}?imageMogr2/thumbnail/1000x);">
+                        </div>
+                    </a>
+                    <a href="/news/${news_startup.id_}" title="${news_startup.title}">
+                        <div class="item-title">
+                            <span class="item-title-p d-font">
+                                ${news_startup.title}
+                            </span>
+                            <br>
+                            <span class="item-title-s d-font">
+                                ${news_startup.summary}
+                            </span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
