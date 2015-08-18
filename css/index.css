@@ -130,7 +130,6 @@ body{
 
 .home-item{
    box-shadow: 0 0 1px 1px #ccc;
-   background-color: #000;
    color: #616161;
    margin: auto;
    margin-bottom: 30px;
@@ -226,7 +225,7 @@ body{
     #video{
         width: 725px;
         margin-top: 30px;
-        float: right;
+        margin-right: 0px;
             transition: all 0.3s ease-out;
        -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
     -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
@@ -284,6 +283,29 @@ body{
         margin-left: -2px;
         overflow: hidden;
     }
+
+    .home-item a  .home-item-title{
+        position: relative;
+        color: #fff;
+        padding: 9px 0;
+        background-color: rgba(0,0,0,0);
+        margin-top: 3px;
+        opacity: 0;
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+
+    }
+
+    .home-item a:hover .home-item-title{
+        background-color: rgba(0,0,0,0.5);
+        opacity: 1;
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+    }
 }
 
 @media (max-width: 768px){
@@ -329,4 +351,5 @@ body{
     }
 
 }
+
 
