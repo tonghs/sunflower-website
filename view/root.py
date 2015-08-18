@@ -3,8 +3,10 @@
 
 from view._base import BaseHandler
 from _route import route
+from model import const
 
 from model.news import News
+
 
 @route('/')
 class index(BaseHandler):
@@ -39,11 +41,19 @@ class fund(BaseHandler):
     def get(self):
         self.render()
 
-@route('/news')
+@route('/news/(milestone|startup)')
 class news(BaseHandler):
-    def get(self):
-        li = News.news()
-        self.render(li=li)
+    def get(self, catagory):
+        if catagory == 'startup':
+            catagory = const.NEWS_CATAGORY.STARTUP
+        else:
+            catagory = const.NEWS_CATAGORY.NEWS
+
+        spec = dict(catagory=catagory)
+        title = const.NEWS_CATAGORY_CN.get(catagory)
+        li = News.news(spec=spec)
+
+        self.render(li=li, title=title)
 
 @route('/contact')
 class contact(BaseHandler):

@@ -47,7 +47,7 @@ class NEWS_CATAGORY(IntEnum_):
 
 NEWS_CATAGORY_CN = {
     NEWS_CATAGORY.STARTUP: '路演项目',
-    NEWS_CATAGORY.NEWS: '新闻',
+    NEWS_CATAGORY.NEWS: '大事记',
 }
 
 

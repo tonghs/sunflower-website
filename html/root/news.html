@@ -5,13 +5,14 @@ from model.news import News
 %>
 <%inherit file="../_base.html" />
 <%block name="title_">
-    全部新闻
+    ${title}
 </%block>
 <%block name="css">
     <link href="${STATIC_HOST}/css/news.css" rel="stylesheet">
 </%block>
 <div class="container main">
     <div id="news">
+        <h3>${title}</h3>
         % for o in li:
         <div class="item">
             <div class="title">
