@@ -305,6 +305,35 @@ body{
     -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
          -o-transition: all 0.3s ease-out;
     }
+
+    .more{
+        background-image: url(https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_arrow_forward_48px-128.png);
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: left center;
+        float: right;
+        display: block;
+        width: 80px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: -19px;
+        margin-right: -40px;
+        text-align: left;
+    }
+
+    .more:hover{
+        background-position: right center;
+    }
+
+    .more span{
+        opacity: 0;
+    }
+
+    .more:hover span{
+        opacity: 1;
+    }
+
+
 }
 
 @media (max-width: 768px){
@@ -349,35 +378,15 @@ body{
         overflow: hidden;
     }
 
-}
+    .home-item-title{
+        display: none;
+    }
 
-.more{
-    background-image: url(https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_arrow_forward_48px-128.png);
-    background-repeat: no-repeat;
-    background-size: 30px;
-    background-position: left center;
-    float: right;
-    display: block;
-    width: 80px;
-    height: 30px;
-    line-height: 30px;
-    margin-top: -19px;
-    margin-right: -40px;
-    text-align: left;
-}
+    .more{
+        display: none;
+    }
 
-.more:hover{
-    background-position: right center;
 }
-
-.more span{
-    opacity: 0;
-}
-
-.more:hover span{
-    opacity: 1;
-}
-
 
 @keyframes slidedown
 {
