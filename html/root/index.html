@@ -19,12 +19,13 @@ ${APP} - ${SLOGAN}
     </div>
     <div class="jumbotron t-align-c" id="home" style="background-image: url(${WEB_INFO.home_img});" data-parallax-background-ratio="0.5">
         <div class="t-align-c" id="home-content">
-            <div id="program-desc" class="s-font">
-                一块投吧
-            </div>
-            <div id="program-desc-sub" class="s-font">
-                全国首档全民参与的大型投创类电视节目，和最会赚钱的人一起投资<br>明星领投，全民跟投的真赚钱TV Show
-
+            <div id="slidedown1">
+                <div id="program-desc" class="s-font">
+                    一块投吧
+                </div>
+                <div id="program-desc-sub" class="s-font">
+                    全国首档全民参与的大型投创类电视节目，和最会赚钱的人一起投资<br>明星领投，全民跟投的真赚钱TV Show
+                </div>
             </div>
             <div id="btn-reg-container">
                 <a href="/reg" id="btn-reg" class="s-font">我要上节目</a>
@@ -94,7 +95,7 @@ ${APP} - ${SLOGAN}
             </div>
             <%
                 news_startup = News.news_get(10000064)
-                ## news_startup = News.news_get(10000011)
+                news_startup = News.news_get(10000011)
             %>
             <div class="col-sm-8">
                 <div class="home-item" id="video">
