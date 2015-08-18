@@ -130,10 +130,23 @@ body{
 
 .home-item{
    box-shadow: 0 0 1px 1px #ccc;
-   background-color: #fff;
+   background-color: #000;
    color: #616161;
    margin: auto;
    margin-bottom: 30px;
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+}
+
+
+.home-item:hover{
+    box-shadow: 0 0 10px 4px #ccc;
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
 }
 
 .home-item .item-content{
@@ -147,6 +160,7 @@ body{
     width: 100%;
     padding: 20px 0;
     text-align: center;
+   background-color: #fff;
 }
 
 .home-item .item-title .item-title-p{
@@ -194,6 +208,15 @@ body{
 
     #startups{
         width: 700px;
+        margin-top: 0px;
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+
+    }
+    #startups:hover{
+        margin-top: -5px;
             transition: all 0.3s ease-out;
        -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
     -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
@@ -204,21 +227,53 @@ body{
         width: 725px;
         margin-top: 30px;
         float: right;
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+    }
+    #video:hover{
+        margin-top: 25px;
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
     }
     #news{
         width: 365px;
         margin-top: -48px;
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+    }
+    #news:hover{
+        margin-top: -53px;
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
     }
     #fund{
         margin-left: 74px;
+        margin-top: 0;
         width: 300px;
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
+    }
+    #fund:hover{
+        margin-top: -5px;
+            transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+         -o-transition: all 0.3s ease-out;
     }
     #fund-container{
         width: 311px;
         height: 412px;
         overflow: hidden;
-        position: absolute;
-        z-index: -1;
     }
 
     #fund-container iframe{
@@ -273,19 +328,5 @@ body{
         overflow: hidden;
     }
 
-}
-a .item-title, a .item-content{
-    opacity: 1;
-            transition: all 0.3s ease-out;
-       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
-    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
-         -o-transition: all 0.3s ease-out;
-}
-a .item-title:hover, a .item-content:hover{
-    opacity: 0.8;
-            transition: all 0.3s ease-out;
-       -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
-    -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
-         -o-transition: all 0.3s ease-out;
 }
 

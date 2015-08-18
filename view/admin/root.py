@@ -50,15 +50,20 @@ class add_news(AdminHandler):
                 'title' : '',
                 'summary' : '',
                 'img' : 0,
-                'content' : ''
+                'content' : '',
+                'catagory': 1
             }
         self.render(news=news)
 
+@route('/admin/news/(\d+)?')
 @route('/admin/news')
 class news(AdminHandler):
-    def get(self):
-        news_list = News.news()
-        print '>>>kdkdkdkkd', news_list
+    def get(self, catagory=0):
+        spec = dict()
+        if catagory:
+            spec.update(catagory=int(catagory))
+
+        news_list = News.news(spec=spec)
 
         self.render(news_list=news_list)
 

@@ -1,5 +1,6 @@
 <%!
     from tornado.escape import json_encode
+    from model import const 
 %>
 <%inherit file="../_base.html" />
 <%block name="title_">
@@ -14,6 +15,16 @@
         <div class="form-group">
             <label for="title">标题</label>
             <input type="text" ng-model="o.title" class="form-control" id="title" name="title" placeholder="新闻标题">
+        </div>
+        <div class="form-group">
+            <label for="title">分类</label>
+            <br>
+            % for o in const.NEWS_CATAGORY:
+                <label class="radio-inline">
+                    <input type="radio" ng-model="o.catagory" name="catagory" value="${o.value}"> ${const.NEWS_CATAGORY_CN.get(o.value)}
+
+                </label>
+            % endfor
         </div>
         <div class="form-group">
             <label for="title">新闻摘要</label>
