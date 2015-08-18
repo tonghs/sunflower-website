@@ -16,6 +16,7 @@ class News(Doc):
         img = int,
         content = basestring,
         time = int,
+        catagory = int
     )
 
     indexes = [

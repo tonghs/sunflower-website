@@ -1,5 +1,6 @@
 <%!
     from config import APP
+    from model import const
 %>
 <%inherit file="../_god.html" />
 <%block name="css_">
@@ -40,12 +41,15 @@
                 <li><a href="/admin/administrators">管理员</a></li>
             </ul>
             <ul class="nav nav-sidebar">
-                <li><a href="/admin/startups">报名列表</a></li>
-                <li><a href="/admin/startups_analysis">报名统计</a></li>
-                <li><a href="/admin/startups_finalist">已入选项目</a></li>
+                ## <li><a href="/admin/startups">报名列表</a></li>
+                ## <li><a href="/admin/startups_analysis">报名统计</a></li>
+                ## <li><a href="/admin/startups_finalist">已入选项目</a></li>
             </ul>
             <ul class="nav nav-sidebar">
-                <li><a href="/admin/news">新闻管理</a></li>
+                % for o in const.NEWS_CATAGORY:
+                <li><a href="/admin/news/${o.value}">${const.NEWS_CATAGORY_CN.get(o.value)}列表</a></li>
+                % endfor
+                <li><a href="/admin/news">全部新闻</a></li>
                 <li><a href="/admin/add_news">添加新闻</a></li>
             </ul>
             <ul class="nav nav-sidebar">

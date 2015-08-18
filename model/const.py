@@ -41,6 +41,15 @@ DEGREE_CN = {
 }
 
 
+class NEWS_CATAGORY(IntEnum_):
+    STARTUP = 0
+    NEWS = 1
+
+NEWS_CATAGORY_CN = {
+    NEWS_CATAGORY.STARTUP: '路演项目',
+    NEWS_CATAGORY.NEWS: '大事记',
+}
+
 
 if __name__ == "__main__":
     pass
