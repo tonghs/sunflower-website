@@ -377,3 +377,69 @@ body{
 .more:hover span{
     opacity: 1;
 }
+
+
+@keyframes slidedown
+{
+    from {margin-top: -100px;}
+    to {margin-top: 0;}
+}
+
+@-moz-keyframes slidedown /* Firefox */
+{
+    from {margin-top: -100px;}
+    to {margin-top: 0;}
+}
+
+@-webkit-keyframes slidedown /* Safari 和 Chrome */
+{
+    from {margin-top: -100px;}
+    to {margin-top: 0;}
+}
+
+@-o-keyframes slidedown /* Opera */
+{
+    from {margin-top: -100px;}
+    to {margin-top: 0;}
+}
+
+
+@keyframes show
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-moz-keyframes show /* Firefox */
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-webkit-keyframes show /* Safari 和 Chrome */
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-o-keyframes show /* Opera */
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+#slidedown1{
+    animation: slidedown 1s;
+    -moz-animation: slidedown 1s; /* Firefox */
+    -webkit-animation: slidedown 1s;  /* Safari 和 Chrome */
+    -o-animation: slidedown 1s;   /* Opera */
+}
+
+#btn-reg-container{
+    animation: show 2s;
+    -moz-animation: show 2s; /* Firefox */
+    -webkit-animation: show 2s;  /* Safari 和 Chrome */
+    -o-animation: show 2s;   /* Opera */
+}
+
