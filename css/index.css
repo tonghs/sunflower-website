@@ -110,6 +110,7 @@ body{
 }
 
 #btn-reg-container{
+    opacity: 0;
     margin-top: 60px;
 }
 
@@ -394,27 +395,23 @@ body{
 
 }
 
-@keyframes slidedown
-{
-    from {margin-top: -100px;}
+@keyframes slidedown {
+    from {margin-top: -200px;}
     to {margin-top: 0;}
 }
 
-@-moz-keyframes slidedown /* Firefox */
-{
-    from {margin-top: -100px;}
+@-moz-keyframes slidedown{ /* Firefox */ 
+    from {margin-top: -200px;}
     to {margin-top: 0;}
 }
 
-@-webkit-keyframes slidedown /* Safari 和 Chrome */
-{
-    from {margin-top: -100px;}
+@-webkit-keyframes slidedown{ /* Safari 和 Chrome */ 
+    from {margin-top: -200px;}
     to {margin-top: 0;}
 }
 
-@-o-keyframes slidedown /* Opera */
-{
-    from {margin-top: -100px;}
+@-o-keyframes slidedown{ /* Opera */ 
+    from {margin-top: -200px;}
     to {margin-top: 0;}
 }
 
@@ -445,10 +442,10 @@ body{
 
 
 #slidedown1{
-    animation: slidedown 1s;
-    -moz-animation: slidedown 1s; /* Firefox */
-    -webkit-animation: slidedown 1s;  /* Safari 和 Chrome */
-    -o-animation: slidedown 1s;   /* Opera */
+            animation: slidedown 1s ease-in-out;
+       -moz-animation: slidedown 1s ease-in-out; /* Firefox */
+    -webkit-animation: slidedown 1s ease-in-out;  /* Safari 和 Chrome */
+         -o-animation: slidedown 1s ease-in-out;   /* Opera */
 }
 
 #btn-reg-container{
@@ -456,5 +453,8 @@ body{
     -moz-animation: show 2s; /* Firefox */
     -webkit-animation: show 2s;  /* Safari 和 Chrome */
     -o-animation: show 2s;   /* Opera */
+         animation-delay: 1s; /* W3C 和 Opera */
+    -moz-animation-delay: 1s; /* Firefox */
+ -webkit-animation-delay: 1s; /* Safari 和 Chrome */
 }
 
