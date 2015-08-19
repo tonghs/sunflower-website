@@ -215,7 +215,6 @@ body{
 
     }
     #startups:hover{
-        margin-top: -3px;
             transition: all 0.3s ease-out;
        -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
     -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
@@ -232,7 +231,6 @@ body{
          -o-transition: all 0.3s ease-out;
     }
     #video:hover{
-        margin-top: 27px;
             transition: all 0.3s ease-out;
        -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
     -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
@@ -247,7 +245,6 @@ body{
          -o-transition: all 0.3s ease-out;
     }
     #news:hover{
-        margin-top: -51px;
             transition: all 0.3s ease-out;
        -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
     -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
@@ -263,7 +260,6 @@ body{
          -o-transition: all 0.3s ease-out;
     }
     #fund:hover{
-        margin-top: -3px;
             transition: all 0.3s ease-out;
        -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
     -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
