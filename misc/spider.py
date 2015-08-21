@@ -4,15 +4,8 @@ import _env  # noqa
 import requests
 import urllib
 import time
-from extract import extract_all, extract
-from zapp.ANGELCRUNCH.model.utils import print_utf8
-from zapp.ANGELCRUNCH.misc.localjuzi.colorizing_stream_handler import (
-    ColorizingStreamHandler
-)
+from model.util import print_utf8, extract_all, extract
 import logging
-root = logging.getLogger()
-root.setLevel(logging.DEBUG)
-root.addHandler(ColorizingStreamHandler())
 
 
 class Spider(object):
@@ -173,7 +166,7 @@ class JuziSpider(Spider):
 
 
 def main():
-    from zapp.ANGELCRUNCH.model.itjuzi import Itjuzi, ItjuziVc
+    # from zapp.ANGELCRUNCH.model.itjuzi import Itjuzi, ItjuziVc
     sp = JuziSpider(
         'itjuzi.com',
         '/search?cat=company&keyword=%s',
@@ -185,14 +178,17 @@ def main():
     print_utf8('hhh')
     # print_utf8(sp.fetch_by_id(300))
     for juzi_id, juzi_com, vc_list in sp:
-        logging.debug(juzi_id)
+        # logging.debug(juzi_id)
         juzi_id = int(juzi_id)
         if not juzi_com['name']:
             continue
-        Itjuzi(juzi_com).upsert(dict(juzi_id=juzi_id))
-        for vc in vc_list:
-            vc_id = int(vc.pop("vc_id"))
-            ItjuziVc(vc).upsert(dict(juzi_id=juzi_id, vc_id=vc_id))
+        print_utf8(juzi_id)
+        print_utf8(juzi_com)
+        print_utf8(vc_list)
+        # Itjuzi(juzi_com).upsert(dict(juzi_id=juzi_id))
+        # for vc in vc_list:
+        #     vc_id = int(vc.pop("vc_id"))
+        #     ItjuziVc(vc).upsert(dict(juzi_id=juzi_id, vc_id=vc_id))
 
     # for item in sp:
     #     # pass
