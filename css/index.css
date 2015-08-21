@@ -465,16 +465,16 @@ body{
 
 
 #slidedown1{
-            animation: slidedown 1s ease-out;
-       -moz-animation: slidedown 1s ease-out; /* Firefox */
-    -webkit-animation: slidedown 1s ease-out;  /* Safari 和 Chrome */
-         -o-animation: slidedown 1s ease-out;   /* Opera */
+            animation: slidedown 0.5s ease-out;
+       -moz-animation: slidedown 0.5s ease-out; /* Firefox */
+    -webkit-animation: slidedown 0.5s ease-out;  /* Safari 和 Chrome */
+         -o-animation: slidedown 0.5s ease-out;   /* Opera */
 }
 
 #btn-reg-container{
-    animation: show 2s;
-    -moz-animation: show 2s; /* Firefox */
-    -webkit-animation: show 2s;  /* Safari 和 Chrome */
-    -o-animation: show 2s;   /* Opera */
+         animation: show 1s;
+    -moz-animation: show 1s; /* Firefox */
+ -webkit-animation: show 1s;  /* Safari 和 Chrome */
+      -o-animation: show 1s;   /* Opera */
 }
 
