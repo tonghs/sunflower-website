@@ -9,8 +9,8 @@ APP = '向日葵传媒'
 APP_CN = 'Sunflower Media'
 SLOGAN = '不辜负每一个梦想'
 
-HOST = 'http://c.cc:8088'
-STATIC_HOST = 'http://static.c.cc:8088'
+HOST = 'http://xrkmedia.com'
+STATIC_HOST = 'http://static.xrkmedia.com'
 
 DB = 'sunflower'
 
