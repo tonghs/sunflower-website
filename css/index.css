@@ -98,7 +98,7 @@ body{
 }
 
 #program-desc{
-    font-size: 50px;
+    font-size: 38px;
     margin-top: 120px;
     font-weight: 200;
 }
@@ -115,14 +115,15 @@ body{
 }
 
 #btn-reg-container #btn-reg{
-    background-color: #f1f4f9;
+    background-color: #fff;
     background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/camera.png);
     background-repeat: no-repeat;
-    background-position: 44px center;
-    border-radius: 30px;
-    padding: 20px 50px 18px 110px;
-    font-size: 18px;
+    background-position: 39px center;
+    border-radius: 25px;
+    padding: 15px 33px 15px 95px;
+    font-size: 15px;
     color: #2a4251;
+
 }
 
 #btn-reg-container #btn-reg:hover{
@@ -158,9 +159,9 @@ body{
 
 .home-item .item-title{
     width: 100%;
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: center;
-   background-color: #fff;
+    background-color: #fff;
 }
 
 .home-item .item-title .item-title-p{
@@ -354,6 +355,18 @@ body{
         font-size: 45px;
         line-height: 85px;
         width: 100%;
+    }
+
+    #program-desc{
+        font-size: 30px;
+        margin-top: 120px;
+        font-weight: 200;
+    }
+    #program-desc-sub {
+        font-size: 16px;
+        width: 80%;
+        margin: auto;
+        padding-top: 10px;
     }
     #news{
         width: 100%;
