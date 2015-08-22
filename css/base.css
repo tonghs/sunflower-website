@@ -175,3 +175,30 @@ header{
     -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
          -o-transition: all 0.3s ease-out;
 }
+
+@media (max-width: 768px){
+    .web .navbar .navbar-brand{
+            line-height: 18px;
+            height: 61px;
+            background-repeat: no-repeat;
+            background-position: 14px center;
+            background-size: 42px;
+            padding-left: 66px;
+            font-size: 14px;
+    }
+    .web .navbar .navbar-toggle{
+        height: 46px;
+        border: 0;
+        background-color: #f8f8f8;
+    }
+
+    .navbar-toggle .icon-bar+.icon-bar {
+        margin-top: 6px;
+    }
+    .web .navbar ul li a {
+        line-height: 31px;
+        height: 52px;
+        font-size: 14px;
+    }
+}
+
