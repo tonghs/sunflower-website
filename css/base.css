@@ -95,14 +95,14 @@ header{
 #footer{
     background-color: #272727;
     color: #737373;
-    padding: 50px 0 40px;
+    padding: 28px 0 25px;
 }
 
 
 #footer .container h3{
     color: #fff;
     margin-bottom: 30px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #footer .container p{
