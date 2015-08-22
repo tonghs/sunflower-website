@@ -1,11 +1,12 @@
 .container h4{
     margin: 0;
     padding: 10px 0 5px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .container h3 b{
     color: #99d055;
+    font-size: 22px;
 }
 
 h3{
@@ -14,7 +15,7 @@ h3{
 
 .container p{
     color: #555555; 
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .container hr{
