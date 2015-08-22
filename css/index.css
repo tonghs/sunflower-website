@@ -30,7 +30,7 @@ body{
     .navbar #nav-login{
         border: solid 1px #fff;
         padding: 5px;
-        font-size: 15px;
+        font-size: 14px;
         color: #fff;
         background-color: none;
         background-color: transparent;
@@ -202,9 +202,11 @@ body{
 }
 
 @media (min-width: 768px){
+    /*
     .container{
         min-width: 1200px;
     }
+    */
 
     #startups{
         width: 700px;
