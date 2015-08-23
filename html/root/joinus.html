@@ -1,11 +1,13 @@
-<%inherit file="../_base.html" />
+<%inherit file="_abount_base.html" />
 <%block name="title_">
 加入我们
 </%block>
 <%block name="css">
+    ${parent.css()}
     <link href="${STATIC_HOST}/css/joinus.css" rel="stylesheet">
 </%block>
-<div class="container main">
+
+<div class="item">
     <h3>广告客户总监</h3>
     <h4 class="s-font">岗位职责：</h4>
     <p class="s-font">1、负责品牌企业客户的开发与维护，媒体广告销售与管理；</p>
@@ -16,6 +18,8 @@
     <p class="s-font">3、具有很强的营销策划能力与营销团队的管理能力，能对销售业绩负责；</p>
     <p class="s-font">4、具备娴熟的沟通技巧、极强的项目公关能力、谈判能力和出色的执行能力；对电视节目的价值有开掘能力；熟练Excel，PowerPoint、word等办公软件；</p>
     <p class="s-font">5、有媒体或4A广告公司工作经验、企业商会工作经验、知名商学院工作经验、曾经服务过知名品牌客户者、有企业客户资源者优先。</p>
+</div>
+<div class="item">
     <h3>高级广告业务经理</h3>
     <h4 class="s-font">岗位职责：</h4>
     <p class="s-font">1、负责知名品牌企业客户的开发与维护；</p>
@@ -28,6 +32,8 @@
     <p class="s-font">5、责任心强，服务意识强，能承受较强的工作压力；</p>
     <p class="s-font">6、有媒体或4A广告公司工作经验、企业商会工作经验、知名商学院工作经验、曾经服务过知名品牌客户者、有企业品牌客户资源者优先。</p>
 
+</div>
+<div class="item">
     <h3>产品经理</h3>
     <h4 class="s-font">岗位职责：</h4>
     <p class="s-font">1、结合公司整体战略方向，根据市场调研情况，进行产品规划，负责公司互联网支付产品的设计与维护；</p>
@@ -46,11 +52,9 @@
     <p class="s-font">5、熟练使用OFFICE、AXURE等工具软件，有投身互联网金融行业的强烈意愿和足够信心，有互联网金融行业移动产品经验优先；</p>
     <p class="s-font">6、想象力丰富，有创意、有激情，良好的沟通能力和团队合作精神。</p>
 
+</div>
     <h3>邮箱地址</h3>
     <p class="s-font"><a href="mailto:liupengfei@xrkmedia.com">liupengfei@xrkmedia.com</a><p>
-
-
-</div>
 <%block name="js">
     <script src="${STATIC_HOST}/js/joinus.js"></script>
 </%block>
