@@ -1,0 +1,30 @@
+#left, #right{
+    margin-top: 20px;
+}
+
+#left{
+    position: absolute;
+    box-shadow: 0 0 1px 0 #eee;
+    border: solid 1px #eee;
+    width: 200px;
+}
+
+#right{
+    padding-left: 220px;
+}
+
+#right .content{
+    box-shadow: 0 0 1px 0 #eee;
+    border: solid 1px #eee;
+    padding: 30px;
+}
+
+#left ul, #left ul li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#left ul{
+    margin: 30px 20px;
+}

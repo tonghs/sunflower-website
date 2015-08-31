@@ -1,24 +1,44 @@
+h3{
+    margin-top: 0px;
+}
+
+.container .item{
+    margin-bottom: 45px;
+}
+
 .container h4{
     margin: 0;
-    padding: 10px 0 5px;
+    padding: 10px 0 10px;
     font-size: 18px;
 }
 
-.container h3 b{
-    color: #99d055;
-    font-size: 22px;
-}
-
-h3{
-    margin-top: 45px;
-}
-
-.container p{
+.container.main p{
     color: #555555; 
     font-size: 15px;
+    margin: 0 18px 10px;
 }
 
-.container hr{
-    width: 120px;
-    border-bottom: #ccc 1px dashed;
+@media (max-width: 768px){
+    #body{
+        padding-top: 61px;
+    }
+    h3{
+        margin-top: 30px;
+        font-size: 18px;
+    }
+
+    .container h4{
+        margin: 0;
+        padding: 10px 0 10px;
+        font-size: 16px;
+    }
+
+    .container p{
+        color: #555555;
+        font-size: 15px;
+        line-height: 22px;
+        width: 90%;
+        margin: auto;
+    }
+
 }
