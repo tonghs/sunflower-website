@@ -1,14 +1,14 @@
 <%!
 from config import APP, SLOGAN, QINIU, HOST
 from model.news import News
-news_ = News.news(limit=2)
+news_ = News.news(limit=1)
 news = None
 if news_:
-    news = news_[1]
+    news = news_[0]
 %>
 <%inherit file="../_base.html" />
 <%block name="title">
-${APP} - ${SLOGAN}
+${APP}
 </%block>
 <%block name="css">
     <link href="${STATIC_HOST}/css/index.css" rel="stylesheet">

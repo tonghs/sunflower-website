@@ -62,3 +62,6 @@ class News(Doc):
 
 if __name__ == "__main__":
     pass
+    news_ = News.news(limit=2)
+    for o in news_:
+        print o.title
