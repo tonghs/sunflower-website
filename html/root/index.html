@@ -1,10 +1,9 @@
 <%!
 from config import APP, SLOGAN, QINIU, HOST
 from model.news import News
-news_ = News.news(limit=1)
-news = None
-if news_:
-    news = news_[0]
+from model.const import NEWS_CATAGORY
+news_milestone = News.latest_news(NEWS_CATAGORY.NEWS)
+news_startup = News.latest_news(NEWS_CATAGORY.STARTUP)
 %>
 <%inherit file="../_base.html" />
 <%block name="title">
@@ -33,9 +32,9 @@ ${APP}
         </div>
     </div>
 </div>
-<div style="height: 600px;"></div>
+<div style="height: 705px;"></div>
 <div class="jumbotron t-align-c">
-    <div class="container t-align-c" id="fixed-width">
+    <div class="container t-align-c">
         <div class="row">
             <div class="col-sm-8">
                 <div class="home-item" id="startups">
@@ -60,19 +59,19 @@ ${APP}
             </div>
             <div class="col-sm-4">
                 <div class="home-item" id="news">
-                    <a href="/news/${news.id_}" title="${news.title}">
-                        <div class="item-content" style="background-image: url(${QINIU.HOST}/${news.img});">
+                    <a href="/news/${news_milestone.id_}" title="${news_milestone.title}">
+                        <div class="item-content" style="background-image: url(${QINIU.HOST}/${news_milestone.img});">
                             <div class="home-item-title">大事记</div>
                         </div>
                     </a>
                     <div class="item-title">
-                        <a href="/news/${news.id_}" title="${news.title}">
+                        <a href="/news/${news_milestone.id_}" title="${news_milestone.title}">
                             <span class="item-title-p d-font">
-                                ${news.title}
+                                ${news_milestone.title}
                             </span>
                             <br>
                             <span class="item-title-s d-font">
-                                ${news.summary}
+                                ${news_milestone.summary}
                             </span>
                         </a>
                         <a class="more" href="${HOST}/news/milestone">
@@ -93,10 +92,6 @@ ${APP}
                     </a>
                 </div>
             </div>
-            <%
-                news_startup = News.news_get(10000064)
-                ## news_startup = News.news_get(10000011)
-            %>
             <div class="col-sm-8">
                 <div class="home-item" id="video">
                     <a href="/news/${news_startup.id_}" title="${news_startup.title}">

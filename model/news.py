@@ -51,6 +51,15 @@ class News(Doc):
     def news(cls, spec=dict(), offset=0, limit=0):
         return News.find(spec, sort=[('time', -1)], offset=offset, limit=limit)
 
+    @classmethod
+    def latest_news(cls, catagory): 
+        news_ = News.news(spec=dict(catagory=catagory), limit=1)
+        news = None
+        if news_:
+            news = news_[0]
+
+        return news
+
 
     @classmethod
     def _desc_get(cls, html):
