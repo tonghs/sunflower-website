@@ -161,6 +161,19 @@
     offset: 30
   });
 
+  $.confirm = function(callback, msg) {
+    if (msg == null) {
+      msg = '确定？';
+    }
+    return BootstrapDialog.confirm(msg, function(result) {
+      if (result) {
+        if (callback) {
+          return callback();
+        }
+      }
+    });
+  };
+
   headroom.init();
 
 }).call(this);

@@ -124,4 +124,11 @@ headroom  = new Headroom(myElement, {
                     offset : 30
                 })
 
+$.confirm = (callback, msg='确定？') ->
+    BootstrapDialog.confirm(msg, (result)->
+            if result
+                if callback
+                    callback()
+    )
+
 headroom.init()

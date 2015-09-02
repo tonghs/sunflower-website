@@ -8,6 +8,12 @@ from db import Doc
 from config import HOST
 from gid_ import gid
 
+
+class DEL_FLAG:
+    TRUE = 1
+    FALSE = 0
+
+
 class News(Doc):
     structure = dict(
         id_ = int,
@@ -16,7 +22,8 @@ class News(Doc):
         img = int,
         content = basestring,
         time = int,
-        catagory = int
+        catagory = int,
+        is_del = int,
     )
 
     indexes = [
@@ -24,12 +31,17 @@ class News(Doc):
         { 'fields': ['id_'] },
     ]
 
+    default_values = {
+        'is_del': DEL_FLAG.FALSE
+    }
+
     @classmethod
     def news_upsert(cls, doc):
         id_ = 0
         if not doc.id_:
             id_ = gid() 
             doc.__dict__.update(time=int(time.time()))
+            doc.__dict__.update(is_del=DEL_FLAG.FALSE)
         else:
             id_ = doc.id_
 
@@ -41,7 +53,7 @@ class News(Doc):
     def news_get(cls, id_):
         o = None
         try:
-            o = News.find_one(dict(id_=int(id_)))
+            o = News.find_one(dict(id_=int(id_), is_del=DEL_FLAG.FALSE))
         except:
             pass
 
@@ -49,11 +61,14 @@ class News(Doc):
 
     @classmethod
     def news(cls, spec=dict(), offset=0, limit=0):
+        if 'is_del' not in spec:
+            spec.update(is_del=DEL_FLAG.FALSE)
+
         return News.find(spec, sort=[('time', -1)], offset=offset, limit=limit)
 
     @classmethod
     def latest_news(cls, catagory): 
-        news_ = News.news(spec=dict(catagory=catagory), limit=1)
+        news_ = News.news(spec=dict(catagory=catagory, is_del=DEL_FLAG.FALSE), limit=1)
         news = None
         if news_:
             news = news_[0]
@@ -71,6 +86,6 @@ class News(Doc):
 
 if __name__ == "__main__":
     pass
-    news_ = News.news(limit=2)
-    for o in news_:
-        print o.title
+    for o in News.iterdoc():
+        o.is_del = 0
+        o.save()

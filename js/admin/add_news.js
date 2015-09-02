@@ -31,7 +31,9 @@
         V().o.content = editor.getValue();
         V().$apply();
         return $.postJSON('/j/admin/add_news', $scope.o, function(o) {
-          return $.alert_success('保存成功');
+          return $.alert_success('保存成功', function() {
+            return location.href = 'news';
+          });
         });
       };
     });

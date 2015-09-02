@@ -50,7 +50,9 @@ window.def_news = (o)->
                 V().o.content = editor.getValue()
                 V().$apply()
                 $.postJSON '/j/admin/add_news', $scope.o, (o)->
-                    $.alert_success '保存成功'
+                    $.alert_success '保存成功', ->
+                        location.href = 'news'
+
     )
 
 

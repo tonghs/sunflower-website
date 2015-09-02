@@ -26,7 +26,7 @@
                 <td>${news.summary}</td>
                 <td>${time_fmt(news.time)}</td>
                 <td>
-                    <a href="javascript: void(0);">删除</a>
+                    <a href="javascript: void(0);" class="del" data-id="${news.id_}">删除</a>
                     &nbsp;&nbsp;
                     <a href="${HOST}/admin/add_news/${news.id_}" target="_blank">编辑</a>
                     &nbsp;&nbsp;
@@ -38,4 +38,5 @@
     </table>
 </div>
 <%block name="js">
+    <script src="${STATIC_HOST}/js/admin/news.js"></script>
 </%block>
