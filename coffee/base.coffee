@@ -115,15 +115,6 @@ $.alert_fail = (msg='操作失败')->
                 callback()
     })
 
-myElement = document.querySelector("header")
-headroom  = new Headroom(myElement, {
-                    tolerance: {
-                      down : 10,
-                      up : 20
-                    },
-                    offset : 30
-                })
-
 $.confirm = (callback, msg='确定？') ->
     BootstrapDialog.confirm(msg, (result)->
             if result
@@ -131,4 +122,16 @@ $.confirm = (callback, msg='确定？') ->
                     callback()
     )
 
-headroom.init()
+
+myElement = document.querySelector("header")
+
+if myElement
+    headroom  = new Headroom(myElement, {
+                        tolerance: {
+                          down : 10,
+                          up : 20
+                        },
+                        offset : 30
+                    })
+
+    headroom.init()

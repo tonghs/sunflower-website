@@ -70,5 +70,5 @@ class news(AdminHandler):
 @route('/admin/logout')
 class logout(BaseHandler):
     def get(self):
-        self.clear_cookie("user")
+        self.clear_cookie("admin")
         self.redirect("/admin")

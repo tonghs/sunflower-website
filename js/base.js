@@ -151,16 +151,6 @@
     });
   };
 
-  myElement = document.querySelector("header");
-
-  headroom = new Headroom(myElement, {
-    tolerance: {
-      down: 10,
-      up: 20
-    },
-    offset: 30
-  });
-
   $.confirm = function(callback, msg) {
     if (msg == null) {
       msg = '确定？';
@@ -174,6 +164,17 @@
     });
   };
 
-  headroom.init();
+  myElement = document.querySelector("header");
+
+  if (myElement) {
+    headroom = new Headroom(myElement, {
+      tolerance: {
+        down: 10,
+        up: 20
+      },
+      offset: 30
+    });
+    headroom.init();
+  }
 
 }).call(this);
