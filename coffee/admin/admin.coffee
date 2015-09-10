@@ -12,7 +12,7 @@ def_view(
         $scope.submit =->
             $.postJSON '/j/admin/login', $scope.o, (o)->
                 if o.success
-                    window.location.href = '/admin/index'
+                    window.location.href = '/admin/settings'
                 else
                     $.alert_fail o.msg
 

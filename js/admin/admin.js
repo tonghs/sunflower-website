@@ -9,7 +9,7 @@
     return $scope.submit = function() {
       return $.postJSON('/j/admin/login', $scope.o, function(o) {
         if (o.success) {
-          return window.location.href = '/admin/index';
+          return window.location.href = '/admin/settings';
         } else {
           return $.alert_fail(o.msg);
         }
