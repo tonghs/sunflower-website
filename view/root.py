@@ -30,16 +30,19 @@ class reg_success(BaseHandler):
 class about(BaseHandler):
     def get(self):
         self.render()
+
         
 @route('/1nvestors')
 class investors(BaseHandler):
     def get(self):
         self.render()
 
+
 @route('/fund')
 class fund(BaseHandler):
     def get(self):
         self.render()
+
 
 @route('/news/(milestone|startup)')
 class news(BaseHandler):
@@ -54,6 +57,7 @@ class news(BaseHandler):
         li = News.news(spec=spec)
 
         self.render(li=li, title=title)
+
 
 @route('/contact')
 class contact(BaseHandler):
@@ -77,6 +81,7 @@ class signin(BaseHandler):
 class signup(BaseHandler):
     def get(self):
         self.render()
+
 
 @route('/signout')
 class signup(BaseHandler):

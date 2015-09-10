@@ -9,13 +9,6 @@ from model.user import User
 from model.qiniu_ import qiniu_token
 from model.gid_ import gid
 
-# @route('/j/reg')
-# class reg(JsonHandler):
-#     def post(self):
-#         o = self.json
-#         # Reg.reg_new(o)
-# 
-#.finish()
 
 @route('/j/upload_token')
 class upload_token(JsonHandler):
@@ -52,5 +45,3 @@ class _(JsonHandler):
             User.user_new(o.name, o.user_name, o.password)
 
         self.finish(dict(err=self.err.to_dict()))
-
-
