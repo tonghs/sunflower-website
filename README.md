@@ -17,5 +17,16 @@ sunflower-website
   * 阿里云及 Docker container 添加 ssk-key
 
 
+### Milestone
+
+* 2016-09-15
+    * DB 备份脚本
+    * WebApp 和 MongoDB 分离到两个独立的 Container 中
+
+### TODO
+
+    * 持续集成
+    * 手机和邮箱注册
+
 ### 注意
 不要直接编辑 js 文件，请编辑 coffee 文件夹下的 coffee 文件，编译成 js。
