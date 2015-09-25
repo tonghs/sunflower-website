@@ -232,25 +232,43 @@ header{
          -o-transition: all 0.3s ease-out;
 }
 @media (min-width: 768px){
-    #partner img{
+    #partner-container #desktop{
+        
+    }
+
+    #partner-container #mobile{
+        display: none;
+    }
+
+    #partner-container img{
         width: 150px;
     }
-    #partner #angelcrunch{
+    #partner-container #angelcrunch{
+        margin-top: 15px;
+        
     }
 
-    #partner #putiandai{
+    #partner-container #putiandai{
     }
 
-    #partner #tianshijie{
+    #partner-container #tianshijie{
         width: 125px;
     }
 
-    #partner #haizi{
+    #partner-container #haizi{
+        margin-top: 3px;
     }
 
-    #partner #founders_space{
+    #partner-container #founders_space{
+        margin-top: 17px;
+    }
+
+    #partner-container #hku{
+        margin-top: 12px;
+    }
+
+    #partner-container #cfscc{
         margin-top: 10px;
-        width: 315px;
     }
 
 }
@@ -280,26 +298,52 @@ header{
         font-size: 14px;
     }
 
-    #partner img{
-        width: 35%;
-
-    }
-    #partner #angelcrunch{
+    #partner-container #desktop{
+        display: none;
     }
 
-    #partner #putiandai{
+    #partner-container #mobile{
     }
 
-    #partner #tianshijie{
+    #partner-container img{
+        margin-top: 15px;
+        margin-left: 15px;
+        width: 40%;
+
+    }
+    #partner-container #angelcrunch{
     }
 
-    #partner #haizi{
+    #partner-container #putiandai{
     }
 
-    #partner #founders_space{
-        margin-top: 10px;
-        width: 75%;
+    #partner-container #tianshijie{
     }
 
+    #partner-container #haizi{
+    }
+
+    #partner-container #founders_space{
+    }
+
+    #partner-container #hku{
+    }
+
+    #partner-container #cfscc{
+    }
+}
+
+#partner-container{
+    background-color: #f9f9f9;
+    padding: 25px;
+}
+
+#partner-container hr{
+    border-top: 2px solid #eee;
+    width: 60px;
+}
+
+#partner-container .title{
+    font-size: 25px; 
 }
 
