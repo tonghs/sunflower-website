@@ -231,6 +231,30 @@ header{
     -webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
          -o-transition: all 0.3s ease-out;
 }
+@media (min-width: 768px){
+    #partner img{
+        width: 150px;
+    }
+    #partner #angelcrunch{
+    }
+
+    #partner #putiandai{
+    }
+
+    #partner #tianshijie{
+        width: 125px;
+    }
+
+    #partner #haizi{
+        margin-left: 38px;
+    }
+
+    #partner #founders_space{
+        margin-top: 10px;
+        width: 315px;
+    }
+
+}
 
 @media (max-width: 768px){
     .web .navbar .navbar-brand{
@@ -256,5 +280,28 @@ header{
         height: 52px;
         font-size: 14px;
     }
+
+    #partner img{
+        width: 35%;
+
+    }
+    #partner #angelcrunch{
+    }
+
+    #partner #putiandai{
+    }
+
+    #partner #tianshijie{
+    }
+
+    #partner #haizi{
+        margin-left: 14px;
+    }
+
+    #partner #founders_space{
+        margin-top: 10px;
+        width: 75%;
+    }
+
 }
 
