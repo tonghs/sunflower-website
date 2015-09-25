@@ -116,11 +116,15 @@ $.alert_fail = (msg='操作失败')->
     })
 
 $.confirm = (callback, msg='确定？') ->
-    BootstrapDialog.confirm(msg, (result)->
+    BootstrapDialog.confirm({
+        title: '确认',
+        message: msg,
+        callback: (result)->
             if result
                 if callback
                     callback()
-    )
+
+    })
 
 
 myElement = document.querySelector("header")

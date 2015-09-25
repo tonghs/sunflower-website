@@ -1,0 +1,40 @@
+<%
+    from model.util import time_fmt 
+    from config import HOST
+%>
+<%inherit file="../_base.html" />
+<%block name="title_">
+媒体报道列表
+</%block>
+<%block name="css">
+    <link href="${STATIC_HOST}/css/admin/reports.css" rel="stylesheet">
+</%block>
+<div class="panel panel-default">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>标题</th>
+                <th>时间</th>
+                <th>动作</th>
+            </tr>
+        <thead>
+        <tbody>
+            % for report in report_list:
+            <tr>
+                <td><a href="${report.url}" target="_blank">${report.title}</a></td>
+                <td>${time_fmt(report.time)}</td>
+                <td>
+                    <a href="javascript: void(0);" class="del" data-id="${report.id_}">删除</a>
+                    &nbsp;&nbsp;
+                    <a href="${HOST}/admin/edit_report/${report.id_}" target="_blank">编辑</a>
+                    &nbsp;&nbsp;
+                    <a href="${report.url}" target="_blank">查看</a>
+                </td>
+            </tr>
+            % endfor
+        </tbody>
+    </table>
+</div>
+<%block name="js">
+    <script src="${STATIC_HOST}/js/admin/reports.js"></script>
+</%block>

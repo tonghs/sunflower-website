@@ -8,6 +8,7 @@ from _route import route
 from model.admin import Admin
 from model.web_info import WebInfo
 from model.news import News, DEL_FLAG
+from model.report import Report, DEL_FLAG
 
 @route('/j/admin/login')
 class _(JsonHandler):
@@ -51,3 +52,21 @@ class del_news(AdminJsonHandler):
         News.news_upsert(o)
 
         self.finish()
+
+@route('/j/admin/add_report')
+class add_report(AdminJsonHandler):
+    def post(self):
+        o = self.json
+        Report.report_upsert(o)
+
+        self.finish(o.__dict__)
+
+@route('/j/admin/del_report')
+class del_report(AdminJsonHandler):
+    def post(self):
+        o = self.json
+        o.__dict__.update(is_del=DEL_FLAG.TRUE)
+        Report.report_upsert(o)
+
+        self.finish()
+

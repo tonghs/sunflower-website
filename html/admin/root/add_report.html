@@ -4,54 +4,43 @@
 %>
 <%inherit file="../_base.html" />
 <%block name="title_">
-添加新闻
+添加媒体报道
 </%block>
 <%block name="css">
-    <link href="${STATIC_HOST}/css/admin/add_news.css" rel="stylesheet">
+    <link href="${STATIC_HOST}/css/admin/add_report.css" rel="stylesheet">
 </%block>
-<div class="" ng-app="NewsApp">
-    <form ng-controller="NewsCtrl">
-        <h2 class="t-align-c">添加新闻</h2>
+<div class="" ng-app="ReportApp">
+    <form ng-controller="ReportCtrl">
+        <h2 class="t-align-c">添加媒体报道</h2>
         <div class="form-group">
-            <label for="title">标题</label>
-            <input type="text" ng-model="o.title" class="form-control" id="title" name="title" placeholder="新闻标题">
+            <label for="title">报道标题</label>
+            <input type="text" ng-model="o.title" class="form-control" id="title" name="title" placeholder="报道标题">
         </div>
         <div class="form-group">
-            <label for="title">分类</label>
-            <br>
-            % for o in const.NEWS_CATAGORY:
-                <label class="radio-inline">
-                    <input type="radio" ng-model="o.catagory" name="catagory" value="${o.value}"> ${const.NEWS_CATAGORY_CN.get(o.value)}
-
-                </label>
-            % endfor
+            <label for="title">报道链接</label>
+            <input type="text" ng-model="o.url" class="form-control" id="url" name="url" placeholder="报道链接">
         </div>
         <div class="form-group">
-            <label for="title">新闻摘要</label>
-            <input type="text" ng-model="o.summary" class="form-control" id="summary" name="summary" placeholder="新闻摘要，一句话即可">
+            <label for="title">报道摘要</label>
+            <textarea ng-model="o.summary" class="form-control" id="summary" name="summary" placeholder="报道摘要，一句话即可"></textarea>
         </div>
         <div class="form-group">
             <div id="img-preview">
             </div>
-            ## <label for="title">新闻头图</label>
             <button type="button" id="img_up" class="btn btn-info">
                 <span ng_if="percent!=0 && percent!=100">
                     上传中 {{percent}}% ...
                 </span>
                 <span ng_if="percent==0 || percent==100">
                     <span ng_if="o.img == 0">
-                        上传新闻头图
+                        上传图片
                     </span>
                     <span ng_if="o.img != 0">
                         重新上传
                     </span>
                 </span>
             </button>
-            <input type="hidden" ng-model="o.img" class="form-control" id="img" name="img" placeholder="新闻头图">
-        </div>
-        <div class="form-group">
-            <label for="desc">新闻内容</label>
-            <textarea class="form-control" rows="5" id="content" ng-model="o.content" name="content" placeholder="新闻内容"></textarea>
+            <input type="hidden" ng-model="o.img" class="form-control" id="img" name="img" placeholder="报道图片">
         </div>
         <button type="button" ng-click="submit()" class="btn btn-primary">保存</button>
     </form>
@@ -64,8 +53,8 @@
     <script src="${STATIC_HOST}/js/_lib/simditor/hotkeys.min.js"></script>
     <script src="${STATIC_HOST}/js/_lib/simditor/uploader.js"></script>
     <script src="${STATIC_HOST}/js/_lib/simditor/simditor.js"></script>
-    <script src="${STATIC_HOST}/js/admin/add_news.js"></script>
+    <script src="${STATIC_HOST}/js/admin/add_report.js"></script>
     <script>
-        def_news(${json_encode(news)|n});
+        def_report(${json_encode(report)|n});
     </script>
 </%block>

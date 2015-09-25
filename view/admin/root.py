@@ -6,6 +6,7 @@ from _route import route
 
 from model.web_info import WebInfo
 from model.news import News
+from model.report import Report 
 
 @route('/admin')
 class admin(BaseHandler):
@@ -55,6 +56,7 @@ class add_news(AdminHandler):
             }
         self.render(news=news)
 
+
 @route('/admin/news/(\d+)?')
 @route('/admin/news')
 class news(AdminHandler):
@@ -66,6 +68,33 @@ class news(AdminHandler):
         news_list = News.news(spec=spec)
 
         self.render(news_list=news_list)
+
+
+@route('/admin/add_report')
+@route('/admin/edit_report/(\d+)?')
+class add_report(AdminHandler):
+    def get(self, report_id=None):
+        report = None
+        if report_id:
+            report = Report.report_get(report_id)
+
+        if not report:
+            report = {
+                'title' : '',
+                'summary' : '',
+                'url': '',
+                'img' : 0,
+            }
+        self.render(report=report)
+
+
+@route('/admin/reports')
+class reports(AdminHandler):
+    def get(self):
+        report_list = Report.reports()
+
+        self.render(report_list=report_list)
+
 
 @route('/admin/logout')
 class logout(BaseHandler):
