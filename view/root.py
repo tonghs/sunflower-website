@@ -6,6 +6,7 @@ from _route import route
 from model import const
 
 from model.news import News
+from model.report import Report
 
 
 @route('/')
@@ -57,6 +58,14 @@ class news(BaseHandler):
         li = News.news(spec=spec)
 
         self.render(li=li, title=title)
+
+
+@route('/reports')
+class reports(BaseHandler):
+    def get(self):
+        li = Report.reports()
+
+        self.render(li=li)
 
 
 @route('/contact')

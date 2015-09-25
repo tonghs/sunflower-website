@@ -6,6 +6,7 @@
     margin: auto;
     box-shadow: 0 0 1px 0 #eee;
     border: 1px solid #eee;
+    padding-bottom: 20px;
 }
 
 #news h3{
@@ -37,6 +38,7 @@
 
 #news .item .content{
     line-height: 23px;
+
 }
 @media (max-width: 1001px){
     #news{
@@ -49,4 +51,22 @@
         margin: 20px 0 20px;
         padding: 0 10px;
     }
+}
+
+.img{
+    float: left;
+    margin-right: 18px;
+}
+.img img{
+    width: 200px;
+    height: 120px;
+}
+
+.ico{
+    padding-right: 30px;
+    font-size: 19px;
+    float: right;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 22px;
 }

@@ -22,6 +22,7 @@ class Report(Doc):
         img = int,
         time = int,
         url = basestring,
+        from_ = basestring,
         is_del = int,
     )
 
@@ -65,6 +66,19 @@ class Report(Doc):
 
         return Report.find(spec, sort=[('time', -1)], offset=offset, limit=limit)
 
+    @property
+    def from_ico(self):
+        ico = ''
+        tmp = self.url.split('/')
+        if len(tmp) > 1:
+            ico = 'http://%s/favicon.ico' % tmp[2] 
+
+        return ico
+
+
 
 if __name__ == "__main__":
+    for o in Report.reports():
+        o.img = 10000019
+        o.save()
     pass
