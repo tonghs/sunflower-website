@@ -3,32 +3,30 @@ from config import APP, SLOGAN, QINIU
 from model.util import time_fmt 
 from model.news import News 
 %>
-<%inherit file="../_base.html" />
+<%inherit file="_sub_page.html" />
 <%block name="title_">
 媒体报道
 </%block>
 <%block name="css">
     <link href="${STATIC_HOST}/css/reports.css" rel="stylesheet">
 </%block>
-<div class="container main">
-    <div id="news">
-        <h3>媒体报道</h3>
-        % for o in li:
-        <div class="item">
-            <div class="title">
-                <a href="${o.url}" title="${o.title}" target="_blank"><b>${o.title}</b></a>
-            </div>
-            <div class="time"><i>${time_fmt(o.time, '%Y-%m-%d')}</i></div>
-            <div class="img">
-                <img src="${QINIU.HOST}/${o.img}?imageMogr2/thumbnail/!400x/gravity/Center/crop/400x240">
-            </div>
-            <div class="content">
-                ${o.summary}
-                <a href="${o.url}" title="${o.title}" target="_blank">[阅读全部]</a>
-            </div>
-            <div class="ico" style="background-image: url(${o.from_ico})"><b>-- ${o.from_}</b></div>
-            <div class="clear"></div>
+<div id="news">
+    <div class="page-title">媒体报道</div>
+    % for o in li:
+    <div class="item">
+        <div class="title">
+            <a href="${o.url}" title="${o.title}" target="_blank">${o.title}</a>
         </div>
-        % endfor
+        <div class="time"><i>${time_fmt(o.time, '%Y-%m-%d')}</i></div>
+        <div class="img">
+            <img src="${QINIU.HOST}/${o.img}?imageMogr2/thumbnail/!400x/gravity/Center/crop/400x240">
+        </div>
+        <div class="content">
+            ${o.summary}
+            <a href="${o.url}" title="${o.title}" target="_blank">[阅读全部]</a>
+        </div>
+        <div class="ico" style="background-image: url(${o.from_ico})">-- ${o.from_}</div>
+        <div class="clear"></div>
     </div>
+    % endfor
 </div>

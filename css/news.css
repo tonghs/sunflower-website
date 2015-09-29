@@ -1,26 +1,13 @@
-.main{
-    padding-top: 50px;
-}
 #news{
-    width: 980px;
-    margin: auto;
-    box-shadow: 0 0 1px 0 #eee;
-    border: 1px solid #eee;
 }
 
-#news h3{
-    text-align: center;
-    font-size: 30px;
-}
 
 #news .item{
-    margin: 25px 0 30px;
-    padding: 0 50px;
+    margin-top: 20px;
 }
 
 #news .item .title{
-    font-size: 23px;
-    font-weight: bold;
+    font-size: 18px;
 }
 
 #news .item .title a{
@@ -32,11 +19,14 @@
 }
 #news .item .time{
     color: #999;
-    padding: 8px 0;
+    padding: 2px 0 8px;
 }
 
 #news .item .content{
     line-height: 23px;
+    border: 0;
+    box-shadow: 0 0 0 0;
+    padding: 0;
 }
 @media (max-width: 1001px){
     #news{

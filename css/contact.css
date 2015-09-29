@@ -1,24 +1,52 @@
 .container .item{
-    font-size: 25px;
-    padding-left: 50px;
-    height: 30px;
-    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 33px;
+    padding-left: 32px;
+    height: 33px;
+    margin-bottom: 5px;
     background-repeat: no-repeat;
     background-position: left center;
-    background-size: auto 30px;
 }
 
 #phone{
     background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/phone.png?imageMogr2/thumbnail/x60);
-    background-size: auto 25px;
+    background-size: auto 20px;
 }
 #mail{
     background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/mail.png?imageMogr2/thumbnail/x60);
     background-position: 1px center;
+    background-size: auto 25px;
 }
 
 #location{
     background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/location.png?imageMogr2/thumbnail/x60);
     background-position: 4px center;
-    margin-bottom: 40px;
+    background-size: auto 25px;
+    margin-bottom: 25px;
+}
+
+#weibo{
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/Weibo.png?imageMogr2/thumbnail/x60);
+    background-size: auto 25px;
+}
+
+#tweibo{
+    background-image: url(http://7xk1xj.com1.z0.glb.clouddn.com/img/tweibo.png?imageMogr2/thumbnail/x60);
+    background-size: auto 25px;
+}
+
+.iw_poi_title {
+    color:#CC5522;
+    font-size:14px;
+    font-weight:bold;
+    overflow:hidden;
+    padding-right:13px;
+    white-space:nowrap
+}
+.iw_poi_content {
+    font:12px arial,sans-serif;
+    overflow:visible;
+    padding-top:4px;
+    white-space:-moz-pre-wrap;
+    word-wrap:break-word
 }

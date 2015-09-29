@@ -1,5 +1,7 @@
 h3{
+    font-size: 18px;
     margin-top: 0px;
+    font-weight: 200;
 }
 
 .container .item{
@@ -9,12 +11,12 @@ h3{
 .container h4{
     margin: 0;
     padding: 10px 0 10px;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 200;
 }
 
 .container.main p{
     color: #555555; 
-    font-size: 15px;
     margin: 0 18px 10px;
 }
 

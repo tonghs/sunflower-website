@@ -10,13 +10,13 @@
 }
 
 #right{
-    /*padding-left: 220px;*/
+    padding-left: 220px;
 }
 
 #right .content{
     box-shadow: 0 0 1px 0 #eee;
     border: solid 1px #eee;
-    padding: 30px;
+    padding: 20px 30px 30px;
 }
 
 #left ul, #left ul li{
@@ -27,4 +27,11 @@
 
 #left ul{
     margin: 30px 20px;
+}
+
+div.page-title{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0 0 20px;
 }

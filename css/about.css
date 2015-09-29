@@ -1,15 +1,6 @@
 
 h3{
     margin-top: 45px;
-}
-
-hr{
-    width: 120px;
-    border-bottom: #ccc 1px dashed;
-}
-
-.btn{
-    margin-top: 30px;
-    margin-bottom: 50px;
+    font-weight: normal;
 }
 

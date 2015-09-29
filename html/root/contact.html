@@ -1,25 +1,25 @@
-<%inherit file="../_base.html" />
+<%inherit file="_sub_page.html" />
 <%block name="title_">
 联系我们
 </%block>
 <%block name="css">
     <link href="${STATIC_HOST}/css/contact.css" rel="stylesheet">
-    <link href="${STATIC_HOST}/css/sub_page.css" rel="stylesheet">
 </%block>
 <!--引用百度地图API-->
-<style type="text/css">
-    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
-    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
-</style>
 <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
-<div class="container main">
-    <h2 class="s-font">联系我们</h2>
-    <div class="item s-font" id="phone">${WEB_INFO.phone}</div>
-    <div class="item s-font" id="mail"><a href="mailto:${WEB_INFO.email}" class="s-font">${WEB_INFO.email}</a></div>
-    <div class="item s-font" id="location" class="s-font">${WEB_INFO.location}</div>
+    <div class="page-title">联系我们</div>
+<p>
+    <div class="item" id="phone">${WEB_INFO.phone}</div>
+    <div class="item" id="mail"><a href="mailto:${WEB_INFO.email}" class="s-font">${WEB_INFO.email}</a></div>
+    <div class="item" id="weibo" class="s-font">
+        <a href="http://www.weibo.com/u/5652890377" target="_blank">@一块投吧</a>
+    </div>
+    <div class="item" id="tweibo" class="s-font">
+        <a href="http://t.qq.com/yikuaitouba" target="_blank">@一块投吧</a>
+    </div>
+    <div class="item" id="location" class="s-font">${WEB_INFO.location}</div>
     <!--百度地图容器-->
     <div style="width:100%;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
-</div>
 <%block name="js">
     <script src="${STATIC_HOST}/js/contact.js"></script>
     <script type="text/javascript">
