@@ -1,0 +1,49 @@
+<%inherit file="../_base.html" />
+<%block name="css_">
+    ${parent.css_()}
+    <link href="${STATIC_HOST}/css/_sub_page.css" rel="stylesheet">
+</%block>
+<div class="container main">
+    <div id="left">
+        <ul>
+            <li>
+                <a href="/about">
+                    关于我们
+                </a>
+            </li>
+            <li>
+                <a href="/contact">
+                    联系我们
+                </a>
+            </li>
+            <li>
+                <a href="/joinus">
+                    加入我们
+                </a>
+            </li>
+            <li>
+                <a href="/reports">
+                    媒体报道
+                </a>
+            </li>
+            <li>
+                <a href="/news/milestone">
+                    大事记
+                </a>
+            </li>
+            <li>
+                <a href="/news/startup">
+                    路演项目
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="right">
+        <div class="content">
+            ${next.body()}
+        </div>
+    </div>
+</div>
+<%block name="js_">
+    <script src="${STATIC_HOST}/js/_sub_page.js"></script>
+</%block>

@@ -35,6 +35,7 @@ html, body{
 }
 .main{
     margin-bottom: 40px;
+    min-height: 270px;
 }
 
 .margin-auto{

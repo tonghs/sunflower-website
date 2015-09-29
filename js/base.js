@@ -18,12 +18,6 @@
     }, 500);
   });
 
-  $("#footer-sns #weixin").poshytip({
-    className: 'tip-twitter',
-    alignTo: 'target',
-    alignX: 'center'
-  });
-
   pathname = location.pathname;
 
   $("#navbar>ul>li").removeClass('active');

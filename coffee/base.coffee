@@ -10,13 +10,6 @@ $('.to-top').click ->
     $("html,body").animate({scrollTop: $("#top").offset().top - 100}, 500)
 
 
-$("#footer-sns #weixin").poshytip({
-    className: 'tip-twitter',
-    alignTo: 'target',
-    alignX: 'center',
-})
-
-
 pathname = location.pathname
 $("#navbar>ul>li").removeClass('active')
 $("#navbar>ul>li").each ->

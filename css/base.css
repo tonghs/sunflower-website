@@ -108,7 +108,7 @@ header{
     color: #737373;
 }
 
-#footer .container p{
+#footer .container p.copyright{
     text-align: right;
     line-height: 25px;
     margin-bottom: 20px;
@@ -229,6 +229,14 @@ header{
 
     #partner-container #cfscc{
     }
+
+    #footer .container p.copyright{
+        text-align: center;
+    }
+    #footer .container{
+        text-align: center;
+    }
+
 }
 
 #partner-container{

@@ -19,14 +19,24 @@
     padding: 20px 30px 30px;
 }
 
-#left ul, #left ul li{
+#left ul{
+    padding: 10px 0 2px;
+}
+
+#left ul li{
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-#left ul{
-    margin: 30px 20px;
+#left ul li a{
+    display: block;
+    padding: 10px 30px;
+    color: #000;
+}
+
+#left ul li a:hover{
+    background-color: #eee;
 }
 
 div.page-title{
@@ -34,4 +44,23 @@ div.page-title{
     font-size: 22px;
     font-weight: 300;
     margin: 0 0 20px;
+}
+
+.active{
+    background-color: #eee;
+}
+
+@media (max-width: 768px){
+    #left{
+        display: none;
+    }
+    #right{
+        padding-left: 0;
+    }
+    #right .content{
+        border: 0;
+        box-shadow: 0 0 0 0;
+        padding: 5px;
+    }
+
 }
