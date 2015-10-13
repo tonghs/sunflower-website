@@ -19,7 +19,9 @@ from model.news import News
         </div>
         <div class="time"><i>${time_fmt(o.time, '%Y-%m-%d')}</i></div>
         <div class="img">
-            <img src="${QINIU.HOST}/${o.img}?imageMogr2/thumbnail/!400x/gravity/Center/crop/400x240">
+            <a href="${o.url}" title="${o.title}" target="_blank">
+                <img src="${QINIU.HOST}/${o.img}?imageMogr2/thumbnail/!400x/gravity/Center/crop/400x240">
+            </a>
         </div>
         <div class="content">
             ${o.summary}

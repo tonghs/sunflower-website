@@ -3,7 +3,7 @@
 }
 
 #news .item{
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 #news .item .title{
@@ -19,7 +19,7 @@
 }
 #news .item .time{
     color: #999;
-    padding: 2px 0 8px;
+    padding: 0 0 4px;
 }
 
 #news .item .content{
@@ -29,15 +29,6 @@
     padding: 0;
 
 }
-@media (max-width: 1001px){
-    #news{
-    }
-    #news .item{
-        margin: 20px 0 20px;
-        padding: 0 10px;
-    }
-}
-
 .img{
     float: left;
     margin-right: 18px;
@@ -45,6 +36,18 @@
 .img img{
     width: 200px;
     height: 120px;
+        transition: all 0.3s ease-out;
+   -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+-webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+     -o-transition: all 0.3s ease-out;
+}
+
+.img img:hover{
+        transition: all 0.3s ease-out;
+   -moz-transition: all 0.3s ease-out;  /* Firefox 4 */
+-webkit-transition: all 0.3s ease-out;   /* Safari 和 Chrome */
+     -o-transition: all 0.3s ease-out;
+    opacity: 0.9;
 }
 
 .ico{
@@ -56,3 +59,20 @@
     background-size: 22px;
     margin-top: 15px;
 }
+
+@media (max-width: 1001px){
+    #news{
+    }
+    #news .item{
+        margin: 20px 0 20px;
+        padding: 0 10px;
+    }
+    .img{
+        margin: 0 0 5px 0;
+    }
+    .img img{
+        width: 100%;
+        height: auto;
+    }
+}
+
