@@ -32,4 +32,5 @@ class QINIU(object):
     SECRET_KEY = 'v9G34Fy78Z5JRN26l7czcBJM1zNuG8CXgB5h491m'
     BUCKET = 'sunflower-website'
     HOST = 'http://7xk1xj.com1.z0.glb.clouddn.com'
+    IMG_HOST = 'http://7xnqki.com2.z0.glb.qiniucdn.com'
 

@@ -1,5 +1,5 @@
 <%!
-    from config import APP, APP_CN
+    from config import APP, APP_CN, QINIU
 %>
 <%inherit file="_god.html" />
 <%block name="css_">
@@ -56,7 +56,7 @@
     </div>
     <div id="float-banner">
         ## <img src="http://open.weixin.qq.com/qr/code/?username=${WEB_INFO.program_weixin}"/>
-        <img src="http://7xk1xj.com1.z0.glb.clouddn.com/img/qrcode_yikuaitouba_zip.jpg"/>
+        <img src="${QINIU.IMG_HOST}/img/qrcode_yikuaitouba_zip.jpg"/>
         <p class="s-font">扫描关注<br>一块投吧</p>
         <p class="float-banner-item to-top s-font">↑ TOP</p>
     </div>
@@ -67,36 +67,36 @@
             <div class="img-container">
                 <div class="row" id="desktop">
                     <div class="col-sm-2">
-                        <img src="http://7xk1xj.com1.z0.glb.clouddn.com/partner/angelcrunch_zip.png" id="angelcrunch">
+                        <img src="${QINIU.IMG_HOST}/partner/angelcrunch_zip.png" id="angelcrunch">
                     </div>
                     <div class="col-sm-2">
-                        <img src="http://7xk1xj.com1.z0.glb.clouddn.com/partner/putiandai_zip.png" id="putiandai">
+                        <img src="${QINIU.IMG_HOST}/partner/putiandai_zip.png" id="putiandai">
                     </div>
                     <div class="col-sm-2">
-                        <img src="http://7xk1xj.com1.z0.glb.clouddn.com/partner/haizi_zip.png" id="haizi">
+                        <img src="${QINIU.IMG_HOST}/partner/haizi_zip.png" id="haizi">
                     </div>
                     <div class="col-sm-2">
-                        <img src="http://7xk1xj.com1.z0.glb.clouddn.com/partner/founders_space_zip.png" id="founders_space">
+                        <img src="${QINIU.IMG_HOST}/partner/founders_space_zip.png" id="founders_space">
                     </div>
                     <div class="col-sm-2">
-                        <img src="http://7xk1xj.com1.z0.glb.clouddn.com/partner/hku_zip.png" id="hku">
+                        <img src="${QINIU.IMG_HOST}/partner/hku_zip.png" id="hku">
                     </div>
                     <div class="col-sm-2">
-                        <img src="http://7xk1xj.com1.z0.glb.clouddn.com/partner/cfscc_zip.png" id="cfscc">
+                        <img src="${QINIU.IMG_HOST}/partner/cfscc_zip.png" id="cfscc">
                     </div>
                 </div>
                 <div class="row" id="mobile">
                     <div class="col-sm-4">
-                        <img src="http://7xk1xj.com1.z0.glb.clouddn.com/partner/angelcrunch_zip.png" id="angelcrunch">
-                        <img src="http://7xk1xj.com1.z0.glb.clouddn.com/partner/putiandai_zip.png" id="putiandai">
+                        <img src="${QINIU.IMG_HOST}/partner/angelcrunch_zip.png" id="angelcrunch">
+                        <img src="${QINIU.IMG_HOST}/partner/putiandai_zip.png" id="putiandai">
                     </div>
                     <div class="col-sm-4">
-                        <img src="http://7xk1xj.com1.z0.glb.clouddn.com/partner/haizi_zip.png" id="haizi">
-                        <img src="http://7xk1xj.com1.z0.glb.clouddn.com/partner/founders_space_zip.png" id="founders_space">
+                        <img src="${QINIU.IMG_HOST}/partner/haizi_zip.png" id="haizi">
+                        <img src="${QINIU.IMG_HOST}/partner/founders_space_zip.png" id="founders_space">
                     </div>
                     <div class="col-sm-4">
-                        <img src="http://7xk1xj.com1.z0.glb.clouddn.com/partner/hku_zip.png" id="hku">
-                        <img src="http://7xk1xj.com1.z0.glb.clouddn.com/partner/cfscc_zip.png" id="cfscc">
+                        <img src="${QINIU.IMG_HOST}/partner/hku_zip.png" id="hku">
+                        <img src="${QINIU.IMG_HOST}/partner/cfscc_zip.png" id="cfscc">
                     </div>
                 </div>
             </div>
