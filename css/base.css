@@ -130,8 +130,8 @@ header{
          -o-transition: all 0.3s ease-out;
 }
 @media (min-width: 768px){
-    #partner-container #desktop{
-        
+    #partner-container .desktop{
+        margin-bottom: 5px;
     }
 
     #partner-container #mobile{
@@ -196,7 +196,7 @@ header{
         font-size: 14px;
     }
 
-    #partner-container #desktop{
+    #partner-container .desktop{
         display: none;
     }
 
